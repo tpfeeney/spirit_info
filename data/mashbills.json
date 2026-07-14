@@ -1,6 +1,867 @@
 {
-  "HIGH_RYE": {
-    "name": "High Rye Bourbon",
-    "mashbill": "60% corn, 36% rye, 4% malted barley"
+  "78C/12R/10MB": {
+    "name": "78C/12R/10MB",
+    "grains": {
+      "corn": 78,
+      "rye": 12,
+      "malted_barley": 10
+    },
+    "raw": "78c/12r/10mb",
+    "brands": [
+      "Elijah Craig",
+      "Heaven Hill (HH)",
+      "Evan Williams",
+      "Ezra Brooks",
+      "99",
+      "PHC 10th - 24y BiB",
+      "PHC 11th - 11yr old SiB",
+      "PHC 12th - Orange Curacao",
+      "PHC 14th - Heavy Char"
+    ]
+  },
+  "100B": {
+    "name": "100B",
+    "grains": {
+      "barley": 100
+    },
+    "raw": "100b",
+    "brands": []
+  },
+  "100C": {
+    "name": "100C",
+    "grains": {
+      "corn": 100
+    },
+    "raw": "100c",
+    "brands": []
+  },
+  "100MB": {
+    "name": "100MB",
+    "grains": {
+      "malted_barley": 100
+    },
+    "raw": "100mb",
+    "brands": []
+  },
+  "100MR": {
+    "name": "100MR",
+    "grains": {
+      "malted_rye": 100
+    },
+    "raw": "100mr",
+    "brands": []
+  },
+  "100MER": {
+    "name": "100MER",
+    "grains": {
+      "merced_rye": 100
+    },
+    "raw": "100mer",
+    "brands": []
+  },
+  "100R": {
+    "name": "100R",
+    "grains": {
+      "rye": 100
+    },
+    "raw": "100r",
+    "brands": []
+  },
+  "100W": {
+    "name": "100W",
+    "grains": {
+      "wheat": 100
+    },
+    "raw": "100w",
+    "brands": []
+  },
+  "45R/30W/25B": {
+    "name": "45R/30W/25B",
+    "grains": {
+      "rye": 45,
+      "wheat": 30,
+      "barley": 25
+    },
+    "raw": "45r/30w/25b",
+    "brands": []
+  },
+  "51C/45W/4MB": {
+    "name": "51C/45W/4MB",
+    "grains": {
+      "corn": 51,
+      "wheat": 45,
+      "malted_barley": 4
+    },
+    "raw": "51c/45w/4mb",
+    "brands": []
+  },
+  "51R/35C/14MB": {
+    "name": "51R/35C/14MB",
+    "grains": {
+      "rye": 51,
+      "corn": 35,
+      "malted_barley": 14
+    },
+    "raw": "51r/35c/14mb",
+    "brands": []
+  },
+  "51R/37C/12MB": {
+    "name": "51R/37C/12MB",
+    "grains": {
+      "rye": 51,
+      "corn": 37,
+      "malted_barley": 12
+    },
+    "raw": "51r/37c/12mb",
+    "brands": []
+  },
+  "51R/45C/4MB": {
+    "name": "51R/45C/4MB",
+    "grains": {
+      "rye": 51,
+      "corn": 45,
+      "malted_barley": 4
+    },
+    "raw": "51r/45c/4mb",
+    "brands": []
+  },
+  "51R/49MB": {
+    "name": "51R/49MB",
+    "grains": {
+      "rye": 51,
+      "malted_barley": 49
+    },
+    "raw": "51r/49mb",
+    "brands": []
+  },
+  "51W/37C/12MB": {
+    "name": "51W/37C/12MB",
+    "grains": {
+      "wheat": 51,
+      "corn": 37,
+      "malted_barley": 12
+    },
+    "raw": "51w/37c/12mb",
+    "brands": []
+  },
+  "55R/35C/10MB": {
+    "name": "55R/35C/10MB",
+    "grains": {
+      "rye": 55,
+      "corn": 35,
+      "malted_barley": 10
+    },
+    "raw": "55r/35c/10mb",
+    "brands": []
+  },
+  "56C/38R/6MB": {
+    "name": "56C/38R/6MB",
+    "grains": {
+      "corn": 56,
+      "rye": 38,
+      "malted_barley": 6
+    },
+    "raw": "56c/38r/6mb",
+    "brands": []
+  },
+  "56C/38R/6UB": {
+    "name": "56C/38R/6UB",
+    "grains": {
+      "corn": 56,
+      "rye": 38,
+      "unmalted_barley": 6
+    },
+    "raw": "56c/38r/6ub",
+    "brands": []
+  },
+  "60C/14W/14R/12MB": {
+    "name": "60C/14W/14R/12MB",
+    "grains": {
+      "corn": 60,
+      "wheat": 14,
+      "rye": 14,
+      "malted_barley": 12
+    },
+    "raw": "60c/14w/14r/12mb",
+    "brands": []
+  },
+  "60C/20W/10R/10MB": {
+    "name": "60C/20W/10R/10MB",
+    "grains": {
+      "corn": 60,
+      "wheat": 20,
+      "rye": 10,
+      "malted_barley": 10
+    },
+    "raw": "60c/20w/10r/10mb",
+    "brands": []
+  },
+  "60C/22B/18W": {
+    "name": "60C/22B/18W",
+    "grains": {
+      "corn": 60,
+      "barley": 22,
+      "wheat": 18
+    },
+    "raw": "60c/22b/18w",
+    "brands": []
+  },
+  "60C/30R/10MB": {
+    "name": "60C/30R/10MB",
+    "grains": {
+      "corn": 60,
+      "rye": 30,
+      "malted_barley": 10
+    },
+    "raw": "60c/30r/10mb",
+    "brands": []
+  },
+  "60C/30W/10MB": {
+    "name": "60C/30W/10MB",
+    "grains": {
+      "corn": 60,
+      "wheat": 30,
+      "malted_barley": 10
+    },
+    "raw": "60c/30w/10mb",
+    "brands": []
+  },
+  "60C/35R/5MB": {
+    "name": "60C/35R/5MB",
+    "grains": {
+      "corn": 60,
+      "rye": 35,
+      "malted_barley": 5
+    },
+    "raw": "60c/35r/5mb",
+    "brands": []
+  },
+  "60C/36R/4MB": {
+    "name": "60C/36R/4MB",
+    "grains": {
+      "corn": 60,
+      "rye": 36,
+      "malted_barley": 4
+    },
+    "raw": "60c/36r/4mb",
+    "brands": []
+  },
+  "60R/40W": {
+    "name": "60R/40W",
+    "grains": {
+      "rye": 60,
+      "wheat": 40
+    },
+    "raw": "60r/40w",
+    "brands": []
+  },
+  "60UMB/40MMB": {
+    "name": "60UMB/40MMB",
+    "grains": {
+      "unsmoked_malted_barley": 60,
+      "mesquited_malted_barley": 40
+    },
+    "raw": "60umb/40mmb",
+    "brands": []
+  },
+  "63C/27R/10MB": {
+    "name": "63C/27R/10MB",
+    "grains": {
+      "corn": 63,
+      "rye": 27,
+      "malted_barley": 10
+    },
+    "raw": "63c/27r/10mb",
+    "brands": []
+  },
+  "64C/24R/12MB": {
+    "name": "64C/24R/12MB",
+    "grains": {
+      "corn": 64,
+      "rye": 24,
+      "malted_barley": 12
+    },
+    "raw": "64c/24r/12mb",
+    "brands": []
+  },
+  "64C/24W/12MB": {
+    "name": "64C/24W/12MB",
+    "grains": {
+      "corn": 64,
+      "wheat": 24,
+      "malted_barley": 12
+    },
+    "raw": "64c/24w/12mb",
+    "brands": []
+  },
+  "64C/30R/6MB": {
+    "name": "64C/30R/6MB",
+    "grains": {
+      "corn": 64,
+      "rye": 30,
+      "malted_barley": 6
+    },
+    "raw": "64c/30r/6mb",
+    "brands": []
+  },
+  "64WRC/14R/14W/8B": {
+    "name": "64WRC/14R/14W/8B",
+    "grains": {
+      "wisconsin_red_corn": 64,
+      "rye": 14,
+      "wheat": 14,
+      "barley": 8
+    },
+    "raw": "64wrc/14r/14w/8b",
+    "brands": []
+  },
+  "65C/25R/10MB": {
+    "name": "65C/25R/10MB",
+    "grains": {
+      "corn": 65,
+      "rye": 25,
+      "malted_barley": 10
+    },
+    "raw": "65c/25r/10mb",
+    "brands": []
+  },
+  "65C/30R/5MB": {
+    "name": "65C/30R/5MB",
+    "grains": {
+      "corn": 65,
+      "rye": 30,
+      "malted_barley": 5
+    },
+    "raw": "65c/30r/5mb",
+    "brands": []
+  },
+  "65R/20MB/15C": {
+    "name": "65R/20MB/15C",
+    "grains": {
+      "rye": 65,
+      "malted_barley": 20,
+      "corn": 15
+    },
+    "raw": "65r/20mb/15c",
+    "brands": []
+  },
+  "66R/30C/4B": {
+    "name": "66R/30C/4B",
+    "grains": {
+      "rye": 66,
+      "corn": 30,
+      "barley": 4
+    },
+    "raw": "66r/30c/4b",
+    "brands": []
+  },
+  "68C/16R/16MB": {
+    "name": "68C/16R/16MB",
+    "grains": {
+      "corn": 68,
+      "rye": 16,
+      "malted_barley": 16
+    },
+    "raw": "68c/16r/16mb",
+    "brands": []
+  },
+  "68C/16W/16MB": {
+    "name": "68C/16W/16MB",
+    "grains": {
+      "corn": 68,
+      "wheat": 16,
+      "malted_barley": 16
+    },
+    "raw": "68c/16w/16mb",
+    "brands": []
+  },
+  "68C/20W/10MB": {
+    "name": "68C/20W/10MB",
+    "grains": {
+      "corn": 68,
+      "wheat": 20,
+      "malted_barley": 10
+    },
+    "raw": "68c/20w/10mb",
+    "brands": []
+  },
+  "68C/20W/12MB": {
+    "name": "68C/20W/12MB",
+    "grains": {
+      "corn": 68,
+      "wheat": 20,
+      "malted_barley": 12
+    },
+    "raw": "68c/20w/12mb",
+    "brands": []
+  },
+  "68C/28R/4MB": {
+    "name": "68C/28R/4MB",
+    "grains": {
+      "corn": 68,
+      "rye": 28,
+      "malted_barley": 4
+    },
+    "raw": "68c/28r/4mb",
+    "brands": []
+  },
+  "70C/15R/15W": {
+    "name": "70C/15R/15W",
+    "grains": {
+      "corn": 70,
+      "rye": 15,
+      "wheat": 15
+    },
+    "raw": "70c/15r/15w",
+    "brands": []
+  },
+  "70C/16W/14MB": {
+    "name": "70C/16W/14MB",
+    "grains": {
+      "corn": 70,
+      "wheat": 16,
+      "malted_barley": 14
+    },
+    "raw": "70c/16w/14mb",
+    "brands": []
+  },
+  "70C/20R/10MB": {
+    "name": "70C/20R/10MB",
+    "grains": {
+      "corn": 70,
+      "rye": 20,
+      "malted_barley": 10
+    },
+    "raw": "70c/20r/10mb",
+    "brands": []
+  },
+  "70C/20W/10MB": {
+    "name": "70C/20W/10MB",
+    "grains": {
+      "corn": 70,
+      "wheat": 20,
+      "malted_barley": 10
+    },
+    "raw": "70c/20w/10mb",
+    "brands": []
+  },
+  "70C/10HW/10HMB/10DM": {
+    "name": "70C/10HW/10HMB/10DM",
+    "grains": {
+      "corn": 70,
+      "honeyed_wheat": 10,
+      "honeyed_malted_barley": 10,
+      "distillers_malt": 10
+    },
+    "raw": "70c/10hw/10hmb/10dm",
+    "brands": []
+  },
+  "70C/21R/9MB": {
+    "name": "70C/21R/9MB",
+    "grains": {
+      "corn": 70,
+      "rye": 21,
+      "malted_barley": 9
+    },
+    "raw": "70c/21r/9mb",
+    "brands": [
+      "Green River/OZtyler"
+    ]
+  },
+  "70C/21W/9MB": {
+    "name": "70C/21W/9MB",
+    "grains": {
+      "corn": 70,
+      "wheat": 21,
+      "malted_barley": 9
+    },
+    "raw": "70c/21w/9mb",
+    "brands": []
+  },
+  "70C/25R/5MB": {
+    "name": "70C/25R/5MB",
+    "grains": {
+      "corn": 70,
+      "rye": 25,
+      "malted_barley": 5
+    },
+    "raw": "70c/25r/5mb",
+    "brands": []
+  },
+  "70C/25W/5R": {
+    "name": "70C/25W/5R",
+    "grains": {
+      "corn": 70,
+      "wheat": 25,
+      "rye": 5
+    },
+    "raw": "70c/25w/5r",
+    "brands": []
+  },
+  "70C/26R/4MB": {
+    "name": "70C/26R/4MB",
+    "grains": {
+      "corn": 70,
+      "rye": 26,
+      "malted_barley": 4
+    },
+    "raw": "70c/26r/4mb",
+    "brands": []
+  },
+  "70R/18C/12MB": {
+    "name": "70R/18C/12MB",
+    "grains": {
+      "rye": 70,
+      "corn": 18,
+      "malted_barley": 12
+    },
+    "raw": "70r/18c/12mb",
+    "brands": []
+  },
+  "70R/20C/10MB": {
+    "name": "70R/20C/10MB",
+    "grains": {
+      "rye": 70,
+      "corn": 20,
+      "malted_barley": 10
+    },
+    "raw": "70r/20c/10mb",
+    "brands": []
+  },
+  "72C/15MB/13R": {
+    "name": "72C/15MB/13R",
+    "grains": {
+      "corn": 72,
+      "malted_barley": 15,
+      "rye": 13
+    },
+    "raw": "72c/15mb/13r",
+    "brands": []
+  },
+  "72C/16R/12MB": {
+    "name": "72C/16R/12MB",
+    "grains": {
+      "corn": 72,
+      "rye": 16,
+      "malted_barley": 12
+    },
+    "raw": "72c/16r/12mb",
+    "brands": []
+  },
+  "72C/18R/10MB": {
+    "name": "72C/18R/10MB",
+    "grains": {
+      "corn": 72,
+      "rye": 18,
+      "malted_barley": 10
+    },
+    "raw": "72c/18r/10mb",
+    "brands": []
+  },
+  "72C/22R/6MB": {
+    "name": "72C/22R/6MB",
+    "grains": {
+      "corn": 72,
+      "rye": 22,
+      "malted_barley": 6
+    },
+    "raw": "72c/22r/6mb",
+    "brands": []
+  },
+  "73C/18R/9MB": {
+    "name": "73C/18R/9MB",
+    "grains": {
+      "corn": 73,
+      "rye": 18,
+      "malted_barley": 9
+    },
+    "raw": "73c/18r/9mb",
+    "brands": []
+  },
+  "73C/23R/4MB": {
+    "name": "73C/23R/4MB",
+    "grains": {
+      "corn": 73,
+      "rye": 23,
+      "malted_barley": 4
+    },
+    "raw": "73c/23r/4mb",
+    "brands": []
+  },
+  "74C/15W/11MB": {
+    "name": "74C/15W/11MB",
+    "grains": {
+      "corn": 74,
+      "wheat": 15,
+      "malted_barley": 11
+    },
+    "raw": "74c/15w/11mb",
+    "brands": []
+  },
+  "74C/18R/8MB": {
+    "name": "74C/18R/8MB",
+    "grains": {
+      "corn": 74,
+      "rye": 18,
+      "malted_barley": 8
+    },
+    "raw": "74c/18r/8mb",
+    "brands": []
+  },
+  "75C/13BR/12MB": {
+    "name": "75C/13BR/12MB",
+    "grains": {
+      "corn": 75,
+      "brown_rice": 13,
+      "malted_barley": 12
+    },
+    "raw": "75c/13br/12mb",
+    "brands": []
+  },
+  "75C/13R/12MB": {
+    "name": "75C/13R/12MB",
+    "grains": {
+      "corn": 75,
+      "rye": 13,
+      "malted_barley": 12
+    },
+    "raw": "75c/13r/12mb",
+    "brands": [
+      "rc  10k"
+    ]
+  },
+  "75C/15R/10MB": {
+    "name": "75C/15R/10MB",
+    "grains": {
+      "corn": 75,
+      "rye": 15,
+      "malted_barley": 10
+    },
+    "raw": "75c/15r/10mb",
+    "brands": []
+  },
+  "75C/15W/7R/3MB": {
+    "name": "75C/15W/7R/3MB",
+    "grains": {
+      "corn": 75,
+      "wheat": 15,
+      "rye": 7,
+      "malted_barley": 3
+    },
+    "raw": "75c/15w/7r/3mb",
+    "brands": []
+  },
+  "75C/20R/5MB": {
+    "name": "75C/20R/5MB",
+    "grains": {
+      "corn": 75,
+      "rye": 20,
+      "malted_barley": 5
+    },
+    "raw": "75c/20r/5mb",
+    "brands": []
+  },
+  "75C/20W/5MB": {
+    "name": "75C/20W/5MB",
+    "grains": {
+      "corn": 75,
+      "wheat": 20,
+      "malted_barley": 5
+    },
+    "raw": "75c/20w/5mb",
+    "brands": []
+  },
+  "75C/20.5R/4.5MB": {
+    "name": "75C/20.5R/4.5MB",
+    "grains": {
+      "corn": 75,
+      "rye": 20.5,
+      "malted_barley": 4.5
+    },
+    "raw": "75c/20.5r/4.5mb",
+    "brands": []
+  },
+  "75C/21R/4MB": {
+    "name": "75C/21R/4MB",
+    "grains": {
+      "corn": 75,
+      "rye": 21,
+      "malted_barley": 4
+    },
+    "raw": "75c/21r/4mb",
+    "brands": []
+  },
+  "75C/21W/4MB": {
+    "name": "75C/21W/4MB",
+    "grains": {
+      "corn": 75,
+      "wheat": 21,
+      "malted_barley": 4
+    },
+    "raw": "75c/21w/4mb",
+    "brands": []
+  },
+  "75R/25MB": {
+    "name": "75R/25MB",
+    "grains": {
+      "rye": 75,
+      "malted_barley": 25
+    },
+    "raw": "75r/25mb",
+    "brands": []
+  },
+  "77C/13R/10MB": {
+    "name": "77C/13R/10MB",
+    "grains": {
+      "corn": 77,
+      "rye": 13,
+      "malted_barley": 10
+    },
+    "raw": "77c/13r/10mb",
+    "brands": []
+  },
+  "78C/10R/12MB": {
+    "name": "78C/10R/12MB",
+    "grains": {
+      "corn": 78,
+      "rye": 10,
+      "malted_barley": 12
+    },
+    "raw": "78c/10r/12mb",
+    "brands": []
+  },
+  "78.5C/13R/8.5MB": {
+    "name": "78.5C/13R/8.5MB",
+    "grains": {
+      "corn": 78.5,
+      "rye": 13,
+      "malted_barley": 8.5
+    },
+    "raw": "78.5c/13r/8.5mb",
+    "brands": []
+  },
+  "80C/12MB/8R": {
+    "name": "80C/12MB/8R",
+    "grains": {
+      "corn": 80,
+      "malted_barley": 12,
+      "rye": 8
+    },
+    "raw": "80c/12mb/8r",
+    "brands": []
+  },
+  "80C/14R/6MB": {
+    "name": "80C/14R/6MB",
+    "grains": {
+      "corn": 80,
+      "rye": 14,
+      "malted_barley": 6
+    },
+    "raw": "80c/14r/6mb",
+    "brands": []
+  },
+  "80C/19R/1MB": {
+    "name": "80C/19R/1MB",
+    "grains": {
+      "corn": 80,
+      "rye": 19,
+      "malted_barley": 1
+    },
+    "raw": "80c/19r/1mb",
+    "brands": []
+  },
+  "81C/13R/6MB": {
+    "name": "81C/13R/6MB",
+    "grains": {
+      "corn": 81,
+      "rye": 13,
+      "malted_barley": 6
+    },
+    "raw": "81c/13r/6mb",
+    "brands": []
+  },
+  "84C/8R/8MB": {
+    "name": "84C/8R/8MB",
+    "grains": {
+      "corn": 84,
+      "rye": 8,
+      "malted_barley": 8
+    },
+    "raw": "84c/8r/8mb",
+    "brands": []
+  },
+  "86C/8MB/6R": {
+    "name": "86C/8MB/6R",
+    "grains": {
+      "corn": 86,
+      "malted_barley": 8,
+      "rye": 6
+    },
+    "raw": "86c/8mb/6r",
+    "brands": []
+  },
+  "87C/12R/6MB": {
+    "name": "87C/12R/6MB",
+    "grains": {
+      "corn": 87,
+      "rye": 12,
+      "malted_barley": 6
+    },
+    "raw": "87c/12r/6mb",
+    "brands": []
+  },
+  "91C/9MB": {
+    "name": "91C/9MB",
+    "grains": {
+      "corn": 91,
+      "malted_barley": 9
+    },
+    "raw": "91c/9mb",
+    "brands": []
+  },
+  "94R/6MB": {
+    "name": "94R/6MB",
+    "grains": {
+      "rye": 94,
+      "malted_barley": 6
+    },
+    "raw": "94r/6mb",
+    "brands": []
+  },
+  "95C/5MB": {
+    "name": "95C/5MB",
+    "grains": {
+      "corn": 95,
+      "malted_barley": 5
+    },
+    "raw": "95c/5mb",
+    "brands": []
+  },
+  "95R/5MB": {
+    "name": "95R/5MB",
+    "grains": {
+      "rye": 95,
+      "malted_barley": 5
+    },
+    "raw": "95r/5mb",
+    "brands": []
+  },
+  "96C/4B": {
+    "name": "96C/4B",
+    "grains": {
+      "corn": 96,
+      "barley": 4
+    },
+    "raw": "96c/4b",
+    "brands": []
+  },
+  "99C/1MB": {
+    "name": "99C/1MB",
+    "grains": {
+      "corn": 99,
+      "malted_barley": 1
+    },
+    "raw": "99c/1mb",
+    "brands": []
   }
 }
