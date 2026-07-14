@@ -1,0 +1,726 @@
+{
+  "E-MX": {
+    "name": "Exceptional Series Malt Whiskey",
+    "type": "Malt Whiskey",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "",
+    "note": "X indicates barrel age",
+    "confirmed": false
+  },
+  "E-KB": {
+    "name": "Exceptional Series Bourbon",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "",
+    "confirmed": false
+  },
+  "RIO": {
+    "name": "RIO",
+    "type": "Bourbon",
+    "mashbill": "75/21/4",
+    "source": "MGP",
+    "aging_location": "KY (Castle and Key Distillery stone warehouse)",
+    "color": "Copper",
+    "confirmed": true
+  },
+  "NIO": {
+    "name": "NIO",
+    "type": "Bourbon",
+    "mashbill": "75/21/4",
+    "source": "MGP",
+    "aging_location": "IN",
+    "note": "Low rye, younger than NIO",
+    "confirmed": true
+  },
+  "I21": {
+    "name": "I21",
+    "type": "Bourbon",
+    "mashbill": "75/21/4",
+    "source": "MGP",
+    "aging_location": "IN",
+    "color": "Dark Red",
+    "note": "Low rye, younger than NIO. MDB1:Fudge Zinger",
+    "confirmed": true
+  },
+  "IRT": {
+    "name": "IRT",
+    "type": "Bourbon",
+    "mashbill": "60/36/4",
+    "source": "MGP",
+    "aging_location": "TN",
+    "note": "High rye",
+    "confirmed": true
+  },
+  "HR7": {
+    "name": "HR7",
+    "type": "Bourbon",
+    "mashbill": "60/36/4",
+    "source": "MGP",
+    "aging_location": "KY/IN",
+    "age": "7yrs+",
+    "note": "High rye",
+    "confirmed": true
+  },
+  "HRY": {
+    "name": "HRY",
+    "type": "Bourbon",
+    "mashbill": "60/36/4",
+    "source": "MGP",
+    "aging_location": "KY/IN",
+    "age": "under 7yrs",
+    "color": "Dark Blue",
+    "note": "High rye, 6.5 to 7.5 year old Indiana bourbon, like thick mud",
+    "confirmed": true
+  },
+  "KHT": {
+    "name": "KHT",
+    "type": "Bourbon",
+    "mashbill": "75/21/4",
+    "source": "Unknown KY source",
+    "aging_location": "KY",
+    "note": "Only 1 released",
+    "confirmed": true
+  },
+  "KBT": {
+    "name": "KBT",
+    "type": "Bourbon",
+    "mashbill": "72/18/10",
+    "source": "BBC",
+    "aging_location": "KY",
+    "color": "Yellow",
+    "note": "First one was C18-27-KY",
+    "confirmed": true
+  },
+  "K13": {
+    "name": "K13",
+    "type": "Bourbon",
+    "mashbill": "78/13/9",
+    "source": "Unknown KY source",
+    "aging_location": "KY",
+    "color": "Yellow",
+    "note": "May be the heaviest liquid weight of any whiskey we've done",
+    "confirmed": true
+  },
+  "K21": {
+    "name": "K21",
+    "type": "Bourbon",
+    "mashbill": "70/21/9",
+    "source": "Unknown KY source",
+    "aging_location": "KY",
+    "color": "Yellow",
+    "note": "Tastes like 2012 E.H. Taylor Barrel Proof",
+    "confirmed": true
+  },
+  "KEL": {
+    "name": "KEL",
+    "type": "Bourbon",
+    "mashbill": "75/21/4",
+    "source": "MGP",
+    "aging_location": "KY",
+    "color": "Bright Red",
+    "note": "Low rye MGP, aged in Kelvin char #4 barrels",
+    "confirmed": true
+  },
+  "HIC": {
+    "name": "HIC",
+    "type": "Bourbon",
+    "mashbill": "60/36/4",
+    "source": "MGP",
+    "aging_location": "IN",
+    "color": "Light Blue",
+    "age": "8yrs+",
+    "note": "High rye, over 8yrs old",
+    "confirmed": true
+  },
+  "KOA": {
+    "name": "KOA",
+    "type": "Bourbon",
+    "mashbill": "75/21/4",
+    "source": "Barton",
+    "aging_location": "KY",
+    "color": "Burgundy",
+    "age": "8yrs+",
+    "note": "High proof, aged in Bardstown KY",
+    "confirmed": true
+  },
+  "VEN": {
+    "name": "VEN",
+    "type": "Bourbon",
+    "mashbill": "75/21/4",
+    "source": "Barton",
+    "aging_location": "KY",
+    "confirmed": true
+  },
+  "WTN": {
+    "name": "WTN",
+    "type": "Bourbon",
+    "mashbill": "60/22/18",
+    "source": "Unknown TN source",
+    "aging_location": "KY",
+    "note": "Wheated bourbon",
+    "confirmed": true
+  },
+  "KRY": {
+    "name": "KRY",
+    "type": "Rye",
+    "mashbill": "95/5",
+    "source": "KY",
+    "aging_location": "KY",
+    "confirmed": true
+  },
+  "RHY": {
+    "name": "RHY",
+    "type": "Rye",
+    "mashbill": "51/45/4",
+    "source": "MGP",
+    "aging_location": "IN",
+    "note": "Replaced by SRY",
+    "confirmed": true
+  },
+  "SRY": {
+    "name": "SRY",
+    "type": "Rye",
+    "mashbill": "51/45/4",
+    "source": "MGP",
+    "aging_location": "IN",
+    "color": "Dark Green",
+    "note": "Replaced RHY",
+    "confirmed": true
+  },
+  "I95": {
+    "name": "I95",
+    "type": "Rye",
+    "mashbill": "95/5",
+    "source": "MGP",
+    "aging_location": "IN",
+    "confirmed": true
+  },
+  "TNR": {
+    "name": "TNR",
+    "type": "Rye",
+    "mashbill": "95/5",
+    "source": "Dickel",
+    "aging_location": "KY/TN",
+    "confirmed": true
+  },
+  "TKO": {
+    "name": "TKO",
+    "type": "Rye",
+    "mashbill": "70/25/5",
+    "source": "Dickel",
+    "aging_location": "KY/TN",
+    "age": "8yrs+",
+    "note": "High proof",
+    "confirmed": true
+  },
+  "IKO": {
+    "name": "IKO",
+    "type": "Rye",
+    "mashbill": "70/25/5",
+    "source": "Dickel",
+    "aging_location": "KY",
+    "color": "Pink wax",
+    "age": "8yrs+",
+    "note": "High Proof Dickel",
+    "confirmed": true
+  },
+  "MAD-B": {
+    "name": "MAD-B",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Madeira cask",
+    "confirmed": false
+  },
+  "MAD-R": {
+    "name": "MAD-R",
+    "type": "Rye",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Madeira cask",
+    "confirmed": false
+  },
+  "CC": {
+    "name": "CC",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Cognac cask",
+    "confirmed": false
+  },
+  "CC-R": {
+    "name": "CC-R",
+    "type": "Rye",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Cognac cask",
+    "confirmed": false
+  },
+  "AMB": {
+    "name": "AMB",
+    "type": "Rye",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Amburana cask",
+    "confirmed": false
+  },
+  "AMB-B": {
+    "name": "AMB-B",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Amburana cask",
+    "confirmed": false
+  },
+  "OLS": {
+    "name": "OLS",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Oloroso sherry cask",
+    "confirmed": false
+  },
+  "OLS-R": {
+    "name": "OLS-R",
+    "type": "Rye",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Oloroso sherry cask",
+    "confirmed": false
+  },
+  "JR": {
+    "name": "JR",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Jamaican rum cask",
+    "confirmed": false
+  },
+  "BAL": {
+    "name": "BAL",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Balsamo cask",
+    "confirmed": false
+  },
+  "WP-B": {
+    "name": "WP-B",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "White port cask",
+    "confirmed": false
+  },
+  "WP-R": {
+    "name": "WP-R",
+    "type": "Rye",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "White port cask",
+    "confirmed": false
+  },
+  "TP-B": {
+    "name": "TP-B",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Tawny port cask",
+    "confirmed": false
+  },
+  "TP-R": {
+    "name": "TP-R",
+    "type": "Rye",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Tawny port cask",
+    "confirmed": false
+  },
+  "EUC": {
+    "name": "EUC",
+    "type": "Rye",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Eucalipto cask",
+    "confirmed": false
+  },
+  "BR": {
+    "name": "BR",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Barbados rum cask",
+    "confirmed": false
+  },
+  "FSR-B": {
+    "name": "FSR-B",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Barbados rum cask",
+    "confirmed": false
+  },
+  "FSR-R": {
+    "name": "FSR-R",
+    "type": "Rye",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Barbados rum cask",
+    "confirmed": false
+  },
+  "JAQ": {
+    "name": "JAQ",
+    "type": "Rye",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Jacqueira (jackwood) cask",
+    "confirmed": false
+  },
+  "TO-B": {
+    "name": "TO-B",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Tokaji cask",
+    "confirmed": false
+  },
+  "TO-R": {
+    "name": "TO-R",
+    "type": "Rye",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Tokaji cask",
+    "confirmed": false
+  },
+  "PXS-R": {
+    "name": "PXS-R",
+    "type": "Rye",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "PX sherry cask",
+    "note": "101-95 was first one",
+    "confirmed": false
+  },
+  "PXS-B": {
+    "name": "PXS-B",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "PX sherry cask",
+    "note": "IRT-29 was first one",
+    "confirmed": false
+  },
+  "RP-B": {
+    "name": "RP-B",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Ruby port cask",
+    "confirmed": false
+  },
+  "VDN-B": {
+    "name": "VDN-B",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "VDN cask",
+    "confirmed": false
+  },
+  "MAP-R": {
+    "name": "MAP-R",
+    "type": "Rye",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Maple cask",
+    "confirmed": false
+  },
+  "MAP-B": {
+    "name": "MAP-B",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "American oak Maple cask",
+    "confirmed": false
+  },
+  "FOM-B": {
+    "name": "FOM-B",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "French oak Maple cask",
+    "confirmed": false
+  },
+  "HON-B": {
+    "name": "HON-B",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Honey cask",
+    "confirmed": false
+  },
+  "APR-B": {
+    "name": "APR-B",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Apricot brandy cask",
+    "confirmed": false
+  },
+  "TST-R": {
+    "name": "TST-R",
+    "type": "Rye",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "Toasted American/French oak cask",
+    "note": "First French oak was FO-R",
+    "confirmed": false
+  },
+  "PSB": {
+    "name": "PSB",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "Pot distilled",
+    "aging_location": "TN",
+    "confirmed": false
+  },
+  "E-WB": {
+    "name": "E-WB",
+    "type": "Bourbon",
+    "mashbill": "71/21/8",
+    "source": "WV distilled and aged",
+    "aging_location": "WV",
+    "note": "Exceptional Series: Wheated Bourbon",
+    "confirmed": true
+  },
+  "P90": {
+    "name": "P90",
+    "type": "Rye",
+    "mashbill": "90/10",
+    "source": "",
+    "aging_location": "IN",
+    "color": "Dark Green",
+    "age": "",
+    "note": "High Proof",
+    "confirmed": false
+  },
+  "N21": {
+    "name": "N21",
+    "type": "Bourbon",
+    "mashbill": "70/21/9",
+    "source": "GR",
+    "aging_location": "KY",
+    "color": "Yellow",
+    "note": "Distilled and aged in KY - ISC and Kelvin",
+    "confirmed": true
+  },
+  "ELE": {
+    "name": "ELE",
+    "type": "Bourbon",
+    "mashbill": "78/13/9",
+    "source": "",
+    "aging_location": "KY",
+    "color": "Maroon",
+    "note": "Distilled and aged in KY - ISC",
+    "confirmed": false
+  },
+  "BRW": {
+    "name": "BRW",
+    "type": "Bourbon",
+    "mashbill": "70/21/9",
+    "source": "",
+    "aging_location": "KY",
+    "color": "White/Offwhite",
+    "note": "Distilled and aged in KY - Kelvin",
+    "confirmed": false
+  },
+  "AQU": {
+    "name": "AQU",
+    "type": "Bourbon",
+    "mashbill": "70/21/9",
+    "source": "GR",
+    "aging_location": "KY",
+    "color": "Aqua",
+    "note": "Distilled and aged in KY - Kelvin",
+    "confirmed": false
+  },
+  "HRK": {
+    "name": "HRK",
+    "type": "Bourbon",
+    "mashbill": "60/36/4",
+    "source": "MGP",
+    "aging_location": "IN",
+    "color": "Yellow",
+    "note": "High rick aged, Kelvin",
+    "confirmed": true
+  },
+  "MEL": {
+    "name": "MEL",
+    "type": "Bourbon",
+    "mashbill": "75/13/12",
+    "source": "WT",
+    "aging_location": "KY",
+    "color": "Off pink",
+    "note": "KY distilled and aged",
+    "confirmed": false
+  },
+  "99C": {
+    "name": "99C",
+    "type": "Corn Whiskey",
+    "mashbill": "99/1",
+    "source": "",
+    "aging_location": "",
+    "color": "Red",
+    "confirmed": false
+  },
+  "20L": {
+    "name": "20L",
+    "type": "Corn Whiskey",
+    "mashbill": "99/1",
+    "source": "ALW",
+    "aging_location": "",
+    "color": "Gray",
+    "note": "High aged, high proof",
+    "confirmed": false
+  },
+  "F13": {
+    "name": "F13",
+    "type": "Bourbon",
+    "mashbill": "78/13/9",
+    "source": "Beam",
+    "aging_location": "KY",
+    "color": "Gold",
+    "note": "Distilled and aged in KY",
+    "confirmed": true
+  },
+  "HF13": {
+    "name": "HF13",
+    "type": "Bourbon",
+    "mashbill": "78/13/9",
+    "source": "Beam",
+    "aging_location": "KY",
+    "color": "Gold",
+    "note": "Distilled and aged in KY",
+    "confirmed": true
+  },
+  "JIT": {
+    "name": "JIT",
+    "type": "Bourbon",
+    "mashbill": "75/21/4",
+    "source": "Barton",
+    "aging_location": "KY",
+    "color": "Purple",
+    "note": "Aged and distilled in KY",
+    "confirmed": true
+  },
+  "SBG": {
+    "name": "SBG",
+    "type": "Bourbon",
+    "mashbill": "75/21/4",
+    "source": "Barton",
+    "aging_location": "KY",
+    "color": "Yellow",
+    "note": "Aged and distilled in KY",
+    "confirmed": true
+  },
+  "10K": {
+    "name": "10K",
+    "type": "Bourbon",
+    "mashbill": "75/13/12",
+    "source": "Beam",
+    "aging_location": "KY",
+    "color": "Black",
+    "note": "Aged and distilled in KY",
+    "confirmed": false
+  },
+  "VER": {
+    "name": "VER",
+    "type": "Bourbon",
+    "mashbill": "75/21/4",
+    "source": "Spice yeast",
+    "aging_location": "KY",
+    "color": "Dark yellow",
+    "note": "Aged and distilled in KY",
+    "confirmed": false
+  },
+  "PLT": {
+    "name": "PLT",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "Beam",
+    "aging_location": "KY",
+    "color": "Platinum",
+    "confirmed": false
+  },
+  "K45": {
+    "name": "K45",
+    "type": "Bourbon",
+    "mashbill": "51/45/4",
+    "source": "Bardstown",
+    "aging_location": "KY",
+    "color": "Gold",
+    "note": "High rye bourbon",
+    "confirmed": false
+  },
+  "VTO": {
+    "name": "VTO",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "KY",
+    "color": "Purple",
+    "note": "Burb distilled and aged in KY, Kelvin barrel",
+    "confirmed": false
+  },
+  "SEG": {
+    "name": "SEG",
+    "type": "Rye",
+    "mashbill": "64/30/6",
+    "source": "Bardstown",
+    "aging_location": "KY",
+    "color": "Blue",
+    "note": "Distilled and aged in KY",
+    "confirmed": true
+  },
+  "GLN": {
+    "name": "GLN",
+    "type": "Bourbon",
+    "mashbill": "75/21/4",
+    "source": "Barton",
+    "aging_location": "KY",
+    "color": "Silver",
+    "note": "Similar to KOA but different aging",
+    "confirmed": true
+  },
+  "KNF": {
+    "name": "KNF",
+    "type": "Bourbon",
+    "mashbill": "60/36/4",
+    "source": "BBC",
+    "aging_location": "KY",
+    "color": "Light blue",
+    "note": "KY distilled and aged",
+    "confirmed": true
+  },
+  "KHR": {
+    "name": "KHR",
+    "type": "Bourbon",
+    "mashbill": "",
+    "source": "",
+    "aging_location": "KY",
+    "color": "Silver",
+    "note": "TBD",
+    "confirmed": false
+  },
+  "GIN": {
+    "name": "GIN",
+    "type": "Bourbon",
+    "mashbill": "75/21/4",
+    "source": "Barton",
+    "aging_location": "KY",
+    "color": "Silver",
+    "note": "Aged in Owensboro, KY",
+    "confirmed": true
+  }
+}

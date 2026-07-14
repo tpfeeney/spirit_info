@@ -1,0 +1,229 @@
+{
+  "1xx": {
+    "source": "Beam/Bookers - Knob Creek"
+  },
+  "2xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "Most likely Kelvin",
+    "confirmed": true
+  },
+  "3xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "Most likely Kelvin",
+    "confirmed": true
+  },
+  "4xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "Most likely Kelvin",
+    "confirmed": true
+  },
+  "5xx": {
+    "source": "NDA on source (KY Bourbon)",
+    "note": "Rumored Willett"
+  },
+  "6xx": {
+    "source": "NDA on source (KY Bourbon)",
+    "note": "Rumored Willett"
+  },
+  "7xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "ISC/Kelvin? Unsure",
+    "confirmed": true
+  },
+  "8xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "ISC/Kelvin? Unsure",
+    "confirmed": true
+  },
+  "9xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "ISC/Kelvin? Unsure",
+    "confirmed": true
+  },
+  "10xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "Kelvin"
+  },
+  "11xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "Kelvin"
+  },
+  "12xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "Kelvin",
+    "note": "Same as 3xx, just different distillation date. Only 1200-1220 ish are Kelvin",
+    "confirmed": true
+  },
+  "13xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "Kelvin"
+  },
+  "14xx": {
+    "source": "Dickel Non-LCP"
+  },
+  "15xx": {
+    "source": "Starts MGP (1502-1549?) 21% rye, middle KY (1551-1582), ends MGP 21% (1583-1599) NDA on middle source",
+    "note": "Rumored Green River",
+    "barrel": "Kelvin",
+    "confirmed": true,
+    "confirmedNote": "Confirmed OZ / GR"
+  },
+  "16xx": {
+    "source": "MGP",
+    "mashbill": "36% rye",
+    "note": "Limited run of high-rye MGP; not Kelvin"
+  },
+  "19xx": {
+    "source": "MGP",
+    "mashbill": "36% rye",
+    "note": "Limited run of high-rye MGP",
+    "barrel": "Kelvin - 200-300 barrels of 19-20xx",
+    "confirmed": true
+  },
+  "20xx": {
+    "source": "MGP",
+    "mashbill": "36% rye",
+    "note": "Limited run of high-rye MGP",
+    "barrel": "ISC (these are Kelvin char 4)",
+    "confirmed": true
+  },
+  "24xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "ISC"
+  },
+  "27xx": {
+    "source": "Beam/Bookers"
+  },
+  "28xx": {
+    "source": "Beam/Bookers",
+    "note": "Added an S"
+  },
+  "30xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "Kelvin char 4",
+    "confirmed": true
+  },
+  "32xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "Kelvin"
+  },
+  "33xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "Kelvin"
+  },
+  "34xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "Kelvin"
+  },
+  "35xx": {
+    "source": "MGP",
+    "mashbill": "21% rye",
+    "barrel": "Kelvin"
+  },
+  "51xx": {
+    "source": "NDA",
+    "note": "Rumored Green River",
+    "barrel": "Kelvin/ISC? Unsure"
+  },
+  "55xx": {
+    "source": "NDA",
+    "note": "Rumored OZ Tyler/Barton? Unsure - much higher chance of Barton than OZ based on profile",
+    "confirmed": true
+  },
+  "6xxx": {
+    "source": "TN source; Old Distilling Co.; No LCP"
+  },
+  "72xx": {
+    "source": "TN source; No LCP",
+    "barrel": "Kelvin/ISC? Unsure"
+  },
+  "82xx": {
+    "source": "Most likely Beam"
+  },
+  "88xx": {
+    "source": "Rumored HH",
+    "barrel": "Kelvin barrels at NBC",
+    "confirmed": true,
+    "confirmedNote": "Confirmed HH",
+    "note": "Not calling it double oaked but it will have lived in 2 different barrels"
+  },
+  "89xx": {
+    "source": "Rumored HH",
+    "barrel": "Kelvin barrels at NBC",
+    "confirmed": true,
+    "note": "Not calling it double oaked but it will have lived in 2 different barrels. Same as 88xx"
+  },
+  "C1": {
+    "source": "Under NDA (Wild Turkey)",
+    "note": "Uncertain if under NDA",
+    "confirmed": true,
+    "confirmedNote": "Star = edit to all C barrels"
+  },
+  "C2": {
+    "source": "Under NDA (Wild Turkey)",
+    "note": "Uncertain if under NDA",
+    "confirmed": true,
+    "confirmedNote": "Star = edit to all C barrels"
+  },
+  "C3": {
+    "source": "Under NDA (Wild Turkey)",
+    "note": "Uncertain if under NDA",
+    "confirmed": true,
+    "confirmedNote": "Star = edit to all C barrels"
+  },
+  "C4": {
+    "source": "Under NDA (Wild Turkey)",
+    "note": "Uncertain if under NDA",
+    "confirmed": true,
+    "confirmedNote": "Star = edit to all C barrels"
+  },
+  "C5": {
+    "source": "Under NDA (Wild Turkey)",
+    "note": "Uncertain if under NDA",
+    "confirmed": true,
+    "confirmedNote": "Star = edit to all C barrels"
+  },
+  "C6": {
+    "source": "Under NDA (Wild Turkey)",
+    "note": "Uncertain if under NDA",
+    "confirmed": true,
+    "confirmedNote": "Star = edit to all C barrels"
+  },
+  "51xxx": {
+    "source": "MGP ALW"
+  },
+  "20xxx": {
+    "source": "Jefferson Reserve",
+    "barrel": "Kelvin/ISC? Unsure"
+  },
+  "10xxx": {
+    "type": "Rye",
+    "source": "6 year KY 100% rye, most likely Green River",
+    "mashbill": "100% rye",
+    "confirmed": true,
+    "confirmedNote": "Confirmed OZ / GR",
+    "note": "Ryes - all runs except below are 95/5 MGP"
+  },
+  "76xx": {
+    "type": "Rye",
+    "source": "95/5 MGP",
+    "mashbill": "95/5",
+    "barrel": "Kelvin",
+    "confirmed": true
+  }
+}
