@@ -206,21 +206,11 @@
     "confirmed": true
   },
   "TKO": {
-    "name": "TKO",
-    "type": "Rye",
-    "mashbill": "70/25/5",
-    "source": "Dickel",
-    "aging_location": "KY/TN",
-    "age": "8yrs+",
-    "note": "High proof",
-    "confirmed": true
-  },
-  "IKO": {
     "name": "IKO",
     "type": "Rye",
     "mashbill": "70/25/5",
     "source": "Dickel",
-    "aging_location": "KY",
+    "aging_location": "KY/TN",
     "color": "Pink wax",
     "age": "8yrs+",
     "note": "High Proof Dickel",
