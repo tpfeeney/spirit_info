@@ -1,128 +1,107 @@
-import os
-import json
-import re
-from datetime import datetime
+"""
+Suggestion system for adding brands, mashbills, RC codes, and NBC codes.
+"""
 
 import discord
 from discord import app_commands
 from discord.ext import commands
-from discord.ui import Select, View, Modal, TextInput
+import json
+import os
+from datetime import datetime
+from typing import Optional
 
+# Configuration
+DATA_DIR = "./data"
+SUGGESTIONS_FILE = os.path.join(DATA_DIR, "suggestions.json")
+OWNER_ID = None  # Set this to your Discord user ID
+REVIEW_CHANNEL_ID = None  # Set this to review channel ID if you want notifications
 
-# ============ Configuration - Adjust these values ============
-DATA_DIR = "data"
-SUGGESTIONS_FILE = "data/suggestions.json"
-REVIEW_CHANNEL_ID = None  # Set to your channel ID, e.g., 123456789012345678
-OWNER_ID = None  # Set to your Discord user ID
-# ============================================================
-
-_suggestion_counter = 0
-
-
-def get_categories():
-    """Get list of available categories from data files."""
-    cats = []
-    data_dir = DATA_DIR.lstrip("./")
-    if os.path.isdir(data_dir):
-        for filename in os.listdir(data_dir):
-            if filename.endswith(".json") and filename != "suggestions.json":
-                cats.append(filename.replace(".json", ""))
-    return sorted(cats)
-
-
-def next_id():
-    """Generate next suggestion ID."""
-    global _suggestion_counter
-    _suggestion_counter += 1
-    return _suggestion_counter
+# Ensure data directory exists
+os.makedirs(DATA_DIR, exist_ok=True)
 
 
 def load_suggestions():
-    """Load suggestions from file, initializing if needed."""
-    global _suggestion_counter
-    if _suggestion_counter == 0:
-        try:
-            if os.path.exists(SUGGESTIONS_FILE):
-                with open(SUGGESTIONS_FILE) as f:
-                    existing = json.load(f)
-                if existing:
-                    _suggestion_counter = max(s.get("id", 0) for s in existing) if existing else 0
-        except (json.JSONDecodeError, FileNotFoundError):
-            pass
+    """Load suggestions from file."""
+    if not os.path.exists(SUGGESTIONS_FILE):
+        return []
     try:
-        with open(SUGGESTIONS_FILE) as f:
+        with open(SUGGESTIONS_FILE, "r") as f:
             return json.load(f)
-    except (json.JSONDecodeError, FileNotFoundError):
+    except Exception as e:
+        print(f"Error loading suggestions: {e}")
         return []
 
 
 def save_suggestions(queue):
     """Save suggestions to file."""
-    with open(SUGGESTIONS_FILE, "w") as f:
-        json.dump(queue, f, indent=2)
-
-
-def load_json_data(filename):
-    """Load a JSON data file."""
-    filepath = os.path.join(DATA_DIR.lstrip("./"), filename)
     try:
-        if os.path.exists(filepath):
-            with open(filepath) as f:
-                return json.load(f)
-    except (json.JSONDecodeError, FileNotFoundError):
-        pass
-    return {}
+        with open(SUGGESTIONS_FILE, "w") as f:
+            json.dump(queue, f, indent=2)
+    except Exception as e:
+        print(f"Error saving suggestions: {e}")
 
 
-def validate_mashbill_format(mashbill):
+def next_id():
+    """Generate next suggestion ID."""
+    queue = load_suggestions()
+    if not queue:
+        return 1
+    return max(s["id"] for s in queue) + 1
+
+
+def get_mashbills():
+    """Load existing mashbills."""
+    mashbill_path = os.path.join(DATA_DIR, "mashbills.json")
+    if not os.path.exists(mashbill_path):
+        return []
+    try:
+        with open(mashbill_path, "r") as f:
+            data = json.load(f)
+            return sorted(list(data.keys()))
+    except Exception:
+        return []
+
+
+def validate_mashbill_format(mashbill: str) -> bool:
     """Validate mashbill format like 51C/25R/24MB."""
-    pattern = r'^\d+[A-Z]+(/\d+[A-Z]+)*$'
+    import re
+    pattern = r"^\d+(\.\d+)?[A-Z]+(/\d+(\.\d+)?[A-Z]+)*$"
     return bool(re.match(pattern, mashbill.upper()))
 
 
-def validate_nbc_code_format(code):
-    """Validate NBC code format like 52xx or 10xxx."""
-    pattern = r'^\d+x+$|^[A-Z]\d+$'
-    return bool(re.match(pattern, code.upper()))
+# ==================== MODAL CLASSES ====================
 
-
-# ==================== MODALS ====================
-
-class NewMashbillModal(Modal, title="Suggest New Mashbill"):
-    mashbill = TextInput(
-        label="Mashbill (e.g., 51C/25R/24MB)",
-        placeholder="Format: 51C/25R/24MB",
+class NewMashbillModal(discord.ui.Modal, title="New Mashbill"):
+    mashbill = discord.ui.TextInput(
+        label="Mashbill",
+        placeholder="e.g., 51C/25R/24MB",
         required=True,
-        max_length=50
+        max_length=100,
     )
-    brand = TextInput(
-        label="Brand/Product (Optional)",
-        placeholder="Brand or product name",
+    brand = discord.ui.TextInput(
+        label="Brand/Product (optional)",
+        placeholder="e.g., Maker's Mark",
         required=False,
-        max_length=100
+        max_length=200,
     )
-
-    def __init__(self):
-        super().__init__()
 
     async def on_submit(self, interaction: discord.Interaction):
-        mashbill_value = self.mashbill.value.strip().upper()
+        mashbill_value = self.mashbill.value.strip()
         
         # Validate format
         if not validate_mashbill_format(mashbill_value):
             await interaction.response.send_message(
-                "❌ Invalid mashbill format. Please use format like: 51C/25R/24MB",
-                ephemeral=True
+                "❌ Invalid mashbill format. Use format like: 51C/25R/24MB",
+                ephemeral=True,
             )
             return
         
-        # Check if mashbill already exists
-        mashbills_data = load_json_data("mashbills.json")
-        if mashbill_value in mashbills_data:
+        # Check if exists
+        existing = get_mashbills()
+        if mashbill_value.upper() in [m.upper() for m in existing]:
             await interaction.response.send_message(
-                f"⚠️ Mashbill `{mashbill_value}` already exists!\n"
-                f"Use the 'Brand' option if you want to add a brand to this mashbill.",
-                ephemeral=True
+                f"⚠️ Mashbill `{mashbill_value}` already exists!",
+                ephemeral=True,
             )
             return
         
@@ -145,14 +124,13 @@ class NewMashbillModal(Modal, title="Suggest New Mashbill"):
         
         # Create embed
         embed = discord.Embed(
-            title="📝 New Mashbill Suggestion Submitted",
-            color=discord.Color.blue(),
+            title="✅ New Mashbill Suggestion Submitted",
+            color=discord.Color.green(),
         )
-        embed.add_field(name="Mashbill", value=mashbill_value, inline=True)
-        embed.add_field(name="Suggestion ID", value=f"#{suggestion['id']}", inline=True)
+        embed.add_field(name="Mashbill", value=mashbill_value, inline=False)
         if self.brand.value:
-            embed.add_field(name="Brand", value=self.brand.value, inline=False)
-        embed.add_field(name="Status", value="⏳ Awaiting review", inline=False)
+            embed.add_field(name="Brand", value=self.brand.value.strip(), inline=False)
+        embed.set_footer(text=f"ID: #{suggestion['id']}")
         
         # Send to review channel
         if REVIEW_CHANNEL_ID:
@@ -166,15 +144,15 @@ class NewMashbillModal(Modal, title="Suggest New Mashbill"):
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
-class BrandToMashbillModal(Modal, title="Add Brand to Mashbill"):
-    brand = TextInput(
+class BrandToMashbillModal(discord.ui.Modal, title="Add Brand to Mashbill"):
+    brand = discord.ui.TextInput(
         label="Brand/Product Name",
-        placeholder="Enter the brand name",
+        placeholder="e.g., Maker's Mark",
         required=True,
-        max_length=100
+        max_length=200,
     )
 
-    def __init__(self, mashbill):
+    def __init__(self, mashbill: str):
         super().__init__()
         self.mashbill = mashbill
 
@@ -198,13 +176,12 @@ class BrandToMashbillModal(Modal, title="Add Brand to Mashbill"):
         
         # Create embed
         embed = discord.Embed(
-            title="🥃 Brand Suggestion Submitted",
-            color=discord.Color.blue(),
+            title="✅ Brand Suggestion Submitted",
+            color=discord.Color.green(),
         )
-        embed.add_field(name="Mashbill", value=self.mashbill, inline=True)
-        embed.add_field(name="Brand", value=brand_value, inline=True)
-        embed.add_field(name="Suggestion ID", value=f"#{suggestion['id']}", inline=True)
-        embed.add_field(name="Status", value="⏳ Awaiting review", inline=False)
+        embed.add_field(name="Brand", value=brand_value, inline=False)
+        embed.add_field(name="Mashbill", value=self.mashbill, inline=False)
+        embed.set_footer(text=f"ID: #{suggestion['id']}")
         
         # Send to review channel
         if REVIEW_CHANNEL_ID:
@@ -218,129 +195,133 @@ class BrandToMashbillModal(Modal, title="Add Brand to Mashbill"):
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
-class NewRCCodeModal(Modal, title="Suggest New RC Code"):
-    code = TextInput(
-        label="RC Code (e.g., HIC, KOA)",
-        placeholder="Enter the code",
+class NewRCCodeModal(discord.ui.Modal, title="New RC Code - Part 1"):
+    code = discord.ui.TextInput(
+        label="RC Code",
+        placeholder="e.g., KEL",
         required=True,
-        max_length=20
+        max_length=20,
     )
-    type_field = TextInput(
-        label="Type (Optional)",
-        placeholder="e.g., Bourbon, Rye, etc.",
+    name = discord.ui.TextInput(
+        label="Name",
+        placeholder="e.g., Kelvin Barrel",
+        required=True,
+        max_length=100,
+    )
+    type_field = discord.ui.TextInput(
+        label="Type (optional)",
+        placeholder="e.g., Bourbon, Rye",
         required=False,
-        max_length=50
+        max_length=50,
     )
-    mashbill = TextInput(
-        label="Mashbill (Optional)",
+    mashbill = discord.ui.TextInput(
+        label="Mashbill (optional)",
         placeholder="e.g., 75/21/4",
         required=False,
-        max_length=50
-    )
-    source = TextInput(
-        label="Source (Optional)",
-        placeholder="e.g., MGP, Barton, etc.",
-        required=False,
-        max_length=100
-    )
-    aging_location = TextInput(
-        label="Aging Location (Optional)",
-        placeholder="e.g., KY, IN, etc.",
-        required=False,
-        max_length=100
+        max_length=100,
     )
 
     async def on_submit(self, interaction: discord.Interaction):
-        code_value = self.code.value.strip().upper()
+        # Store data for part 2
+        self.code_value = self.code.value.strip()
+        self.name_value = self.name.value.strip()
+        self.type_value = self.type_field.value.strip() if self.type_field.value else None
+        self.mashbill_value = self.mashbill.value.strip() if self.mashbill.value else None
         
-        # Check if code already exists
-        rc_data = load_json_data("rc_codes.json")
-        if code_value in rc_data:
-            await interaction.response.send_message(
-                f"⚠️ RC Code `{code_value}` already exists!\n"
-                f"Use the 'Update RC Code' option to modify it.",
-                ephemeral=True
-            )
-            return
-        
+        # Show part 2
+        modal2 = NewRCCodeModal2(
+            self.code_value,
+            self.name_value,
+            self.type_value,
+            self.mashbill_value,
+        )
+        await interaction.response.send_modal(modal2)
+
+
+class NewRCCodeModal2(discord.ui.Modal, title="New RC Code - Part 2"):
+    source = discord.ui.TextInput(
+        label="Source (optional)",
+        placeholder="e.g., MGP, Barton",
+        required=False,
+        max_length=100,
+    )
+    aging_location = discord.ui.TextInput(
+        label="Aging Location (optional)",
+        placeholder="e.g., KY, IN",
+        required=False,
+        max_length=50,
+    )
+    color = discord.ui.TextInput(
+        label="Color (optional)",
+        placeholder="e.g., Red, Blue",
+        required=False,
+        max_length=50,
+    )
+    note = discord.ui.TextInput(
+        label="Note (optional)",
+        placeholder="Additional information",
+        required=False,
+        max_length=500,
+        style=discord.TextStyle.paragraph,
+    )
+
+    def __init__(self, code: str, name: str, type_val: Optional[str], mashbill: Optional[str]):
+        super().__init__()
+        self.code = code
+        self.name = name
+        self.type_val = type_val
+        self.mashbill = mashbill
+
+    async def on_submit(self, interaction: discord.Interaction):
         # Create suggestion
         suggestion = {
             "id": next_id(),
             "type": "new_rc_code",
-            "code": code_value,
+            "code": self.code,
+            "name": self.name,
             "timestamp": datetime.utcnow().isoformat(),
             "submitted_by": str(interaction.user.id),
         }
         
-        if self.type_field.value:
-            suggestion["rc_type"] = self.type_field.value.strip()
-        if self.mashbill.value:
-            suggestion["mashbill"] = self.mashbill.value.strip()
+        # Add optional fields
+        if self.type_val:
+            suggestion["whiskey_type"] = self.type_val
+        if self.mashbill:
+            suggestion["mashbill"] = self.mashbill
         if self.source.value:
             suggestion["source"] = self.source.value.strip()
         if self.aging_location.value:
             suggestion["aging_location"] = self.aging_location.value.strip()
-        
-        # Show second modal for additional fields
-        await interaction.response.send_modal(NewRCCodeModal2(suggestion))
-
-
-class NewRCCodeModal2(Modal, title="RC Code Details (Part 2)"):
-    color = TextInput(
-        label="Color (Optional)",
-        placeholder="e.g., Dark Red, Gold, etc.",
-        required=False,
-        max_length=50
-    )
-    note = TextInput(
-        label="Note (Optional)",
-        placeholder="Additional notes",
-        required=False,
-        max_length=500,
-        style=discord.TextStyle.paragraph
-    )
-    confirmed = TextInput(
-        label="Confirmed? (Optional)",
-        placeholder="yes or no",
-        required=False,
-        max_length=3
-    )
-
-    def __init__(self, suggestion_data):
-        super().__init__()
-        self.suggestion_data = suggestion_data
-
-    async def on_submit(self, interaction: discord.Interaction):
         if self.color.value:
-            self.suggestion_data["color"] = self.color.value.strip()
+            suggestion["color"] = self.color.value.strip()
         if self.note.value:
-            self.suggestion_data["note"] = self.note.value.strip()
-        if self.confirmed.value:
-            confirmed_value = self.confirmed.value.strip().lower()
-            if confirmed_value in ['yes', 'y', 'true']:
-                self.suggestion_data["confirmed"] = True
-            elif confirmed_value in ['no', 'n', 'false']:
-                self.suggestion_data["confirmed"] = False
+            suggestion["note"] = self.note.value.strip()
         
         # Save
         queue = load_suggestions()
-        queue.append(self.suggestion_data)
+        queue.append(suggestion)
         save_suggestions(queue)
         
         # Create embed
         embed = discord.Embed(
-            title="🔤 New RC Code Suggestion Submitted",
-            color=discord.Color.blue(),
+            title="✅ New RC Code Suggestion Submitted",
+            color=discord.Color.green(),
         )
-        embed.add_field(name="Code", value=self.suggestion_data["code"], inline=True)
-        embed.add_field(name="Suggestion ID", value=f"#{self.suggestion_data['id']}", inline=True)
-        
-        for key in ["rc_type", "mashbill", "source", "aging_location", "color", "note", "confirmed"]:
-            if key in self.suggestion_data:
-                display_key = "Type" if key == "rc_type" else key.replace("_", " ").title()
-                embed.add_field(name=display_key, value=str(self.suggestion_data[key]), inline=True)
-        
-        embed.add_field(name="Status", value="⏳ Awaiting review", inline=False)
+        embed.add_field(name="Code", value=self.code, inline=True)
+        embed.add_field(name="Name", value=self.name, inline=True)
+        if self.type_val:
+            embed.add_field(name="Type", value=self.type_val, inline=True)
+        if self.mashbill:
+            embed.add_field(name="Mashbill", value=self.mashbill, inline=True)
+        if self.source.value:
+            embed.add_field(name="Source", value=self.source.value.strip(), inline=True)
+        if self.aging_location.value:
+            embed.add_field(name="Aging Location", value=self.aging_location.value.strip(), inline=True)
+        if self.color.value:
+            embed.add_field(name="Color", value=self.color.value.strip(), inline=True)
+        if self.note.value:
+            embed.add_field(name="Note", value=self.note.value.strip(), inline=False)
+        embed.set_footer(text=f"ID: #{suggestion['id']}")
         
         # Send to review channel
         if REVIEW_CHANNEL_ID:
@@ -354,129 +335,48 @@ class NewRCCodeModal2(Modal, title="RC Code Details (Part 2)"):
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
-class UpdateRCCodeModal(Modal, title="Update RC Code"):
-    code = TextInput(
-        label="RC Code to Update",
-        placeholder="Enter the existing code",
+class UpdateRCCodeModal(discord.ui.Modal, title="Update RC Code"):
+    code = discord.ui.TextInput(
+        label="RC Code",
+        placeholder="e.g., KEL",
         required=True,
-        max_length=20
+        max_length=20,
     )
 
     async def on_submit(self, interaction: discord.Interaction):
-        code_value = self.code.value.strip().upper()
+        code_value = self.code.value.strip()
         
-        # Check if code exists
-        rc_data = load_json_data("rc_codes.json")
-        if code_value not in rc_data:
-            await interaction.response.send_message(
-                f"❌ RC Code `{code_value}` does not exist!\n"
-                f"Use the 'New RC Code' option to create it.",
-                ephemeral=True
-            )
-            return
-        
-        # Show field selection view
-        view = RCFieldSelectionView(code_value, rc_data[code_value])
+        # Show field selection
+        view = RCFieldSelectionView(code_value)
         await interaction.response.send_message(
-            f"Select which field to update for RC Code `{code_value}`:",
+            f"Select which field to update for RC code `{code_value}`:",
             view=view,
-            ephemeral=True
+            ephemeral=True,
         )
 
 
-class RCFieldSelectionView(View):
-    def __init__(self, code, current_data):
-        super().__init__(timeout=180)
-        self.code = code
-        self.current_data = current_data
-        
-        # Create select menu
-        options = [
-            discord.SelectOption(label="Type", value="type", description=f"Current: {current_data.get('type', 'Not set')}"),
-            discord.SelectOption(label="Mashbill", value="mashbill", description=f"Current: {current_data.get('mashbill', 'Not set')}"),
-            discord.SelectOption(label="Source", value="source", description=f"Current: {current_data.get('source', 'Not set')}"),
-            discord.SelectOption(label="Aging Location", value="aging_location", description=f"Current: {current_data.get('aging_location', 'Not set')}"),
-            discord.SelectOption(label="Color", value="color", description=f"Current: {current_data.get('color', 'Not set')}"),
-            discord.SelectOption(label="Note", value="note", description=f"Current: {current_data.get('note', 'Not set')[:50]}"),
-            discord.SelectOption(label="Confirmed", value="confirmed", description=f"Current: {current_data.get('confirmed', 'Not set')}"),
-        ]
-        
-        select = Select(
-            placeholder="Choose a field to update...",
-            options=options,
-            custom_id="rc_field_select"
-        )
-        select.callback = self.select_callback
-        self.add_item(select)
-    
-    async def select_callback(self, interaction: discord.Interaction):
-        field = interaction.data["values"][0]
-        
-        # Show modal for the selected field
-        modal = UpdateRCFieldModal(self.code, field, self.current_data.get(field, ""))
-        await interaction.response.send_modal(modal)
+class UpdateRCCodeFieldModal(discord.ui.Modal, title="Update RC Code Field"):
+    value = discord.ui.TextInput(
+        label="New Value",
+        required=True,
+        max_length=500,
+        style=discord.TextStyle.paragraph,
+    )
 
-
-class UpdateRCFieldModal(Modal):
-    def __init__(self, code, field, current_value):
-        super().__init__(title=f"Update RC Code: {code}")
+    def __init__(self, code: str, field: str):
+        super().__init__()
         self.code = code
         self.field = field
-        
-        display_name = field.replace("_", " ").title()
-        
-        if field == "confirmed":
-            self.value_input = TextInput(
-                label=display_name,
-                placeholder="yes or no",
-                default=str(current_value) if current_value else "",
-                required=True,
-                max_length=10
-            )
-        elif field == "note":
-            self.value_input = TextInput(
-                label=display_name,
-                placeholder=f"New {display_name}",
-                default=str(current_value) if current_value else "",
-                required=True,
-                max_length=500,
-                style=discord.TextStyle.paragraph
-            )
-        else:
-            self.value_input = TextInput(
-                label=display_name,
-                placeholder=f"New {display_name}",
-                default=str(current_value) if current_value else "",
-                required=True,
-                max_length=100
-            )
-        
-        self.add_item(self.value_input)
+        self.value.label = f"New {field.replace('_', ' ').title()}"
 
     async def on_submit(self, interaction: discord.Interaction):
-        new_value = self.value_input.value.strip()
-        
-        # Handle confirmed field specially
-        if self.field == "confirmed":
-            confirmed_value = new_value.lower()
-            if confirmed_value in ['yes', 'y', 'true']:
-                new_value = True
-            elif confirmed_value in ['no', 'n', 'false']:
-                new_value = False
-            else:
-                await interaction.response.send_message(
-                    "❌ Invalid value for confirmed. Please use 'yes' or 'no'.",
-                    ephemeral=True
-                )
-                return
-        
         # Create suggestion
         suggestion = {
             "id": next_id(),
             "type": "update_rc_code",
             "code": self.code,
             "field": self.field,
-            "value": new_value,
+            "value": self.value.value.strip(),
             "timestamp": datetime.utcnow().isoformat(),
             "submitted_by": str(interaction.user.id),
         }
@@ -488,14 +388,13 @@ class UpdateRCFieldModal(Modal):
         
         # Create embed
         embed = discord.Embed(
-            title="🔤 Update RC Code Suggestion Submitted",
-            color=discord.Color.blue(),
+            title="✅ RC Code Update Suggestion Submitted",
+            color=discord.Color.green(),
         )
         embed.add_field(name="Code", value=self.code, inline=True)
         embed.add_field(name="Field", value=self.field.replace("_", " ").title(), inline=True)
-        embed.add_field(name="New Value", value=str(new_value), inline=True)
-        embed.add_field(name="Suggestion ID", value=f"#{suggestion['id']}", inline=True)
-        embed.add_field(name="Status", value="⏳ Awaiting review", inline=False)
+        embed.add_field(name="New Value", value=self.value.value.strip(), inline=False)
+        embed.set_footer(text=f"ID: #{suggestion['id']}")
         
         # Send to review channel
         if REVIEW_CHANNEL_ID:
@@ -509,121 +408,129 @@ class UpdateRCFieldModal(Modal):
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
-class NewNBCCodeModal(Modal, title="Suggest New NBC Code"):
-    code = TextInput(
-        label="NBC Code (e.g., 52xx, 10xxx)",
-        placeholder="Format: 52xx or similar",
+class NewNBCCodeModal(discord.ui.Modal, title="New NBC Code"):
+    code = discord.ui.TextInput(
+        label="NBC Code (format: 52xx)",
+        placeholder="e.g., 5201",
         required=True,
-        max_length=20
+        max_length=20,
     )
-    source = TextInput(
-        label="Source (Optional)",
-        placeholder="e.g., MGP, Barton, etc.",
+    source = discord.ui.TextInput(
+        label="Source (optional)",
+        placeholder="e.g., MGP, Barton",
         required=False,
-        max_length=100
+        max_length=100,
     )
-    mashbill = TextInput(
-        label="Mashbill (Optional)",
-        placeholder="e.g., 21% rye, 36% rye",
+    mashbill = discord.ui.TextInput(
+        label="Mashbill (optional)",
+        placeholder="e.g., 75/21/4",
         required=False,
-        max_length=50
+        max_length=100,
     )
-    barrel = TextInput(
-        label="Barrel (Optional)",
-        placeholder="e.g., Kelvin, ISC",
+    barrel = discord.ui.TextInput(
+        label="Barrel (optional)",
+        placeholder="e.g., Kelvin",
         required=False,
-        max_length=100
+        max_length=100,
     )
 
     async def on_submit(self, interaction: discord.Interaction):
         code_value = self.code.value.strip()
         
         # Validate format
-        if not validate_nbc_code_format(code_value):
+        if not code_value.lower().endswith("xx") and not code_value.lower().endswith("xxx"):
             await interaction.response.send_message(
-                "❌ Invalid NBC code format. Please use format like: 52xx or 10xxx",
-                ephemeral=True
+                "⚠️ NBC codes typically end with 'xx' or 'xxx' (e.g., 52xx, 10xxx)",
+                ephemeral=True,
             )
-            return
+            # Continue anyway, just warn
         
-        # Check if code already exists
-        nbc_data = load_json_data("nbc_codes.json")
-        if code_value in nbc_data:
-            await interaction.response.send_message(
-                f"⚠️ NBC Code `{code_value}` already exists!\n"
-                f"Use the 'Update NBC Code' option to modify it.",
-                ephemeral=True
-            )
-            return
+        # Store for part 2
+        self.code_value = code_value
+        self.source_value = self.source.value.strip() if self.source.value else None
+        self.mashbill_value = self.mashbill.value.strip() if self.mashbill.value else None
+        self.barrel_value = self.barrel.value.strip() if self.barrel.value else None
         
+        # Show part 2
+        modal2 = NewNBCCodeModal2(
+            self.code_value,
+            self.source_value,
+            self.mashbill_value,
+            self.barrel_value,
+        )
+        await interaction.response.send_modal(modal2)
+
+
+class NewNBCCodeModal2(discord.ui.Modal, title="New NBC Code - Part 2"):
+    note = discord.ui.TextInput(
+        label="Note (optional)",
+        placeholder="Additional information",
+        required=False,
+        max_length=500,
+        style=discord.TextStyle.paragraph,
+    )
+    confirmed = discord.ui.TextInput(
+        label="Confirmed? (optional)",
+        placeholder="yes/no or true/false",
+        required=False,
+        max_length=10,
+    )
+
+    def __init__(self, code: str, source: Optional[str], mashbill: Optional[str], barrel: Optional[str]):
+        super().__init__()
+        self.code = code
+        self.source = source
+        self.mashbill = mashbill
+        self.barrel = barrel
+
+    async def on_submit(self, interaction: discord.Interaction):
         # Create suggestion
         suggestion = {
             "id": next_id(),
             "type": "new_nbc_code",
-            "code": code_value,
+            "code": self.code,
             "timestamp": datetime.utcnow().isoformat(),
             "submitted_by": str(interaction.user.id),
         }
         
-        if self.source.value:
-            suggestion["source"] = self.source.value.strip()
-        if self.mashbill.value:
-            suggestion["mashbill"] = self.mashbill.value.strip()
-        if self.barrel.value:
-            suggestion["barrel"] = self.barrel.value.strip()
-        
-        # Show second modal for additional fields
-        await interaction.response.send_modal(NewNBCCodeModal2(suggestion))
-
-
-class NewNBCCodeModal2(Modal, title="NBC Code Details (Part 2)"):
-    note = TextInput(
-        label="Note (Optional)",
-        placeholder="Additional notes",
-        required=False,
-        max_length=500,
-        style=discord.TextStyle.paragraph
-    )
-    confirmed = TextInput(
-        label="Confirmed? (Optional)",
-        placeholder="yes or no",
-        required=False,
-        max_length=3
-    )
-
-    def __init__(self, suggestion_data):
-        super().__init__()
-        self.suggestion_data = suggestion_data
-
-    async def on_submit(self, interaction: discord.Interaction):
+        # Add optional fields
+        if self.source:
+            suggestion["source"] = self.source
+        if self.mashbill:
+            suggestion["mashbill"] = self.mashbill
+        if self.barrel:
+            suggestion["barrel"] = self.barrel
         if self.note.value:
-            self.suggestion_data["note"] = self.note.value.strip()
+            suggestion["note"] = self.note.value.strip()
         if self.confirmed.value:
-            confirmed_value = self.confirmed.value.strip().lower()
-            if confirmed_value in ['yes', 'y', 'true']:
-                self.suggestion_data["confirmed"] = True
-            elif confirmed_value in ['no', 'n', 'false']:
-                self.suggestion_data["confirmed"] = False
+            conf_val = self.confirmed.value.strip().lower()
+            if conf_val in ["yes", "true", "1"]:
+                suggestion["confirmed"] = True
+            elif conf_val in ["no", "false", "0"]:
+                suggestion["confirmed"] = False
         
         # Save
         queue = load_suggestions()
-        queue.append(self.suggestion_data)
+        queue.append(suggestion)
         save_suggestions(queue)
         
         # Create embed
         embed = discord.Embed(
-            title="📦 New NBC Code Suggestion Submitted",
-            color=discord.Color.blue(),
+            title="✅ New NBC Code Suggestion Submitted",
+            color=discord.Color.green(),
         )
-        embed.add_field(name="Code", value=self.suggestion_data["code"], inline=True)
-        embed.add_field(name="Suggestion ID", value=f"#{self.suggestion_data['id']}", inline=True)
-        
-        for key in ["source", "mashbill", "barrel", "note", "confirmed"]:
-            if key in self.suggestion_data:
-                display_key = key.replace("_", " ").title()
-                embed.add_field(name=display_key, value=str(self.suggestion_data[key]), inline=True)
-        
-        embed.add_field(name="Status", value="⏳ Awaiting review", inline=False)
+        embed.add_field(name="Code", value=self.code, inline=True)
+        if self.source:
+            embed.add_field(name="Source", value=self.source, inline=True)
+        if self.mashbill:
+            embed.add_field(name="Mashbill", value=self.mashbill, inline=True)
+        if self.barrel:
+            embed.add_field(name="Barrel", value=self.barrel, inline=True)
+        if self.note.value:
+            embed.add_field(name="Note", value=self.note.value.strip(), inline=False)
+        if self.confirmed.value:
+            embed.add_field(name="Confirmed", value=self.confirmed.value.strip(), inline=True)
+        embed.set_footer(text=f"ID: #{suggestion['id']}")
         
         # Send to review channel
         if REVIEW_CHANNEL_ID:
@@ -637,127 +544,48 @@ class NewNBCCodeModal2(Modal, title="NBC Code Details (Part 2)"):
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
-class UpdateNBCCodeModal(Modal, title="Update NBC Code"):
-    code = TextInput(
-        label="NBC Code to Update",
-        placeholder="e.g., 52xx, 10xxx",
+class UpdateNBCCodeModal(discord.ui.Modal, title="Update NBC Code"):
+    code = discord.ui.TextInput(
+        label="NBC Code (format: 52xx)",
+        placeholder="e.g., 5201",
         required=True,
-        max_length=20
+        max_length=20,
     )
 
     async def on_submit(self, interaction: discord.Interaction):
         code_value = self.code.value.strip()
         
-        # Check if code exists
-        nbc_data = load_json_data("nbc_codes.json")
-        if code_value not in nbc_data:
-            await interaction.response.send_message(
-                f"❌ NBC Code `{code_value}` does not exist!\n"
-                f"Use the 'New NBC Code' option to create it.",
-                ephemeral=True
-            )
-            return
-        
-        # Show field selection view
-        view = NBCFieldSelectionView(code_value, nbc_data[code_value])
+        # Show field selection
+        view = NBCFieldSelectionView(code_value)
         await interaction.response.send_message(
-            f"Select which field to update for NBC Code `{code_value}`:",
+            f"Select which field to update for NBC code `{code_value}`:",
             view=view,
-            ephemeral=True
+            ephemeral=True,
         )
 
 
-class NBCFieldSelectionView(View):
-    def __init__(self, code, current_data):
-        super().__init__(timeout=180)
-        self.code = code
-        self.current_data = current_data
-        
-        # Create select menu
-        options = [
-            discord.SelectOption(label="Source", value="source", description=f"Current: {current_data.get('source', 'Not set')[:50]}"),
-            discord.SelectOption(label="Mashbill", value="mashbill", description=f"Current: {current_data.get('mashbill', 'Not set')}"),
-            discord.SelectOption(label="Barrel", value="barrel", description=f"Current: {current_data.get('barrel', 'Not set')[:50]}"),
-            discord.SelectOption(label="Note", value="note", description=f"Current: {current_data.get('note', 'Not set')[:50]}"),
-            discord.SelectOption(label="Confirmed", value="confirmed", description=f"Current: {current_data.get('confirmed', 'Not set')}"),
-        ]
-        
-        select = Select(
-            placeholder="Choose a field to update...",
-            options=options,
-            custom_id="nbc_field_select"
-        )
-        select.callback = self.select_callback
-        self.add_item(select)
-    
-    async def select_callback(self, interaction: discord.Interaction):
-        field = interaction.data["values"][0]
-        
-        # Show modal for the selected field
-        modal = UpdateNBCFieldModal(self.code, field, self.current_data.get(field, ""))
-        await interaction.response.send_modal(modal)
+class UpdateNBCCodeFieldModal(discord.ui.Modal, title="Update NBC Code Field"):
+    value = discord.ui.TextInput(
+        label="New Value",
+        required=True,
+        max_length=500,
+        style=discord.TextStyle.paragraph,
+    )
 
-
-class UpdateNBCFieldModal(Modal):
-    def __init__(self, code, field, current_value):
-        super().__init__(title=f"Update NBC Code: {code}")
+    def __init__(self, code: str, field: str):
+        super().__init__()
         self.code = code
         self.field = field
-        
-        display_name = field.replace("_", " ").title()
-        
-        if field == "confirmed":
-            self.value_input = TextInput(
-                label=display_name,
-                placeholder="yes or no",
-                default=str(current_value) if current_value else "",
-                required=True,
-                max_length=10
-            )
-        elif field == "note":
-            self.value_input = TextInput(
-                label=display_name,
-                placeholder=f"New {display_name}",
-                default=str(current_value) if current_value else "",
-                required=True,
-                max_length=500,
-                style=discord.TextStyle.paragraph
-            )
-        else:
-            self.value_input = TextInput(
-                label=display_name,
-                placeholder=f"New {display_name}",
-                default=str(current_value) if current_value else "",
-                required=True,
-                max_length=100
-            )
-        
-        self.add_item(self.value_input)
+        self.value.label = f"New {field.replace('_', ' ').title()}"
 
     async def on_submit(self, interaction: discord.Interaction):
-        new_value = self.value_input.value.strip()
-        
-        # Handle confirmed field specially
-        if self.field == "confirmed":
-            confirmed_value = new_value.lower()
-            if confirmed_value in ['yes', 'y', 'true']:
-                new_value = True
-            elif confirmed_value in ['no', 'n', 'false']:
-                new_value = False
-            else:
-                await interaction.response.send_message(
-                    "❌ Invalid value for confirmed. Please use 'yes' or 'no'.",
-                    ephemeral=True
-                )
-                return
-        
         # Create suggestion
         suggestion = {
             "id": next_id(),
             "type": "update_nbc_code",
             "code": self.code,
             "field": self.field,
-            "value": new_value,
+            "value": self.value.value.strip(),
             "timestamp": datetime.utcnow().isoformat(),
             "submitted_by": str(interaction.user.id),
         }
@@ -769,14 +597,13 @@ class UpdateNBCFieldModal(Modal):
         
         # Create embed
         embed = discord.Embed(
-            title="📦 Update NBC Code Suggestion Submitted",
-            color=discord.Color.blue(),
+            title="✅ NBC Code Update Suggestion Submitted",
+            color=discord.Color.green(),
         )
         embed.add_field(name="Code", value=self.code, inline=True)
         embed.add_field(name="Field", value=self.field.replace("_", " ").title(), inline=True)
-        embed.add_field(name="New Value", value=str(new_value), inline=True)
-        embed.add_field(name="Suggestion ID", value=f"#{suggestion['id']}", inline=True)
-        embed.add_field(name="Status", value="⏳ Awaiting review", inline=False)
+        embed.add_field(name="New Value", value=self.value.value.strip(), inline=False)
+        embed.set_footer(text=f"ID: #{suggestion['id']}")
         
         # Send to review channel
         if REVIEW_CHANNEL_ID:
@@ -790,164 +617,151 @@ class UpdateNBCFieldModal(Modal):
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
-# ==================== VIEWS ====================
+# ==================== VIEW CLASSES ====================
 
-class CategorySelectionView(View):
-    def __init__(self):
-        super().__init__(timeout=180)
-        
-        # Create select menu
-        options = [
-            discord.SelectOption(label="Mashbill", value="mashbill", emoji="📋", description="Suggest a new mashbill"),
-            discord.SelectOption(label="Brand", value="brand", emoji="🥃", description="Add a brand to an existing mashbill"),
-            discord.SelectOption(label="RC (Rare Character)", value="rc", emoji="🔤", description="Suggest or update RC code"),
-            discord.SelectOption(label="NBC (Barrel Code)", value="nbc", emoji="📦", description="Suggest or update NBC code"),
-        ]
-        
-        select = Select(
-            placeholder="Choose what to suggest...",
-            options=options,
-            custom_id="category_select"
-        )
-        select.callback = self.select_callback
-        self.add_item(select)
+class CategorySelectionView(discord.ui.View):
+    """Main selection menu for suggestion type."""
     
-    async def select_callback(self, interaction: discord.Interaction):
-        category = interaction.data["values"][0]
+    @discord.ui.select(
+        placeholder="Choose what to suggest...",
+        options=[
+            discord.SelectOption(label="New Mashbill", value="new_mashbill", emoji="📝"),
+            discord.SelectOption(label="Brand to Existing Mashbill", value="brand_to_mashbill", emoji="🏷️"),
+            discord.SelectOption(label="New RC Code", value="new_rc_code", emoji="🆕"),
+            discord.SelectOption(label="Update RC Code", value="update_rc_code", emoji="✏️"),
+            discord.SelectOption(label="New NBC Code", value="new_nbc_code", emoji="🆕"),
+            discord.SelectOption(label="Update NBC Code", value="update_nbc_code", emoji="✏️"),
+        ],
+    )
+    async def select_callback(self, interaction: discord.Interaction, select: discord.ui.Select):
+        selection = select.values[0]
         
-        if category == "mashbill":
+        if selection == "new_mashbill":
             modal = NewMashbillModal()
             await interaction.response.send_modal(modal)
         
-        elif category == "brand":
-            # Show mashbill selection
-            view = MashbillSelectionView()
-            await interaction.response.edit_message(
-                content="Select a mashbill to add a brand to:",
-                view=view
+        elif selection == "brand_to_mashbill":
+            mashbills = get_mashbills()
+            if not mashbills:
+                await interaction.response.send_message(
+                    "❌ No mashbills found. Please add a mashbill first.",
+                    ephemeral=True,
+                )
+                return
+            view = MashbillSelectionView(mashbills)
+            await interaction.response.send_message(
+                "Select a mashbill:",
+                view=view,
+                ephemeral=True,
             )
         
-        elif category == "rc":
-            # Show RC action selection
-            view = RCActionView()
-            await interaction.response.edit_message(
-                content="What would you like to do with RC codes?",
-                view=view
-            )
-        
-        elif category == "nbc":
-            # Show NBC action selection
-            view = NBCActionView()
-            await interaction.response.edit_message(
-                content="What would you like to do with NBC codes?",
-                view=view
-            )
-
-
-class MashbillSelectionView(View):
-    def __init__(self):
-        super().__init__(timeout=180)
-        
-        # Load mashbills
-        mashbills_data = load_json_data("mashbills.json")
-        mashbills = sorted(list(mashbills_data.keys()))[:25]  # Discord limit
-        
-        if not mashbills:
-            return
-        
-        options = [
-            discord.SelectOption(label=mb, value=mb)
-            for mb in mashbills
-        ]
-        
-        select = Select(
-            placeholder="Choose a mashbill...",
-            options=options,
-            custom_id="mashbill_select"
-        )
-        select.callback = self.select_callback
-        self.add_item(select)
-    
-    async def select_callback(self, interaction: discord.Interaction):
-        mashbill = interaction.data["values"][0]
-        modal = BrandToMashbillModal(mashbill)
-        await interaction.response.send_modal(modal)
-
-
-class RCActionView(View):
-    def __init__(self):
-        super().__init__(timeout=180)
-        
-        options = [
-            discord.SelectOption(label="New RC Code", value="new", emoji="➕", description="Suggest a new RC code"),
-            discord.SelectOption(label="Update RC Code", value="update", emoji="✏️", description="Update an existing RC code"),
-        ]
-        
-        select = Select(
-            placeholder="Choose an action...",
-            options=options,
-            custom_id="rc_action_select"
-        )
-        select.callback = self.select_callback
-        self.add_item(select)
-    
-    async def select_callback(self, interaction: discord.Interaction):
-        action = interaction.data["values"][0]
-        
-        if action == "new":
+        elif selection == "new_rc_code":
             modal = NewRCCodeModal()
             await interaction.response.send_modal(modal)
-        elif action == "update":
+        
+        elif selection == "update_rc_code":
             modal = UpdateRCCodeModal()
             await interaction.response.send_modal(modal)
-
-
-class NBCActionView(View):
-    def __init__(self):
-        super().__init__(timeout=180)
         
-        options = [
-            discord.SelectOption(label="New NBC Code", value="new", emoji="➕", description="Suggest a new NBC code"),
-            discord.SelectOption(label="Update NBC Code", value="update", emoji="✏️", description="Update an existing NBC code"),
-        ]
-        
-        select = Select(
-            placeholder="Choose an action...",
-            options=options,
-            custom_id="nbc_action_select"
-        )
-        select.callback = self.select_callback
-        self.add_item(select)
-    
-    async def select_callback(self, interaction: discord.Interaction):
-        action = interaction.data["values"][0]
-        
-        if action == "new":
+        elif selection == "new_nbc_code":
             modal = NewNBCCodeModal()
             await interaction.response.send_modal(modal)
-        elif action == "update":
+        
+        elif selection == "update_nbc_code":
             modal = UpdateNBCCodeModal()
             await interaction.response.send_modal(modal)
 
 
-# ==================== COG ====================
+class MashbillSelectionView(discord.ui.View):
+    """Select existing mashbill for brand addition."""
+    
+    def __init__(self, mashbills: list):
+        super().__init__()
+        
+        # Split into chunks of 25 for select menu limit
+        for i in range(0, len(mashbills), 25):
+            chunk = mashbills[i:i+25]
+            options = [discord.SelectOption(label=mb, value=mb) for mb in chunk]
+            select = discord.ui.Select(
+                placeholder=f"Select mashbill ({i+1}-{i+len(chunk)})...",
+                options=options,
+            )
+            select.callback = self.make_callback()
+            self.add_item(select)
+    
+    def make_callback(self):
+        async def callback(interaction: discord.Interaction):
+            mashbill = interaction.data["values"][0]
+            modal = BrandToMashbillModal(mashbill)
+            await interaction.response.send_modal(modal)
+        return callback
 
-class SuggestCog(commands.Cog):
+
+class RCFieldSelectionView(discord.ui.View):
+    """Select which field to update for RC code."""
+    
+    def __init__(self, code: str):
+        super().__init__()
+        self.code = code
+    
+    @discord.ui.select(
+        placeholder="Choose field to update...",
+        options=[
+            discord.SelectOption(label="Name", value="name"),
+            discord.SelectOption(label="Type", value="type"),
+            discord.SelectOption(label="Mashbill", value="mashbill"),
+            discord.SelectOption(label="Source", value="source"),
+            discord.SelectOption(label="Aging Location", value="aging_location"),
+            discord.SelectOption(label="Color", value="color"),
+            discord.SelectOption(label="Note", value="note"),
+            discord.SelectOption(label="Confirmed", value="confirmed"),
+        ],
+    )
+    async def select_callback(self, interaction: discord.Interaction, select: discord.ui.Select):
+        field = select.values[0]
+        modal = UpdateRCCodeFieldModal(self.code, field)
+        await interaction.response.send_modal(modal)
+
+
+class NBCFieldSelectionView(discord.ui.View):
+    """Select which field to update for NBC code."""
+    
+    def __init__(self, code: str):
+        super().__init__()
+        self.code = code
+    
+    @discord.ui.select(
+        placeholder="Choose field to update...",
+        options=[
+            discord.SelectOption(label="Source", value="source"),
+            discord.SelectOption(label="Mashbill", value="mashbill"),
+            discord.SelectOption(label="Barrel", value="barrel"),
+            discord.SelectOption(label="Note", value="note"),
+            discord.SelectOption(label="Confirmed", value="confirmed"),
+        ],
+    )
+    async def select_callback(self, interaction: discord.Interaction, select: discord.ui.Select):
+        field = select.values[0]
+        modal = UpdateNBCCodeFieldModal(self.code, field)
+        await interaction.response.send_modal(modal)
+
+
+# ==================== COG CLASS ====================
+
+class SuggestionCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    # ==================== SUGGEST COMMAND ====================
     @app_commands.command(name="suggest")
     async def suggest(self, interaction: discord.Interaction):
-        """Submit a suggestion for review."""
+        """Submit a suggestion for mashbills, brands, RC codes, or NBC codes."""
         view = CategorySelectionView()
         await interaction.response.send_message(
             "What would you like to suggest?",
             view=view,
-            ephemeral=True
+            ephemeral=True,
         )
 
-    # ==================== REVIEW COMMAND ====================
     @app_commands.command(name="review")
     async def review(self, interaction: discord.Interaction):
         """View pending suggestions (owner only)."""
@@ -975,36 +789,39 @@ class SuggestCog(commands.Cog):
         for s in queue:
             suggestion_type = s.get("type", "Unknown")
             
-            if suggestion_type == "brand_to_mashbill":
-                info = f"**#{s['id']}** [Brand] Add `{s['brand']}` to `{s['mashbill']}`"
-            elif suggestion_type == "new_mashbill":
-                info = f"**#{s['id']}** [Mashbill] New mashbill `{s['mashbill']}`"
-                if s.get('brand'):
-                    info += f" with brand `{s['brand']}`"
-            elif suggestion_type == "new_rc_code":
-                info = f"**#{s['id']}** [RC] New code `{s['code']}`"
-            elif suggestion_type == "update_rc_code":
-                info = f"**#{s['id']}** [RC] Update `{s['code']}` - {s['field']}: `{s['value']}`"
-            elif suggestion_type == "new_nbc_code":
-                info = f"**#{s['id']}** [NBC] New code `{s['code']}`"
-            elif suggestion_type == "update_nbc_code":
-                info = f"**#{s['id']}** [NBC] Update `{s['code']}` - {s['field']}: `{s['value']}`"
-            else:
-                info = f"**#{s['id']}** [{suggestion_type}]"
+            if suggestion_type == "new_mashbill":
+                info = f"New mashbill: `{s['mashbill']}`"
+                if s.get("brand"):
+                    info += f" (with brand: {s['brand']})"
             
-            lines.append(info)
-        
-        # Split into chunks if too long
-        description = "\n".join(lines)
-        if len(description) > 4000:
-            description = description[:4000] + "\n... (truncated)"
-        
-        embed.description = description
+            elif suggestion_type == "brand_to_mashbill":
+                info = f"Add `{s['brand']}` to `{s['mashbill']}`"
+            
+            elif suggestion_type == "new_rc_code":
+                info = f"New RC: **{s['code']}** - {s['name']}"
+                if s.get("source"):
+                    info += f" | {s['source']}"
+            
+            elif suggestion_type == "update_rc_code":
+                info = f"Update RC **{s['code']}**: {s['field']} = {s['value']}"
+            
+            elif suggestion_type == "new_nbc_code":
+                info = f"New NBC: **{s['code']}**"
+                if s.get("source"):
+                    info += f" | {s['source']}"
+            
+            elif suggestion_type == "update_nbc_code":
+                info = f"Update NBC **{s['code']}**: {s['field']} = {s['value']}"
+            
+            else:
+                info = f"Unknown type: {suggestion_type}"
+            
+            lines.append(f"**#{s['id']}** [{suggestion_type}] {info}")
+
+        embed.description = "\n".join(lines)
         embed.set_footer(text=f"Total: {len(queue)} suggestion(s)")
-        
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
-    # ==================== APPROVE COMMAND ====================
     @app_commands.command(name="approve")
     @app_commands.describe(suggestion_id="The suggestion ID to approve")
     async def approve(self, interaction: discord.Interaction, suggestion_id: int):
@@ -1033,113 +850,38 @@ class SuggestCog(commands.Cog):
             )
             return
 
-        # Remove from queue
-        queue.pop(target_idx)
-        save_suggestions(queue)
-
-        # Add to appropriate data file
-        suggestion_type = target.get("type")
+        suggestion_type = target.get("type", "Unknown")
         
-        if suggestion_type == "brand_to_mashbill":
-            mashbill_file = os.path.join(DATA_DIR.lstrip("./"), "mashbills.json")
-            data = load_json_data("mashbills.json")
+        # Process based on type
+        if suggestion_type in ["new_mashbill", "brand_to_mashbill", "new_rc_code", "update_rc_code", "new_nbc_code", "update_nbc_code"]:
+            # Remove from queue
+            queue.pop(target_idx)
+            save_suggestions(queue)
+            
+            # Notify review channel
+            if REVIEW_CHANNEL_ID:
+                try:
+                    channel = self.bot.get_channel(REVIEW_CHANNEL_ID)
+                    if channel:
+                        approve_embed = discord.Embed(
+                            title="✅ Suggestion Approved",
+                            color=discord.Color.green(),
+                            description=f"Suggestion #{suggestion_id} ({suggestion_type}) has been approved.",
+                        )
+                        await channel.send(embed=approve_embed)
+                except Exception as e:
+                    print(f"Error sending to review channel: {e}")
+            
+            await interaction.response.send_message(
+                f"✅ Suggestion #{suggestion_id} approved. Please manually add to data files.",
+                ephemeral=True,
+            )
+        else:
+            await interaction.response.send_message(
+                f"❌ Unknown suggestion type: {suggestion_type}",
+                ephemeral=True,
+            )
 
-            mashbill_key = target["mashbill"]
-            if mashbill_key not in data:
-                data[mashbill_key] = {"name": mashbill_key, "brands": [], "grains": {}, "raw": mashbill_key.lower()}
-            if "brands" not in data[mashbill_key]:
-                data[mashbill_key]["brands"] = []
-
-            if target["brand"] not in data[mashbill_key]["brands"]:
-                data[mashbill_key]["brands"].append(target["brand"])
-
-            with open(mashbill_file, "w") as f:
-                json.dump(data, f, indent=2)
-
-        elif suggestion_type == "new_mashbill":
-            mashbill_file = os.path.join(DATA_DIR.lstrip("./"), "mashbills.json")
-            data = load_json_data("mashbills.json")
-
-            mashbill_key = target["mashbill"]
-            data[mashbill_key] = {
-                "name": mashbill_key,
-                "brands": [target["brand"]] if target.get("brand") else [],
-                "grains": {},
-                "raw": mashbill_key.lower()
-            }
-
-            with open(mashbill_file, "w") as f:
-                json.dump(data, f, indent=2)
-
-        elif suggestion_type == "new_rc_code":
-            rc_file = os.path.join(DATA_DIR.lstrip("./"), "rc_codes.json")
-            data = load_json_data("rc_codes.json")
-
-            entry = {"name": target["code"]}
-            for field in ["rc_type", "mashbill", "source", "aging_location", "color", "note", "confirmed"]:
-                if field in target:
-                    key = "type" if field == "rc_type" else field
-                    entry[key] = target[field]
-
-            data[target["code"]] = entry
-
-            with open(rc_file, "w") as f:
-                json.dump(data, f, indent=2)
-
-        elif suggestion_type == "update_rc_code":
-            rc_file = os.path.join(DATA_DIR.lstrip("./"), "rc_codes.json")
-            data = load_json_data("rc_codes.json")
-
-            if target["code"] in data:
-                data[target["code"]][target["field"]] = target["value"]
-
-            with open(rc_file, "w") as f:
-                json.dump(data, f, indent=2)
-
-        elif suggestion_type == "new_nbc_code":
-            nbc_file = os.path.join(DATA_DIR.lstrip("./"), "nbc_codes.json")
-            data = load_json_data("nbc_codes.json")
-
-            entry = {}
-            for field in ["source", "mashbill", "barrel", "note", "confirmed"]:
-                if field in target:
-                    entry[field] = target[field]
-
-            data[target["code"]] = entry
-
-            with open(nbc_file, "w") as f:
-                json.dump(data, f, indent=2)
-
-        elif suggestion_type == "update_nbc_code":
-            nbc_file = os.path.join(DATA_DIR.lstrip("./"), "nbc_codes.json")
-            data = load_json_data("nbc_codes.json")
-
-            if target["code"] in data:
-                data[target["code"]][target["field"]] = target["value"]
-
-            with open(nbc_file, "w") as f:
-                json.dump(data, f, indent=2)
-
-        # Notify review channel
-        if REVIEW_CHANNEL_ID:
-            try:
-                channel = self.bot.get_channel(REVIEW_CHANNEL_ID)
-                if channel:
-                    approve_embed = discord.Embed(
-                        title="✅ Suggestion Approved",
-                        color=discord.Color.green(),
-                        description=f"Suggestion #{suggestion_id} has been added.",
-                    )
-                    await channel.send(embed=approve_embed)
-            except Exception as e:
-                print(f"Error sending to review channel: {e}")
-
-        await interaction.response.send_message(
-            f"✅ Suggestion #{suggestion_id} approved and added. Use `/reload` to reload data.",
-            ephemeral=True,
-        )
-
-    # ==================== REJECT COMMAND ====================
     @app_commands.command(name="reject")
     @app_commands.describe(suggestion_id="The suggestion ID to reject")
     async def reject(self, interaction: discord.Interaction, suggestion_id: int):
@@ -1191,11 +933,9 @@ class SuggestCog(commands.Cog):
             ephemeral=True,
         )
 
-    # ==================== CLEAR COMMAND ====================
-    @app_commands.command(name="clear")
-    @app_commands.describe(suggestion_id="The suggestion ID to clear (leave blank to clear all)")
-    async def clear(self, interaction: discord.Interaction, suggestion_id: int = None):
-        """Clear suggestion(s) from the queue (owner only)."""
+    @app_commands.command(name="clear_suggestions")
+    async def clear_suggestions(self, interaction: discord.Interaction):
+        """Clear all pending suggestions (owner only)."""
         if OWNER_ID and interaction.user.id != OWNER_ID:
             await interaction.response.send_message(
                 "❌ This command is restricted to the bot owner.",
@@ -1203,38 +943,12 @@ class SuggestCog(commands.Cog):
             )
             return
 
-        queue = load_suggestions()
-        
-        if suggestion_id is not None:
-            # Clear specific suggestion
-            target_idx = None
-            for i, s in enumerate(queue):
-                if s["id"] == suggestion_id:
-                    target_idx = i
-                    break
-            
-            if target_idx is None:
-                await interaction.response.send_message(
-                    f"❌ Suggestion #{suggestion_id} not found.",
-                    ephemeral=True,
-                )
-                return
-            
-            queue.pop(target_idx)
-            save_suggestions(queue)
-            await interaction.response.send_message(
-                f"🗑️ Suggestion #{suggestion_id} cleared.",
-                ephemeral=True,
-            )
-        else:
-            # Clear all
-            save_suggestions([])
-            await interaction.response.send_message(
-                "🗑️ All suggestions cleared.",
-                ephemeral=True,
-            )
+        save_suggestions([])
+        await interaction.response.send_message(
+            "✅ All suggestions cleared.",
+            ephemeral=True,
+        )
 
 
 async def setup(bot):
-    """Load the suggest cog."""
-    await bot.add_cog(SuggestCog(bot))
+    await bot.add_cog(SuggestionCog(bot))
