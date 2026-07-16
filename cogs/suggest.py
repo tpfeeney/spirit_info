@@ -49,6 +49,24 @@ def save_suggestions(queue):
     with open(SUGGESTIONS_FILE, "w") as f:
         json.dump(queue, f, indent=2)
 
+async def notify_owner(bot_or_client, suggestion: dict, desc: str, submitter: discord.User):
+    """DM the owner about a new suggestion."""
+    if not OWNER_ID:
+        return
+    try:
+        owner = await bot_or_client.fetch_user(OWNER_ID)
+        embed = discord.Embed(
+            title="🔔 New Suggestion Submitted",
+            color=discord.Color.gold(),
+            description=f"{desc}\n\n**Submitted by:** {submitter.mention} ({submitter})"
+        )
+        embed.set_footer(text=f"Suggestion ID: {suggestion['id']}")
+        await owner.send(embed=embed)
+    except discord.Forbidden:
+        print("⚠️ Could not DM owner — they may have DMs disabled.")
+    except Exception as e:
+        print(f"Error DMing owner: {e}")
+
 # ==================== MODAL CLASSES ====================
 class NewMashbillModal(ui.Modal, title="Add New Mashbill"):
     mashbill = ui.TextInput(
@@ -116,6 +134,8 @@ class NewMashbillModal(ui.Modal, title="Add New Mashbill"):
                     await channel.send(embed=review_embed)
             except Exception as e:
                 print(f"Error sending to review channel: {e}")
+
+        await notify_owner(interaction.client, suggestion, desc, interaction.user)
 
 class NewRCCodeModal(ui.Modal, title="Add New RC Code"):
     code = ui.TextInput(
@@ -202,6 +222,8 @@ class NewRCCodeModal(ui.Modal, title="Add New RC Code"):
                     await channel.send(embed=review_embed)
             except Exception as e:
                 print(f"Error sending to review channel: {e}")
+
+        await notify_owner(interaction.client, suggestion, desc, interaction.user)
 
 class NewNBCCodeModal(ui.Modal, title="Add New NBC Code"):
     code = ui.TextInput(
@@ -290,6 +312,8 @@ class NewNBCCodeModal(ui.Modal, title="Add New NBC Code"):
             except Exception as e:
                 print(f"Error sending to review channel: {e}")
 
+        await notify_owner(interaction.client, suggestion, desc, interaction.user)
+
 class UpdateRCCodeModal(ui.Modal, title="Update RC Code"):
     code = ui.TextInput(
         label="Code to Update",
@@ -347,6 +371,9 @@ class UpdateRCCodeModal(ui.Modal, title="Update RC Code"):
             except Exception as e:
                 print(f"Error sending to review channel: {e}")
 
+        inline_desc = f"**Type:** Update RC Code\n**Code:** {self.code.value}\n**Field:** {self.field.value}\n**New Value:** {self.value.value}"
+        await notify_owner(interaction.client, suggestion, inline_desc, interaction.user)
+
 class UpdateNBCCodeModal(ui.Modal, title="Update NBC Code"):
     code = ui.TextInput(
         label="Code to Update",
@@ -403,6 +430,9 @@ class UpdateNBCCodeModal(ui.Modal, title="Update NBC Code"):
                     await channel.send(embed=review_embed)
             except Exception as e:
                 print(f"Error sending to review channel: {e}")
+
+        inline_desc = f"**Type:** Update NBC Code\n**Code:** {self.code.value}\n**Field:** {self.field.value}\n**New Value:** {self.value.value}"
+        await notify_owner(interaction.client, suggestion, inline_desc, interaction.user)
 
 class BrandToMashbillWithSearchModal(ui.Modal, title="Add Brand to Mashbill"):
     mashbill = ui.TextInput(
@@ -464,6 +494,9 @@ class BrandToMashbillWithSearchModal(ui.Modal, title="Add Brand to Mashbill"):
                     await channel.send(embed=review_embed)
             except Exception as e:
                 print(f"Error sending to review channel: {e}")
+
+        inline_desc = f"**Type:** Brand to Existing Mashbill\n**Mashbill:** {self.mashbill.value}\n**Brand:** {self.brand_name.value}"
+        await notify_owner(interaction.client, suggestion, inline_desc, interaction.user)
 
 # ==================== COG ====================
 class SuggestCog(commands.Cog):
