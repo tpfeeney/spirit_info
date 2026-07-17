@@ -434,6 +434,53 @@ class UpdateNBCCodeModal(ui.Modal, title="Update NBC Code"):
         inline_desc = f"**Type:** Update NBC Code\n**Code:** {self.code.value}\n**Field:** {self.field.value}\n**New Value:** {self.value.value}"
         await notify_owner(interaction.client, suggestion, inline_desc, interaction.user)
 
+class NewBangCommandModal(ui.Modal, title="Suggest a ! Command"):
+    suggestion = ui.TextInput(
+        label="Command Suggestion",
+        placeholder="e.g., !barrelproof - look up barrel proof for a given code",
+        required=True,
+        max_length=1000,
+        style=discord.TextStyle.paragraph
+    )
+
+    async def on_submit(self, interaction: discord.Interaction):
+        suggestion_entry = {
+            "id": next_id(),
+            "type": "new_bang_command",
+            "user": str(interaction.user),
+            "user_id": interaction.user.id,
+            "suggestion": self.suggestion.value,
+        }
+
+        queue = load_suggestions()
+        queue.append(suggestion_entry)
+        save_suggestions(queue)
+
+        desc = f"**Type:** New ! Command\n**Suggestion:** {self.suggestion.value}"
+
+        embed = discord.Embed(
+            title="📝 Suggestion Submitted",
+            color=discord.Color.blue(),
+            description=desc
+        )
+        embed.set_footer(text=f"Suggestion ID: {suggestion_entry['id']}")
+        await interaction.response.send_message(embed=embed, ephemeral=True)
+
+        if REVIEW_CHANNEL_ID:
+            try:
+                channel = interaction.client.get_channel(REVIEW_CHANNEL_ID)
+                if channel:
+                    review_embed = discord.Embed(
+                        title="🔔 New Suggestion",
+                        color=discord.Color.gold(),
+                        description=f"**ID:** {suggestion_entry['id']}\n{desc}\n**User:** {interaction.user.mention}"
+                    )
+                    await channel.send(embed=review_embed)
+            except Exception as e:
+                print(f"Error sending to review channel: {e}")
+
+        await notify_owner(interaction.client, suggestion_entry, desc, interaction.user)
+
 class BrandToMashbillWithSearchModal(ui.Modal, title="Add Brand to Mashbill"):
     mashbill = ui.TextInput(
         label="Mashbill",
@@ -513,6 +560,7 @@ class SuggestCog(commands.Cog):
         app_commands.Choice(name="Update RC Code", value="update_rc_code"),
         app_commands.Choice(name="New NBC Code", value="new_nbc_code"),
         app_commands.Choice(name="Update NBC Code", value="update_nbc_code"),
+        app_commands.Choice(name="Add ! Command", value="new_bang_command"),
     ])
     async def suggest(
         self,
@@ -543,6 +591,10 @@ class SuggestCog(commands.Cog):
         
         elif action == "update_nbc_code":
             modal = UpdateNBCCodeModal()
+            await interaction.response.send_modal(modal)
+
+        elif action == "new_bang_command":
+            modal = NewBangCommandModal()
             await interaction.response.send_modal(modal)
 
     # ==================== REVIEW COMMAND ====================
@@ -598,6 +650,9 @@ class SuggestCog(commands.Cog):
                 if suggestion_type == "update_nbc_code":
                     fields.append(f"**Field:** {s.get('field', 'N/A')}")
                     fields.append(f"**Value:** {s.get('value', 'N/A')}")
+            elif suggestion_type == "new_bang_command":
+                fields.append(f"**Type:** New ! Command")
+                fields.append(f"**Suggestion:** {s.get('suggestion', 'N/A')}")
             
             embed.add_field(
                 name=f"ID: {suggestion_id} — {user}",
@@ -775,6 +830,10 @@ class SuggestCog(commands.Cog):
             except Exception as e:
                 result_msg = f"❌ Error: {e}"
         
+        elif suggestion_type == "new_bang_command":
+            # Freeform suggestion - nothing to write, just acknowledge for manual implementation
+            result_msg = f"✅ Noted. Suggested command:\n> {target.get('suggestion', 'N/A')}"
+
         else:
             result_msg = f"❌ Unknown suggestion type: {suggestion_type}"
 
