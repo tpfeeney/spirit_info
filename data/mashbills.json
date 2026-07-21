@@ -7,10 +7,8 @@
       "malted_barley": "10%"
     },
     "raw": "78c/12r/10mb",
-    "brands": [
-    	"Ezra Brooks",
-		"David Nicholson Reserve"
-    ]
+    "brands": "Evan Williams",
+    "verified_manually": true
   },
   "100B": {
     "name": "100B",
@@ -50,7 +48,8 @@
       "Hudson Baby Bourbon",
       "Reservoir Bourbon Whiskey",
       "Yellow Banks Kentucky Straight Bourbon"
-    ]
+    ],
+    "verified_manually": true
   },
   "100MB": {
     "name": "100MB",
@@ -693,7 +692,6 @@
     "brands": [
       "Bluff Springs Kentucky Straight Bourbon",
       "FEW Bourbon",
-      "FEW Rye",
       "Hidden Barn Kentucky Straight Bourbon Batch #001",
       "Lost Lantern FEW Spirits Illinois Straight Bourbon"
     ]
@@ -831,23 +829,8 @@
       "Belfour Limited Edition Rye",
       "Belfour Rye Whiskey",
       "Belfour Special Edition Rye",
-      "Bluebird Distilling Sportsman Bourbon"
-    ]
-  },
-  "72C/15MB/13R": {
-    "name": "72C/15MB/13R",
-    "grains": {
-      "corn": "72%",
-      "malted_barley": "15%",
-      "rye": "13%"
-    },
-    "raw": "72c/15mb/13r",
-    "brands": [
-      "Hirsch \"The Cask Strength\" Bourbon",
-      "Hirsch \"The Single Barrel\" Bourbon",
-      "Town Branch Bourbon",
-      "Town Branch Bourbon Sherry Cask Finished",
-      "Town Branch Double Oaked Kentucky Straight Bourbon"
+      "Bluebird Distilling Sportsman Bourbon",
+      "FEW Rye"
     ]
   },
   "72C/16R/12MB": {
@@ -1220,29 +1203,15 @@
     },
     "raw": "78c/10r/12mb",
     "brands": [
-      "Ezra Brooks Distiller's Collection Bourbon",
+      "Ezra Brooks Bourbon",
       "Heaven Hill Heritage Collection 17-Year-Old Barrel Proof Bourbon (First Edition)",
       "J.T.S. Brown Bourbon",
-      "Elijah Craig 12-year-old Single Barrel",
-      "Elijah Craig 18-year-old Single Barrel",
-      "Elijah Craig 20-year-old Single Barrel",
-      "Elijah Craig 21-year-old Single Barrel",
-      "Elijah Craig 23-year-old Single Barrel",
-      "Elijah Craig Barrel Proof Batch A122",
-      "Elijah Craig Barrel Proof Batch A123",
-      "Elijah Craig Barrel Proof Batch B522",
-      "Elijah Craig Barrel Proof Batch B523",
-      "Elijah Craig Barrel Proof Batch C918",
-      "Elijah Craig Barrel Proof Batch C921",
-      "Elijah Craig Barrel Proof Batch C923",
-      "Elijah Craig Small Batch",
-      "Elijah Craig Toasted Barrel",
-      "Evan Williams 23 Year Old",
-      "Ezra Brooks 99",
+      "Elijah Craig Bourbons",
       "Parker's Heritage Collection - 10th Edition - 24 Year-Old Bottled-in-Bond Bourbon (2016)",
       "Parker's Heritage Collection - 11th Edition - 11 Year-Old Single Barrel (2017)",
       "Parker's Heritage Collection - 12th Edition - Orange Curaçao Finish (2018)",
-      "Parker's Heritage Collection - 14th Edition - Heavy Char Bourbon (2020)"
+      "Parker's Heritage Collection - 14th Edition - Heavy Char Bourbon (2020)",
+      "David Nicholson Reserve"
     ]
   },
   "78.5C/13R/8.5MB": {
@@ -1604,6 +1573,22 @@
       "William Larue Weller (2019)",
       "William Larue Weller (2020)",
       "William Larue Weller (2022)"
+    ]
+  },
+  "72C/15R/13MB": {
+    "name": "72C/15R/13MB",
+    "grains": {
+      "corn": "72%",
+      "rye": "15%",
+      "malted_barley": "13%"
+    },
+    "raw": "72c/15r/13mb",
+    "brands": [
+      "Hirsch \"The Cask Strength\" Bourbon",
+      "Hirsch \"The Single Barrel\" Bourbon",
+      "Town Branch Bourbon",
+      "Town Branch Bourbon Sherry Cask Finished",
+      "Town Branch Double Oaked Kentucky Straight Bourbon"
     ]
   }
 }
