@@ -1,5 +1,5 @@
 {
-	 "100B": {
+  "100B": {
     "name": "100B",
     "grains": {
       "barley": "100%"
@@ -17,6 +17,13 @@
       "Laws Henry Road Straight Malt Whiskey (Bonded)",
       "Manifest Whiskey Project No. 2",
       "Pearse Lyons Reserve",
+      "Stranahan's Blue Peak Single Malt Whiskey",
+      "Stranahan's Diamond Peak Single Malt Whiskey",
+      "Stranahan's Mountain Angel 10-Year Single Malt Whiskey",
+      "Stranahan's Original Single Malt Whiskey",
+      "Stranahan's Sherry Cask Single Malt Whiskey",
+      "Stranahan's Single Barrel Single Malt Whiskey",
+      "Stranahan's Snowflake"
     ]
   },
   "100C": {
@@ -52,15 +59,13 @@
       "Virginia Distillery Co. VHW Chardonnay Cask Finished Whisky",
       "Virginia Distillery Co. VHW Cider Cask Finished Whisky",
       "Virginia Distillery Co. VHW Port Cask Finished Whisky",
-      "WhistlePig The Beholden 21 Year Single Malt Whiskey",
-	  "Stranahan's Blue Peak Single Malt Whiskey",
-      "Stranahan's Diamond Peak Single Malt Whiskey",
-      "Stranahan's Mountain Angel 10-Year Single Malt Whiskey",
-  	  "Stranahan's Original Single Malt Whiskey",
-      "Stranahan's Sherry Cask Single Malt Whiskey",
-      "Stranahan's Single Barrel Single Malt Whiskey",
-      "Stranahan's Snowflake""malted_rye"
-  	]
+      "WhistlePig The Beholden 21 Year Single Malt Whiskey"
+    ]
+  },
+  "100MR": {
+    "name": "100MR",
+    "grains": {
+      "malted_rye": "100%"
     },
     "raw": "100mr",
     "brands": [
@@ -102,9 +107,12 @@
       "Old Henry Clay Straight Rye Whiskey",
       "Pendleton 1910",
       "Reservoir Rye Whiskey",
-      "Russell's Reserve Single Barrel Bourbon",
       "Shortbarrel Small Batch Rye 101",
       "The Prideful Goat 15yr Straight Rye Cask Strength",
+      "WhistlePig 10 Year Small Batch Rye",
+      "WhistlePig 12 Year Old World Cask Finish",
+      "WhistlePig 15 Year Rye",
+      "WhistlePig PiggyBack Rye",
       "Woodinville Straight Rye Whiskey"
     ]
   },
@@ -122,18 +130,6 @@
       "Laws Straight Wheat Whiskey Finished in Curacao Casks",
       "Reservoir Wheat Whiskey",
       "Woodford Reserve Wheat Whiskey Bottled in Bond"
-    ]
-  },
-  "45R/30W/25B": {
-    "name": "45R/30W/25B",
-    "grains": {
-      "rye": "45%",
-      "wheat": "30%",
-      "barley": "25%"
-    },
-    "raw": "45r/30w/25b",
-    "brands": [ 
-		"none yet"
     ]
   },
   "51C/45W/4MB": {
@@ -179,6 +175,7 @@
     },
     "raw": "51r/37c/12mb",
     "brands": [
+      "Parker's Heritage Collection - 15th Edition - Heavy Char Wheat (2021)",
       "Russell's Reserve 6 Year Rye",
       "Wild Turkey 101 Rye",
       "Wild Turkey Rare Breed Rye Barrel Proof",
@@ -219,7 +216,6 @@
     },
     "raw": "51w/37c/12mb",
     "brands": [
-	  "Parker's Heritage Collection - 15th Edition - Heavy Char Wheat (2021)",
       "Bernheim Original Wheat Whiskey",
       "Parker's Heritage Collection - 8th Edition - Original Batch Wheat Whiskey (2014)"
     ]
@@ -352,11 +348,12 @@
     "brands": [
       "Four Roses 16 Year Single Barrel OBSV",
       "Four Roses 17 Year Single Barrel OBSV",
-      "Four Roses OBSF ",
-      "Four Roses OBSK ",
-      "Four Roses OBSO ",
-      "Four Roses OBSQ ",
-      "Four Roses OBSV ",
+      "Four Roses OBSF Single Barrel Private Selection Barrel Strength Bourbon",
+      "Four Roses OBSK Single Barrel Private Selection Barrel Strength Bourbon",
+      "Four Roses OBSO Single Barrel Private Selection Barrel Strength Bourbon",
+      "Four Roses OBSQ Single Barrel Private Selection Barrel Strength Bourbon",
+      "Four Roses OBSV Single Barrel Private Selection Barrel Strength Bourbon",
+      "Four Roses Single Barrel",
       "High West American Prairie Bourbon",
       "Rough Rider The Happy Warrior Bourbon"
     ]
@@ -370,7 +367,25 @@
     },
     "raw": "60c/36r/4mb",
     "brands": [
-	  "MGP High Rye Bourbon"
+      "1776 Straight Bourbon (James E. Pepper)",
+      "Bardstown Bourbon Copper & Kings Spanish Oloroso Sherry Finish",
+      "Blue Note Crossroads",
+      "Four Gate BRBN DownUnder",
+      "Nulu Amburana Finished Bourbon Whiskey",
+      "Nulu Honey Finished Bourbon Whiskey",
+      "O.K.I. Single Barrel Bourbon",
+      "Oak & Eden Bourbon & Vine",
+      "Redemption 10 Year Barrel Proof High Rye Bourbon",
+      "Redemption High Rye Bourbon",
+      "Redemption High Rye Bourbon Single Barrel Select",
+      "Smoke Wagon Private Barrel",
+      "Smoke Wagon Small Batch Bourbon",
+      "Smoke Wagon Straight Bourbon",
+      "Smoke Wagon Uncut Unfiltered",
+      "Smooth Ambler Old Scout 11 Year-Old \"FS/FT\"",
+      "Smooth Ambler Old Scout 11 Year-Old \"Jawbreaker\"",
+      "Smooth Ambler Old Scout Bourbon",
+      "Smooth Ambler Old Scout Single Barrel Bourbon"
     ]
   },
   "60R/40W": {
@@ -422,7 +437,7 @@
     "raw": "64c/24r/12mb",
     "brands": [
       "All Nations 6 Year Straight Bourbon",
-      "Wilderness Trail 6-Year Bourbon (Wheated)",
+      "Wilderness Trail 6-Year Bourbon (High-Rye)",
       "Wilderness Trail Family Reserve Single Barrel Kentucky Straight Bourbon",
       "Wilderness Trail Kentucky Straight Bourbon Small Batch BiB"
     ]
@@ -436,7 +451,7 @@
     },
     "raw": "64c/24w/12mb",
     "brands": [
-      "Wilderness Trail 6-Year Bourbon (High-Rye)",
+      "Wilderness Trail 6-Year Bourbon (Wheated)",
       "Wilderness Trail Kentucky Straight Bourbon Single Barrel BiB (Wheated)"
     ]
   },
@@ -554,22 +569,6 @@
       "Ragged Branch Wheated Bourbon Bottled in Bond"
     ]
   },
-  "68C/20W/10MB": {
-    "name": "68C/20W/10MB",
-    "grains": {
-      "corn": "68%",
-      "wheat": "20%",
-      "malted_barley": "10%"
-    },
-    "raw": "68c/20w/10mb",
-    "brands": [
-      "David Nicholson 1843 Bourbon",
-      "Rebel 10 Year Single Barrel Bourbon",
-      "Rebel Bourbon 100",
-      "Rebel Distiller's Collection Single Barrel Bourbon",
-      "Rebel Kentucky Straight Bourbon"
-    ]
-  },
   "68C/20W/12MB": {
     "name": "68C/20W/12MB",
     "grains": {
@@ -580,6 +579,7 @@
     "raw": "68c/20w/12mb",
     "brands": [
       "Bardstown Origin Series Wheated Bottled-In-Bond Bourbon",
+      "David Nicholson 1843 Bourbon",
       "Larceny 1870 Small Batch",
       "Larceny Barrel Proof A120",
       "Larceny Barrel Proof A121",
@@ -592,8 +592,19 @@
       "Larceny Barrel Proof C520",
       "Larceny Barrel Proof C920",
       "Larceny Barrel Proof C921",
+      "Old Fitzgerald Bottled-in-Bond 11 Year Bourbon (Fall 2021)",
+      "Old Fitzgerald Bottled-in-Bond 11 Year Bourbon (Spring 2018)",
+      "Old Fitzgerald Bottled-in-Bond 13 Year Bourbon (Spring 2019)",
       "Old Fitzgerald Bottled-in-Bond 14 Year Bourbon (Fall 2020)",
+      "Old Fitzgerald Bottled-in-Bond 15 Year Bourbon (Fall 2019)",
+      "Old Fitzgerald Bottled-in-Bond 8 Year Bourbon (Spring 2021)",
+      "Old Fitzgerald Bottled-in-Bond 9 Year Bourbon (Fall 2018)",
+      "Old Fitzgerald Bottled-in-Bond 9 Year Bourbon (Spring 2020)",
+      "Rebel 10 Year Single Barrel Bourbon",
+      "Rebel Bourbon 100",
       "Rebel Cask Strength Single Barrel (Special Limited Edition)",
+      "Rebel Distiller's Collection Single Barrel Bourbon",
+      "Rebel Kentucky Straight Bourbon",
       "Rebel Yell",
       "Wyoming Whiskey Single Barrel Bourbon",
       "Wyoming Whiskey Small Batch Bourbon"
@@ -775,8 +786,7 @@
     "raw": "70r/18c/12mb",
     "brands": [
       "Jack Daniel's Single Barrel Rye",
-      "Jack Daniel's Tennessee Rye",
-      "Old McBrayer Kentucky Straight Bourbon"
+      "Jack Daniel's Tennessee Rye"
     ]
   },
   "70R/20C/10MB": {
@@ -793,34 +803,6 @@
       "Belfour Special Edition Rye",
       "Bluebird Distilling Sportsman Bourbon",
       "FEW Rye"
-    ]
-  },
-  "72C/16R/12MB": {
-    "name": "72C/16R/12MB",
-    "grains": {
-      "corn": "72%",
-      "rye": "16%",
-      "malted_barley": "12%"
-    },
-    "raw": "72c/16r/12mb",
-    "brands": [
-      "Old Forester 2002 Birthday Bourbon",
-      "Old Forester 2003 Birthday Bourbon Fall",
-      "Old Forester 2003 Birthday Bourbon Spring",
-      "Old Forester 2004 Birthday Bourbon",
-      "Old Forester 2005 Birthday Bourbon",
-      "Old Forester 2006 Birthday Bourbon",
-      "Old Forester 2007 Birthday Bourbon",
-      "Old Forester 2008 Birthday Bourbon",
-      "Old Forester 2009 Birthday Bourbon",
-      "Old Forester 2010 Birthday Bourbon",
-      "Old Forester 2011 Birthday Bourbon",
-      "Old Forester 2012 Birthday Bourbon",
-      "Old Forester 2013 Birthday Bourbon",
-      "Old Forester 2014 Birthday Bourbon",
-      "Old Forester 2015 Birthday Bourbon",
-      "Old Forester 2016 Birthday Bourbon",
-      "Old Forester 2019 Birthday Bourbon"
     ]
   },
   "72C/18R/10MB": {
@@ -840,6 +822,23 @@
       "Old Forester 1897 Bottled in Bond",
       "Old Forester 1910 Old Fine Whisky",
       "Old Forester 1920 Prohibition Style",
+      "Old Forester 2002 Birthday Bourbon",
+      "Old Forester 2003 Birthday Bourbon Fall",
+      "Old Forester 2003 Birthday Bourbon Spring",
+      "Old Forester 2004 Birthday Bourbon",
+      "Old Forester 2005 Birthday Bourbon",
+      "Old Forester 2006 Birthday Bourbon",
+      "Old Forester 2007 Birthday Bourbon",
+      "Old Forester 2008 Birthday Bourbon",
+      "Old Forester 2009 Birthday Bourbon",
+      "Old Forester 2010 Birthday Bourbon",
+      "Old Forester 2011 Birthday Bourbon",
+      "Old Forester 2012 Birthday Bourbon",
+      "Old Forester 2013 Birthday Bourbon",
+      "Old Forester 2014 Birthday Bourbon",
+      "Old Forester 2015 Birthday Bourbon",
+      "Old Forester 2016 Birthday Bourbon",
+      "Old Forester 2019 Birthday Bourbon",
       "Old Forester 86 Kentucky Straight Bourbon",
       "Old Forester Single Barrel 100 Proof",
       "Old Forester Single Barrel 90 Proof",
@@ -877,7 +876,6 @@
     },
     "raw": "73c/18r/9mb",
     "brands": [
-      "I.W. Harper 15-Year Old Bourbon",
       "I.W. Harper Bourbon"
     ]
   },
@@ -919,31 +917,13 @@
     "raw": "74c/18r/8mb",
     "brands": [
       "1792 Full Proof",
-      "Calumet Farm 10 Year Old Single Rack Black Bourbon",
-      "Calumet Farm 12 Year Old Single Rack Black Bourbon",
-      "Calumet Farm 14 Year Old Single Rack Black Bourbon",
-      "Calumet Farm 15 Year Old Single Rack Black Bourbon",
-      "Calumet Farm 8 Year Old Bourbon",
+      "Calumet Farm 8,10,12,14,15 Year Old",
       "Calumet Farm Small Batch Bourbon",
       "Four Gate The Kelvin Collaboration I",
       "Four Gate The Kelvin Collaboration II",
       "Sam Houston 14 Year Old Kentucky Straight Bourbon",
       "Sam Houston 15 Year Old Kentucky Straight Bourbon",
       "Western Reserve 12 Year Kentucky Straight Bourbon"
-    ]
-  },
-  "75C/13BR/12MB": {
-    "name": "75C/13BR/12MB",
-    "grains": {
-      "corn": "75%",
-      "brown_rice": "13%",
-      "malted_barley": "12%"
-    },
-    "raw": "75c/13br/12mb",
-    "brands": [
-      "Jim Beam Repeal Batch",
-      "Jim Beam Single Barrel",
-      "Jim Beam's Choice"
     ]
   },
   "75C/13R/12MB": {
@@ -955,10 +935,6 @@
     },
     "raw": "75c/13r/12mb",
     "brands": [
-      "rc  10k",
-      "Elijah Craig Barrel Proof Batch B516",
-      "Elijah Craig Barrel Proof Batch B521",
-      "Evan Williams Bourbon (Black Label)",
       "Glenns Creek Cuervito Vivo Bourbon",
       "Jim Beam Old Tub Bourbon",
       "Knob Creek 12 Year",
@@ -968,6 +944,7 @@
       "Knob Creek Smoked Maple",
       "Legent Bourbon",
       "Russell's Reserve 13 Year Old Bourbon",
+      "Russell's Reserve Single Barrel Bourbon",
       "Wild Turkey 101 Bourbon",
       "Wild Turkey American Honey",
       "Wild Turkey Bourbon",
@@ -975,7 +952,8 @@
       "Wild Turkey Longbranch",
       "Wild Turkey Master's Keep Voyage",
       "Wild Turkey Rare Breed Bourbon Barrel Proof",
-      "Yellowstone Select Bourbon"
+      "Yellowstone Select Bourbon",
+      "rc  10k"
     ]
   },
   "75C/15R/10MB": {
@@ -1021,29 +999,21 @@
     },
     "raw": "75c/20r/5mb",
     "brands": [
-      "Four Roses OESF",
-      "Four Roses OESK",
-      "Four Roses OESO",
-      "Four Roses OESQ",
-      "Four Roses OESV"
-    ]
-  },
-  "75C/20W/5MB": {
-    "name": "75C/20W/5MB",
-    "grains": {
-      "corn": "75%",
-      "wheat": "20%",
-      "malted_barley": "5%"
-    },
-    "raw": "75c/20w/5mb",
-    "brands": [
-      "Old Fitzgerald Bottled-in-Bond 11 Year Bourbon (Fall 2021)",
-      "Old Fitzgerald Bottled-in-Bond 11 Year Bourbon (Spring 2018)",
-      "Old Fitzgerald Bottled-in-Bond 13 Year Bourbon (Spring 2019)",
-      "Old Fitzgerald Bottled-in-Bond 15 Year Bourbon (Fall 2019)",
-      "Old Fitzgerald Bottled-in-Bond 8 Year Bourbon (Spring 2021)",
-      "Old Fitzgerald Bottled-in-Bond 9 Year Bourbon (Fall 2018)",
-      "Old Fitzgerald Bottled-in-Bond 9 Year Bourbon (Spring 2020)"
+      "Four Roses Elliott's Select 2016 Limited Edition",
+      "Four Roses Limited Edition Single Barrel 2012",
+      "Four Roses Limited Edition Single Barrel 2013",
+      "Four Roses Limited Edition Single Barrel 2014",
+      "Four Roses Limited Edition Small Batch 2017",
+      "Four Roses Limited Edition Small Batch 2018 130th Anniversary",
+      "Four Roses Limited Edition Small Batch 2019",
+      "Four Roses Limited Edition Small Batch 2020",
+      "Four Roses Limited Edition Small Batch 2021",
+      "Four Roses Limited Edition Small Batch 2022",
+      "Four Roses OESF Single Barrel Private Selection Barrel Strength Bourbon",
+      "Four Roses OESK Single Barrel Private Selection Barrel Strength Bourbon",
+      "Four Roses OESO Single Barrel Private Selection Barrel Strength Bourbon",
+      "Four Roses OESQ Single Barrel Private Selection Barrel Strength Bourbon",
+      "Four Roses OESV Single Barrel Private Selection Barrel Strength Bourbon"
     ]
   },
   "75C/20.5R/4.5MB": {
@@ -1065,7 +1035,6 @@
     },
     "raw": "75c/21r/4mb",
     "brands": [
-	"MGP Low Rye Bourbon",
       "Agitator Kentucky Straight Bourbon Finished in Red Wine Barrels",
       "Bad Sweater Whiskey",
       "Billy Banks Rye Whiskey",
@@ -1144,7 +1113,10 @@
       "Jim Beam Bonded",
       "Jim Beam Devil's Cut",
       "Jim Beam Double Oak",
-      "Jim Beam Original (White Label) Kentucky Straight Bourbon"
+      "Jim Beam Original (White Label) Kentucky Straight Bourbon",
+      "Jim Beam Repeal Batch",
+      "Jim Beam Single Barrel",
+      "Jim Beam's Choice"
     ]
   },
   "78C/10R/12MB": {
@@ -1156,27 +1128,20 @@
     },
     "raw": "78c/10r/12mb",
     "brands": [
+      "David Nicholson Reserve",
+      "Elijah Craig Barrel Proof Batch B516",
+      "Elijah Craig Barrel Proof Batch B521",
+      "Elijah Craig Bourbons",
+      "Evan Williams",
+      "Evan Williams Bourbon (Black Label)",
       "Ezra Brooks Bourbon",
       "Heaven Hill Heritage Collection 17-Year-Old Barrel Proof Bourbon (First Edition)",
       "J.T.S. Brown Bourbon",
-      "Elijah Craig Bourbons",
       "Parker's Heritage Collection - 10th Edition - 24 Year-Old Bottled-in-Bond Bourbon (2016)",
       "Parker's Heritage Collection - 11th Edition - 11 Year-Old Single Barrel (2017)",
       "Parker's Heritage Collection - 12th Edition - Orange Curaçao Finish (2018)",
-      "Parker's Heritage Collection - 14th Edition - Heavy Char Bourbon (2020)",
-      "David Nicholson Reserve"
+      "Parker's Heritage Collection - 14th Edition - Heavy Char Bourbon (2020)"
     ]
-  },
-  "78C/12R/10MB": {
-  	"name": "78C/12R/10MB",
-  	"grains": {
- 	  "corn": "78%",
-  	  "rye": "12%",
-  	  "malted_barley": "10%"
-  },
-  	"raw": "78c/12r/10mb",
-  	"brands": "Evan Williams",
-  	"verified_manually": true
   },
   "78.5C/13R/8.5MB": {
     "name": "78.5C/13R/8.5MB",
@@ -1285,6 +1250,7 @@
     },
     "raw": "86c/8mb/6r",
     "brands": [
+      "I.W. Harper 15-Year Old Bourbon",
       "Orphan Barrel Barterhouse",
       "Orphan Barrel Forager's Keep",
       "Orphan Barrel Forged Oak",
@@ -1297,20 +1263,6 @@
       "Orphan Barrel Rhetoric 24 Years Old Bourbon",
       "Orphan Barrel Rhetoric 25 Years Old Bourbon",
       "Orphan Barrel The Gifted Horse"
-    ]
-  },
-  "87C/12R/6MB": {
-    "name": "87C/12R/6MB",
-    "grains": {
-      "corn": "87%",
-      "rye": "12%",
-      "malted_barley": "6%"
-    },
-    "raw": "87c/12r/6mb",
-    "brands": [
-      "Found North Cask Strength Whisky Batch 006",
-      "Found North Cask Strength Whisky Batch 007",
-      "Found North Cask Strength Whisky Batch 008"
     ]
   },
   "91C/9MB": {
@@ -1438,22 +1390,34 @@
   },
   "Buffalo Trace Mash Bill #1": {
     "name": "Buffalo Trace Mash Bill #1",
-    "grains": {"<10% rye"},
+    "grains": {},
     "raw": "buffalo-trace-mash-bill-1",
     "brands": [
-      "Benchmark",
+      "Benchmark Bonded",
+      "Benchmark Full Proof",
+      "Benchmark Old No. 8",
+      "Benchmark Single Barrel",
+      "Benchmark Small Batch",
+      "Benchmark Top Floor",
       "Buffalo Trace",
-      "E.H. Taylor, Jr.",
-      "Eagle Rare 10 and 12",
+      "E.H. Taylor, Jr. Single Barrel",
+      "E.H. Taylor, Jr. Small Batch",
+      "Eagle Rare 10 Year Single Barrel",
       "Eagle Rare 17 Year-Old (2021)",
+      "Eagle Rare 17 Year-Old (2022)",
       "George T. Stagg 2008",
+      "George T. Stagg 2009",
+      "George T. Stagg 2020",
       "Old Charter 8",
-      "Stagg Jr."
+      "Stagg 22B (Batch 19)",
+      "Stagg Batch 18",
+      "Stagg Jr. Batch 16",
+      "Stagg Jr. Batch 17"
     ]
   },
   "Buffalo Trace Mash Bill #2": {
     "name": "Buffalo Trace Mash Bill #2",
-    "grains": {"high (10-15%) Rye"},
+    "grains": {},
     "raw": "buffalo-trace-mash-bill-2",
     "brands": [
       "Ancient Age",
@@ -1461,19 +1425,43 @@
       "Ancient Ancient Age 10 Star Bourbon",
       "Ancient Ancient Age 10 Year",
       "Blanton's Black Edition Bourbon",
-      "Hancock's President's Reserve Bourbon",
-	  "Elmer T Lee",
-	  "Rock Hill Farm"
+      "Blanton's Gold Edition",
+      "Blanton's Paris by Day",
+      "Blanton's Paris by Night",
+      "Blanton's Silver Edition Bourbon",
+      "Blanton's Single Barrel",
+      "Blanton's Special Reserve",
+      "Blanton's Straight from the Barrel",
+      "Chestnut Farms Bottled In Bond",
+      "Chestnut Farms Bourbon",
+      "Hancock's President's Reserve Bourbon"
     ]
   },
   "Buffalo Trace Rye Mash Bill": {
     "name": "Buffalo Trace Rye Mash Bill",
-    "grains": {"~51% Rye"},
+    "grains": {},
     "raw": "buffalo-trace-rye-mash-bill",
     "brands": [
       "Sazerac Rye",
-      "Sazerac Rye 18",
-      "Thomas H. Handy ", 
+      "Sazerac Rye 18 Year-Old (2000)",
+      "Sazerac Rye 18 Year-Old (2001)",
+      "Sazerac Rye 18 Year-Old (2002)",
+      "Sazerac Rye 18 Year-Old (2004)",
+      "Sazerac Rye 18 Year-Old (2006)",
+      "Sazerac Rye 18 Year-Old (2007)",
+      "Sazerac Rye 18 Year-Old (2008)",
+      "Sazerac Rye 18 Year-Old (2010)",
+      "Sazerac Rye 18 Year-Old (2012)",
+      "Sazerac Rye 18 Year-Old (2014)",
+      "Sazerac Rye 18 Year-Old (2018)",
+      "Sazerac Rye 18 Year-Old (2020)",
+      "Sazerac Rye 18 Year-Old (2021)",
+      "Sazerac Rye 18 Year-Old (2022)",
+      "Thomas H. Handy Sazerac 2017",
+      "Thomas H. Handy Sazerac 2018",
+      "Thomas H. Handy Sazerac 2019",
+      "Thomas H. Handy Sazerac 2020",
+      "Thomas H. Handy Sazerac 2021"
     ]
   },
   "Buffalo Trace Wheated Mash Bill": {
@@ -1482,9 +1470,25 @@
     "raw": "buffalo-trace-wheated-mash-bill",
     "brands": [
       "Buffalo Trace Single Oak Barrel 46",
-      "Weller",
-	  "William Larue Weller",
-	  "Modern Pappy Van Winkle"
+      "W.L. Weller 12 Year",
+      "W.L. Weller Antique",
+      "W.L. Weller C.Y.P.B.",
+      "W.L. Weller Full Proof",
+      "W.L. Weller Single Barrel",
+      "W.L. Weller Special Reserve",
+      "William Larue Weller (2005)",
+      "William Larue Weller (2007)",
+      "William Larue Weller (2008)",
+      "William Larue Weller (2009)",
+      "William Larue Weller (2011)",
+      "William Larue Weller (2012)",
+      "William Larue Weller (2013)",
+      "William Larue Weller (2014)",
+      "William Larue Weller (2015)",
+      "William Larue Weller (2018)",
+      "William Larue Weller (2019)",
+      "William Larue Weller (2020)",
+      "William Larue Weller (2022)"
     ]
   },
   "72C/15R/13MB": {
@@ -1501,6 +1505,32 @@
       "Town Branch Bourbon",
       "Town Branch Bourbon Sherry Cask Finished",
       "Town Branch Double Oaked Kentucky Straight Bourbon"
+    ]
+  },
+  "70C/18R/12MB": {
+    "name": "70C/18R/12MB",
+    "grains": {
+      "corn": "70%",
+      "rye": "18%",
+      "malted_barley": "12%"
+    },
+    "raw": "70c/18r/12mb",
+    "brands": [
+      "Old McBrayer Kentucky Straight Bourbon"
+    ]
+  },
+  "87C/12R/1MB": {
+    "name": "87C/12R/1MB",
+    "grains": {
+      "corn": "87%",
+      "rye": "12%",
+      "malted_barley": "1%"
+    },
+    "raw": "87c/12r/1mb",
+    "brands": [
+      "Found North Cask Strength Whisky Batch 006",
+      "Found North Cask Strength Whisky Batch 007",
+      "Found North Cask Strength Whisky Batch 008"
     ]
   }
 }

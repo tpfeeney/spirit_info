@@ -15,6 +15,7 @@ bot = commands.Bot(command_prefix="/", intents=intents)
 async def load_extensions():
     await bot.load_extension("cogs.lookup")
     await bot.load_extension("cogs.suggest")
+    await bot.load_extension("cogs.youtube")
 
 
 @bot.event
