@@ -199,7 +199,7 @@ class YouTubeCog(commands.Cog):
         info["last_video_id"] = new_videos[0]["video_id"]
         save_state(self.channels)
 
-    yt_group = app_commands.Group(name="youtube", description="Manage YouTube upload announcements")
+    yt_group = app_commands.Group(name="ytalerts", description="Manage YouTube upload announcements")
 
     @yt_group.command(name="add", description="Watch a YouTube channel for new uploads (owner only)")
     @app_commands.describe(
@@ -243,7 +243,7 @@ class YouTubeCog(commands.Cog):
         )
 
     @yt_group.command(name="remove", description="Stop watching a YouTube channel (owner only)")
-    @app_commands.describe(channel_id="The YouTube channel ID to remove (see /youtube list)")
+    @app_commands.describe(channel_id="The YouTube channel ID to remove (see /ytalerts list)")
     async def yt_remove(self, interaction: discord.Interaction, channel_id: str):
         if interaction.user.id != OWNER_ID:
             await interaction.response.send_message("❌ You don't have permission to use this command.", ephemeral=True)
