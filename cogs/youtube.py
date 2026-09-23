@@ -17,7 +17,7 @@ STATE_FILE = os.path.join(DATA_DIR, "youtube_channels.json")
 CHECK_INTERVAL_MINUTES = int(os.getenv("YOUTUBE_CHECK_INTERVAL_MINUTES", "10"))
 USER_AGENT = "Mozilla/5.0 (compatible; DiscordBourbonBot/1.0)"
 
-FEED_URL = "https://www.youtube.com/feeds/videos.xml?channel_id={}"
+FEED_URL = "https://www.youtube.com/feeds/videos.xml?channel_id={UCsWSasoA8oCVxWcdGJlO82A}"
 YT_CHANNEL_ID_RE = re.compile(r"^UC[a-zA-Z0-9_-]{22}$")
 
 ATOM_NS = "{http://www.w3.org/2005/Atom}"
