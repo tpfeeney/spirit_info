@@ -12,12 +12,19 @@ from discord.ext import commands, tasks
 owner_id_env = os.getenv("OWNER_ID", "0")
 OWNER_ID = int(owner_id_env) if owner_id_env and owner_id_env.strip() else 0
 
+# Discord channels the bot is allowed to post announcements in.
+# Set YOUTUBE_ALLOWED_CHANNEL_IDS in .env as a comma-separated list of channel IDs.
+# If empty, no restriction is applied.
+ALLOWED_POST_CHANNEL_IDS = {
+    int(x) for x in os.getenv("YOUTUBE_ALLOWED_CHANNEL_IDS", "").split(",") if x.strip()
+}
+
 DATA_DIR = "data"
 STATE_FILE = os.path.join(DATA_DIR, "youtube_channels.json")
 CHECK_INTERVAL_MINUTES = int(os.getenv("YOUTUBE_CHECK_INTERVAL_MINUTES", "10"))
 USER_AGENT = "Mozilla/5.0 (compatible; DiscordBourbonBot/1.0)"
 
-FEED_URL = "https://www.youtube.com/feeds/videos.xml?channel_id={UCsWSasoA8oCVxWcdGJlO82A}"
+FEED_URL = "https://www.youtube.com/feeds/videos.xml?channel_id={}"
 YT_CHANNEL_ID_RE = re.compile(r"^UC[a-zA-Z0-9_-]{22}$")
 
 ATOM_NS = "{http://www.w3.org/2005/Atom}"
@@ -175,22 +182,17 @@ class YouTubeCog(commands.Cog):
             return
 
         post_channel = self.bot.get_channel(info.get("post_channel_id"))
+        if post_channel is not None and ALLOWED_POST_CHANNEL_IDS and post_channel.id not in ALLOWED_POST_CHANNEL_IDS:
+            print(f"[youtube] Channel {post_channel.id} not in allowlist; skipping post")
+            post_channel = None
+
         if post_channel is None:
-            print(f"[youtube] Post channel {info.get('post_channel_id')} not found for {yt_channel_id}")
+            print(f"[youtube] Post channel {info.get('post_channel_id')} unavailable for {yt_channel_id}")
         else:
             for v in reversed(new_videos):  # oldest-first, so posting order matches upload order
-                embed = discord.Embed(
-                    title=v["title"],
-                    url=v["link"],
-                    description=f"New upload from **{v['author'] or info.get('label', yt_channel_id)}**",
-                    color=discord.Color.red(),
-                )
-                if v["thumbnail"]:
-                    embed.set_image(url=v["thumbnail"])
-                if v["published"]:
-                    embed.set_footer(text=v["published"])
                 try:
-                    await post_channel.send(embed=embed)
+                    # Plain link only; Discord auto-unfurls it into a video preview.
+                    await post_channel.send(v["link"])
                 except Exception as e:
                     print(f"[youtube] Error posting video {v['video_id']}: {e}")
 
@@ -214,6 +216,12 @@ class YouTubeCog(commands.Cog):
     ):
         if interaction.user.id != OWNER_ID:
             await interaction.response.send_message("❌ You don't have permission to use this command.", ephemeral=True)
+            return
+
+        if ALLOWED_POST_CHANNEL_IDS and post_channel.id not in ALLOWED_POST_CHANNEL_IDS:
+            await interaction.response.send_message(
+                "❌ That channel isn't approved for YouTube announcements.", ephemeral=True
+            )
             return
 
         await interaction.response.defer(ephemeral=True, thinking=True)
