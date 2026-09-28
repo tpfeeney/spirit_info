@@ -8,8 +8,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-OWNER_ID = int(os.getenv("OWNER_ID"))
-DATA_DIR = "data"
+OWNER_ID = int(os.getenv("OWNER_ID") or 0)
+
+# Resolve the data folder relative to this file (cogs/lookup.py -> ../data),
+# so it works no matter what working directory the host starts the bot from.
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+
+# Problems hit during the most recent load, so /reload-data can report them
+LOAD_ERRORS = {}  # filename -> error message
 
 CATEGORY_LABELS = {
     "rc": "Rare Character",
@@ -23,23 +29,51 @@ def load_json(filename, default=None):
         default = {}
     path = os.path.join(DATA_DIR, filename)
     if not os.path.exists(path):
-        print(f"[WARN] Data file not found: {path}")
+        msg = f"{filename}: file not found at {path}"
+        print(f"[WARN] {msg}")
+        LOAD_ERRORS[filename] = msg
         return default
     try:
         with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
+            data = json.load(f)
     except json.JSONDecodeError as e:
-        print(f"[ERROR] Invalid JSON in {filename}: {e}")
+        msg = f"{filename}: invalid JSON at line {e.lineno}, column {e.colno} ({e.msg})"
+        print(f"[ERROR] {msg}")
+        LOAD_ERRORS[filename] = msg
         return default
+    if not isinstance(data, dict):
+        msg = f"{filename}: expected a JSON object at the top level, got {type(data).__name__}"
+        print(f"[ERROR] {msg}")
+        LOAD_ERRORS[filename] = msg
+        return default
+    return data
+
+
+def load_all():
+    """Load every data file. Returns (categories, mashbills, brand_index)."""
+    LOAD_ERRORS.clear()
+    categories = {
+        "rc": load_json("rc_codes.json"),
+        "nbc": load_json("nbc_codes.json"),
+    }
+    mashbills = load_json("mashbills.json")
+    print(
+        f"[lookup] Loaded {len(categories['rc'])} RC codes, {len(categories['nbc'])} NBC codes, "
+        f"{len(mashbills)} mashbills from {DATA_DIR}"
+    )
+    return categories, mashbills, build_brand_index(mashbills)
 
 
 def build_brand_index(mashbills):
     """Build index of brands for fast lookup"""
     index = {}
     for mb_name, mb_data in mashbills.items():
+        if not isinstance(mb_data, dict):
+            continue
         for brand in mb_data.get("brands", []):
-            key = brand.lower().strip()
-            index.setdefault(key, []).append(mb_name)
+            key = str(brand).lower().strip()
+            if key:
+                index.setdefault(key, []).append(mb_name)
     return index
 
 
@@ -69,7 +103,12 @@ def chunk_by_length(items, prefix="• ", max_len=1024):
 
 def build_mashbill_embed(mb_name, mb_data):
     """Build a single embed for one mashbill and its brands, one per line"""
-    grain_str = ", ".join(f"{k}: {v}" for k, v in mb_data.get("grains", {}).items()) if isinstance(mb_data.get("grains"), dict) else ", ".join(mb_data.get("grains", []))
+    grains = mb_data.get("grains") or {}
+    if isinstance(grains, dict):
+        grain_str = ", ".join(f"{k.replace('_', ' ')}: {v}" for k, v in grains.items())
+    else:
+        grain_str = ", ".join(str(g) for g in grains)
+    grain_str = grain_str or "Unknown"
     brands = mb_data.get("brands", [])
 
     embed = discord.Embed(
@@ -91,12 +130,7 @@ def build_mashbill_embed(mb_name, mb_data):
 
 
 # Load all data at module import time
-CATEGORIES = {
-    "rc": load_json("rc_codes.json"),
-    "nbc": load_json("nbc_codes.json"),
-}
-MASHBILLS = load_json("mashbills.json")
-BRAND_INDEX = build_brand_index(MASHBILLS)
+CATEGORIES, MASHBILLS, BRAND_INDEX = load_all()
 
 
 async def rc_autocomplete(interaction: discord.Interaction, current: str) -> list[app_commands.Choice[str]]:
@@ -384,17 +418,37 @@ class LookupCog(commands.Cog):
             )
             return
 
-        global CATEGORIES, MASHBILLS, BRAND_INDEX
-        CATEGORIES = {
-            "rc": load_json("rc_codes.json"),
-            "nbc": load_json("nbc_codes.json"),
-        }
-        MASHBILLS = load_json("mashbills.json")
-        BRAND_INDEX = build_brand_index(MASHBILLS)
+        # Acknowledge right away: Discord only gives us 3 seconds to respond,
+        # and on a slow free host file loading can blow past that (error 10062).
+        await interaction.response.defer(ephemeral=True, thinking=True)
 
-        await interaction.response.send_message(
-            "✅ Data reloaded successfully!", ephemeral=True
+        global CATEGORIES, MASHBILLS, BRAND_INDEX
+        new_categories, new_mashbills, new_index = load_all()
+        errors = dict(LOAD_ERRORS)
+
+        # Don't wipe good in-memory data with an empty dict from a broken file
+        if "rc_codes.json" not in errors:
+            CATEGORIES["rc"] = new_categories["rc"]
+        if "nbc_codes.json" not in errors:
+            CATEGORIES["nbc"] = new_categories["nbc"]
+        if "mashbills.json" not in errors:
+            MASHBILLS = new_mashbills
+            BRAND_INDEX = new_index
+
+        summary = (
+            f"RC codes: {len(CATEGORIES['rc'])}\n"
+            f"NBC codes: {len(CATEGORIES['nbc'])}\n"
+            f"Mashbills: {len(MASHBILLS)}\n"
+            f"Brands: {len(BRAND_INDEX)}"
         )
+        if errors:
+            msg = "⚠️ Reloaded with problems (kept the previous data for any broken file):\n"
+            msg += "\n".join(f"• {e}" for e in errors.values())
+            msg += f"\n\n{summary}"
+        else:
+            msg = f"✅ Data reloaded successfully!\n{summary}"
+
+        await interaction.followup.send(msg[:2000], ephemeral=True)
 
 
 async def setup(bot: commands.Bot):

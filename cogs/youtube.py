@@ -2,7 +2,9 @@ import os
 import re
 import json
 import xml.etree.ElementTree as ET
+from datetime import datetime, time as dtime
 from typing import Optional
+from zoneinfo import ZoneInfo
 
 import aiohttp
 import discord
@@ -21,7 +23,16 @@ ALLOWED_POST_CHANNEL_IDS = {
 
 DATA_DIR = "data"
 STATE_FILE = os.path.join(DATA_DIR, "youtube_channels.json")
-CHECK_INTERVAL_MINUTES = int(os.getenv("YOUTUBE_CHECK_INTERVAL_MINUTES", "10"))
+# ---- Check schedule (Eastern time; follows daylight saving automatically) ----
+#   8:00 AM - 11:59 PM  -> every 30 minutes (on the :00 and :30)
+#   1:00 PM -  2:59 PM  -> every minute
+#  12:00 AM -  7:59 AM  -> no checks
+# Anything uploaded while we're not checking gets announced on the next check,
+# since we compare against the last video we saw.
+TIMEZONE = ZoneInfo("America/New_York")
+SLOW_START, SLOW_END = dtime(8, 0), dtime(23, 59, 59)
+FAST_START, FAST_END = dtime(13, 0), dtime(15, 0)   # 15:00 itself is a normal :00 check
+SLOW_INTERVAL_MINUTES = 30
 USER_AGENT = "Mozilla/5.0 (compatible; DiscordBourbonBot/1.0)"
 
 FEED_URL = "https://www.youtube.com/feeds/videos.xml?channel_id={}"
@@ -34,6 +45,22 @@ MEDIA_NS = "{http://search.yahoo.com/mrss/}"
 # Note: YouTube's per-channel "uploads" RSS feed includes Shorts as well as
 # regular videos (Shorts are just videos with a vertical aspect ratio), so
 # this single feed covers both without needing the YouTube Data API.
+
+
+def schedule_slot(now: datetime) -> Optional[str]:
+    """
+    Return an ID for the schedule slot `now` falls in, or None if we shouldn't
+    check at all. The loop runs a check whenever the slot changes, so:
+      - fast window: a new slot every minute   -> check every minute
+      - slow window: a new slot every 30 min   -> check every half hour
+    """
+    t = now.time()
+    if FAST_START <= t < FAST_END:
+        return now.strftime("%Y-%m-%d %H:%M")
+    if SLOW_START <= t <= SLOW_END:
+        floored = now.minute - (now.minute % SLOW_INTERVAL_MINUTES)
+        return now.strftime("%Y-%m-%d %H:") + f"{floored:02d}"
+    return None
 
 
 def load_state():
@@ -140,6 +167,7 @@ class YouTubeCog(commands.Cog):
         self.bot = bot
         self.channels = load_state()
         self.session: Optional[aiohttp.ClientSession] = None
+        self.last_slot: Optional[str] = None  # last schedule slot we checked in
 
     async def cog_load(self):
         self.session = aiohttp.ClientSession()
@@ -150,10 +178,28 @@ class YouTubeCog(commands.Cog):
         if self.session:
             await self.session.close()
 
-    @tasks.loop(minutes=CHECK_INTERVAL_MINUTES)
+    @tasks.loop(minutes=1)
     async def check_feeds(self):
+        # Ticks every minute; only actually hits YouTube when we enter a new slot.
+        slot = schedule_slot(datetime.now(TIMEZONE))
+        if slot is None or slot == self.last_slot:
+            return
+        self.last_slot = slot
+        await self._check_all()
+
+    @check_feeds.error
+    async def check_feeds_error(self, error):
+        # Log and keep going instead of letting one bad check kill the loop for good
+        print(f"[youtube] Error in check loop: {error!r}")
+        if not self.check_feeds.is_running():
+            self.check_feeds.restart()
+
+    async def _check_all(self):
         for yt_channel_id, info in list(self.channels.items()):
-            await self._check_one(yt_channel_id, info)
+            try:
+                await self._check_one(yt_channel_id, info)
+            except Exception as e:
+                print(f"[youtube] Error checking {yt_channel_id}: {e!r}")
 
     @check_feeds.before_loop
     async def before_check_feeds(self):
@@ -281,7 +327,7 @@ class YouTubeCog(commands.Cog):
             return
 
         await interaction.response.defer(ephemeral=True, thinking=True)
-        await self.check_feeds()
+        await self._check_all()  # manual checks ignore the time window
         await interaction.followup.send("✅ Check complete.", ephemeral=True)
 
 

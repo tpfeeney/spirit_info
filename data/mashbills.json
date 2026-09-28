@@ -16,7 +16,7 @@
       "Journeyman Distillery Three Oaks Single Malt Whiskey",
       "Laws Henry Road Straight Malt Whiskey (Bonded)",
       "Manifest Whiskey Project No. 2",
-      "Pearse Lyons Reserve",
+      "Pearse Lyons Reserve"
     ]
   },
   "100C": {
@@ -53,14 +53,19 @@
       "Virginia Distillery Co. VHW Cider Cask Finished Whisky",
       "Virginia Distillery Co. VHW Port Cask Finished Whisky",
       "WhistlePig The Beholden 21 Year Single Malt Whiskey",
-	  "Stranahan's Blue Peak Single Malt Whiskey",
+      "Stranahan's Blue Peak Single Malt Whiskey",
       "Stranahan's Diamond Peak Single Malt Whiskey",
       "Stranahan's Mountain Angel 10-Year Single Malt Whiskey",
-  	  "Stranahan's Original Single Malt Whiskey",
+      "Stranahan's Original Single Malt Whiskey",
       "Stranahan's Sherry Cask Single Malt Whiskey",
       "Stranahan's Single Barrel Single Malt Whiskey",
-      "Stranahan's Snowflake""malted_rye"
-  	]
+      "Stranahan's Snowflake"
+    ]
+  },
+  "100MR": {
+    "name": "100MR",
+    "grains": {
+      "malted_rye": "100%"
     },
     "raw": "100mr",
     "brands": [
@@ -1438,7 +1443,7 @@
   },
   "Buffalo Trace Mash Bill #1": {
     "name": "Buffalo Trace Mash Bill #1",
-    "grains": {"<10% rye"},
+    "grains": {"rye": "<10%"},
     "raw": "buffalo-trace-mash-bill-1",
     "brands": [
       "Benchmark",
@@ -1453,7 +1458,7 @@
   },
   "Buffalo Trace Mash Bill #2": {
     "name": "Buffalo Trace Mash Bill #2",
-    "grains": {"high (10-15%) Rye"},
+    "grains": {"rye": "high (10-15%)"},
     "raw": "buffalo-trace-mash-bill-2",
     "brands": [
       "Ancient Age",
@@ -1468,12 +1473,12 @@
   },
   "Buffalo Trace Rye Mash Bill": {
     "name": "Buffalo Trace Rye Mash Bill",
-    "grains": {"~51% Rye"},
+    "grains": {"rye": "~51%"},
     "raw": "buffalo-trace-rye-mash-bill",
     "brands": [
       "Sazerac Rye",
       "Sazerac Rye 18",
-      "Thomas H. Handy ", 
+      "Thomas H. Handy"
     ]
   },
   "Buffalo Trace Wheated Mash Bill": {
