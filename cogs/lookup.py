@@ -50,7 +50,7 @@ def load_json(filename, default=None):
 
 
 def load_all():
-    """Load every data file. Returns (categories, mashbills, brand_index)."""
+    """Load every data file. Returns (categories, mashbills, brand_index, variant_parent)."""
     LOAD_ERRORS.clear()
     categories = {
         "rc": load_json("rc_codes.json"),
@@ -61,12 +61,31 @@ def load_all():
         f"[lookup] Loaded {len(categories['rc'])} RC codes, {len(categories['nbc'])} NBC codes, "
         f"{len(mashbills)} mashbills from {DATA_DIR}"
     )
-    return categories, mashbills, build_brand_index(mashbills)
+    brand_index, variant_parent = build_brand_index(mashbills)
+    return categories, mashbills, brand_index, variant_parent
+
+
+# Original capitalization for each brand key. str.title() mangles names like
+# "Booker's" into "Booker'S", so show names exactly as they're written in the data.
+BRAND_DISPLAY = {}
+
+
+def display_brand(key):
+    return BRAND_DISPLAY.get(key) or key.title()
 
 
 def build_brand_index(mashbills):
-    """Build index of brands for fast lookup"""
+    """
+    Build index of brands for fast lookup.
+
+    Also indexes the original bottle names stored under each mashbill's
+    "variants" (e.g. 'Booker's 2015-02 "Dot's Batch"'), so searching an old
+    bottle name still finds its mashbill. variant_parent maps each of those
+    names to the simplified brand it's listed under: {variant_key: [(mashbill, brand)]}.
+    """
     index = {}
+    variant_parent = {}
+    BRAND_DISPLAY.clear()
     for mb_name, mb_data in mashbills.items():
         if not isinstance(mb_data, dict):
             continue
@@ -74,7 +93,26 @@ def build_brand_index(mashbills):
             key = str(brand).lower().strip()
             if key:
                 index.setdefault(key, []).append(mb_name)
-    return index
+                BRAND_DISPLAY.setdefault(key, str(brand).strip())
+        variants = mb_data.get("variants") or {}
+        if not isinstance(variants, dict):
+            continue
+        for brand, names in variants.items():
+            for name in names or []:
+                key = str(name).lower().strip()
+                if not key or key == str(brand).lower().strip():
+                    continue
+                if mb_name not in index.setdefault(key, []):
+                    index[key].append(mb_name)
+                BRAND_DISPLAY.setdefault(key, str(name).strip())
+                variant_parent.setdefault(key, []).append((mb_name, brand))
+    return index, variant_parent
+
+
+def get_variants(mb_data):
+    """Return the mashbill's {brand: [original bottle names]} dict (empty if none)."""
+    variants = mb_data.get("variants") if isinstance(mb_data, dict) else None
+    return variants if isinstance(variants, dict) else {}
 
 
 def chunk_by_length(items, prefix="• ", max_len=1024):
@@ -110,6 +148,12 @@ def build_mashbill_embed(mb_name, mb_data):
         grain_str = ", ".join(str(g) for g in grains)
     grain_str = grain_str or "Unknown"
     brands = mb_data.get("brands", [])
+    variants = get_variants(mb_data)
+    # "Booker's (14)" tells people there are individual bottles behind the button
+    shown = [
+        f"{b} ({len(variants[b])})" if len(variants.get(b) or []) > 1 else b
+        for b in brands
+    ]
 
     embed = discord.Embed(
         title=f"🌾 {mb_name}",
@@ -117,7 +161,7 @@ def build_mashbill_embed(mb_name, mb_data):
         color=discord.Color.gold(),
     )
 
-    brand_chunks = chunk_by_length(brands)
+    brand_chunks = chunk_by_length(shown)
     for idx, chunk in enumerate(brand_chunks):
         field_name = f"🥃 Brands ({len(brands)})" if idx == 0 else "🥃 Brands (cont.)"
         embed.add_field(
@@ -129,8 +173,61 @@ def build_mashbill_embed(mb_name, mb_data):
     return embed
 
 
+# ---------- "Show individual bottles" button ----------
+# The button's custom_id carries what to show, and clicks are handled by the
+# on_interaction listener in LookupCog. Nothing is kept in memory, so buttons
+# on old messages keep working after the bot restarts or reloads data.
+MASHBILL_BUTTON_PREFIX = "mbvar:"   # mbvar:<mashbill name>
+BRAND_BUTTON_PREFIX = "bvar:"       # bvar:<brand key>
+CUSTOM_ID_MAX = 100                 # Discord limit
+EMBED_CHAR_BUDGET = 5500            # Discord caps an embed at 6000 characters
+EMBED_FIELD_LIMIT = 25
+
+
+def make_bottles_view(custom_id, count):
+    """A view with one 'Show individual bottles' button, or None if it can't be built."""
+    if not count or len(custom_id) > CUSTOM_ID_MAX:
+        return None
+    view = discord.ui.View(timeout=None)
+    view.add_item(discord.ui.Button(
+        label=f"Show individual bottles ({count})",
+        emoji="🍾",
+        style=discord.ButtonStyle.secondary,
+        custom_id=custom_id,
+    ))
+    # Stop the view so discord.py doesn't hold it in memory; the listener handles clicks.
+    view.stop()
+    return view
+
+
+def build_bottle_embeds(title, groups):
+    """
+    Turn [(brand, [bottle names]), ...] into as many embeds as needed to stay
+    within Discord's limits (1024 per field, 25 fields and ~6000 chars per embed).
+    """
+    fields = []
+    for brand, names in groups:
+        for idx, chunk in enumerate(chunk_by_length(names)):
+            name = f"🥃 {brand}"[:256] if idx == 0 else f"🥃 {brand} (cont.)"[:256]
+            fields.append((name, "\n".join(chunk)))
+
+    embeds, current, used = [], None, 0
+    for name, value in fields:
+        size = len(name) + len(value)
+        if current is None or len(current.fields) >= EMBED_FIELD_LIMIT or used + size > EMBED_CHAR_BUDGET:
+            current = discord.Embed(
+                title=title if not embeds else f"{title} (cont.)",
+                color=discord.Color.gold(),
+            )
+            used = len(current.title)
+            embeds.append(current)
+        current.add_field(name=name, value=value, inline=False)
+        used += size
+    return embeds
+
+
 # Load all data at module import time
-CATEGORIES, MASHBILLS, BRAND_INDEX = load_all()
+CATEGORIES, MASHBILLS, BRAND_INDEX, VARIANT_PARENT = load_all()
 
 
 async def rc_autocomplete(interaction: discord.Interaction, current: str) -> list[app_commands.Choice[str]]:
@@ -176,7 +273,7 @@ async def brand_autocomplete(interaction: discord.Interaction, current: str) -> 
         if current_lower in brand.lower()
     ]
     return [
-        app_commands.Choice(name=brand.title(), value=brand)
+        app_commands.Choice(name=display_brand(brand)[:100], value=brand[:100])
         for brand in sorted(matches)
     ][:25]
 
@@ -208,6 +305,87 @@ class LookupCog(commands.Cog):
                 embed.add_field(name=display_name, value=value, inline=inline)
 
         return embed
+
+    async def send_mashbill(self, interaction: discord.Interaction, mb_name: str):
+        """Send a mashbill embed, with the bottles button when it has variants."""
+        mb_data = MASHBILLS[mb_name]
+        embed = build_mashbill_embed(mb_name, mb_data)
+        count = sum(len(v or []) for v in get_variants(mb_data).values())
+        view = make_bottles_view(f"{MASHBILL_BUTTON_PREFIX}{mb_name}", count)
+        if view:
+            await interaction.response.send_message(embed=embed, view=view)
+        else:
+            await interaction.response.send_message(embed=embed)
+
+    def brand_groups(self, brand_key):
+        """[(mashbill, brand display name, [bottle names])] for a brand key."""
+        groups = []
+        for mb_name in BRAND_INDEX.get(brand_key, []):
+            variants = get_variants(MASHBILLS.get(mb_name, {}))
+            for brand, names in variants.items():
+                if brand.lower().strip() == brand_key and names:
+                    groups.append((mb_name, brand, names))
+        return groups
+
+    async def send_brand(self, interaction: discord.Interaction, brand_key: str):
+        """Send a brand embed, with the bottles button when it combines several bottles."""
+        mashbill_names = BRAND_INDEX[brand_key]
+        embed = discord.Embed(
+            title=f"🏷️ {display_brand(brand_key)}"[:256],
+            color=discord.Color.blue(),
+        )
+        embed.add_field(
+            name="Mashbills",
+            value="\n".join(f"• {name}" for name in mashbill_names)[:1024],
+            inline=False,
+        )
+        # Searched an original bottle name? Say which entry it's listed under now.
+        parents = VARIANT_PARENT.get(brand_key, [])
+        if parents:
+            embed.add_field(
+                name="Listed as",
+                value="\n".join(f"• {brand} ({mb})" for mb, brand in parents)[:1024],
+                inline=False,
+            )
+        count = sum(len(names) for _, _, names in self.brand_groups(brand_key))
+        view = make_bottles_view(f"{BRAND_BUTTON_PREFIX}{brand_key}", count)
+        if view:
+            await interaction.response.send_message(embed=embed, view=view)
+        else:
+            await interaction.response.send_message(embed=embed)
+
+    @commands.Cog.listener()
+    async def on_interaction(self, interaction: discord.Interaction):
+        """Handle 'Show individual bottles' clicks (works on old messages too)."""
+        if interaction.type != discord.InteractionType.component:
+            return
+        custom_id = (interaction.data or {}).get("custom_id", "")
+
+        if custom_id.startswith(MASHBILL_BUTTON_PREFIX):
+            mb_name = custom_id[len(MASHBILL_BUTTON_PREFIX):]
+            variants = get_variants(MASHBILLS.get(mb_name, {}))
+            title = f"🍾 Bottles in {mb_name}"
+            groups = [(brand, names) for brand, names in variants.items() if names]
+        elif custom_id.startswith(BRAND_BUTTON_PREFIX):
+            brand_key = custom_id[len(BRAND_BUTTON_PREFIX):]
+            found = self.brand_groups(brand_key)
+            multi = len({mb for mb, _, _ in found}) > 1
+            title = f"🍾 {found[0][1]} bottles" if found else "🍾 Bottles"
+            groups = [(f"{brand} ({mb})" if multi else brand, names) for mb, brand, names in found]
+        else:
+            return  # not our button; other cogs' components are handled by their own views
+
+        if not groups:
+            await interaction.response.send_message(
+                "This list is no longer available (the data may have been reloaded).", ephemeral=True
+            )
+            return
+
+        # Only the person who clicked sees the list, so the channel doesn't fill up.
+        embeds = build_bottle_embeds(title, groups)
+        await interaction.response.send_message(embed=embeds[0], ephemeral=True)
+        for extra in embeds[1:]:
+            await interaction.followup.send(embed=extra, ephemeral=True)
 
     def not_found_message(self, code, cat_label=None):
         """Build not-found message"""
@@ -286,8 +464,7 @@ class LookupCog(commands.Cog):
                     break
 
             if matched_name:
-                embed = build_mashbill_embed(matched_name, MASHBILLS[matched_name])
-                await interaction.response.send_message(embed=embed)
+                await self.send_mashbill(interaction, matched_name)
                 return
 
             # 2. No exact match - fuzzy substring search across all mashbill names
@@ -306,9 +483,7 @@ class LookupCog(commands.Cog):
 
             if len(matches) == 1:
                 # Only one match - show it directly, fully expanded
-                matched_name = matches[0]
-                embed = build_mashbill_embed(matched_name, MASHBILLS[matched_name])
-                await interaction.response.send_message(embed=embed)
+                await self.send_mashbill(interaction, matches[0])
                 return
 
             # 3. Multiple matches - show a pick-list so the user can narrow down
@@ -331,17 +506,7 @@ class LookupCog(commands.Cog):
 
             # Try exact match first (user selected from autocomplete)
             if search_query_lower in BRAND_INDEX:
-                mashbill_names = BRAND_INDEX[search_query_lower]
-                embed = discord.Embed(
-                    title=f"🏷️ {search_query.title()}",
-                    color=discord.Color.blue(),
-                )
-                embed.add_field(
-                    name="Mashbills",
-                    value="\n".join(f"• {name}" for name in mashbill_names),
-                    inline=False,
-                )
-                await interaction.response.send_message(embed=embed)
+                await self.send_brand(interaction, search_query_lower)
                 return
 
             # Fuzzy substring search
@@ -354,23 +519,12 @@ class LookupCog(commands.Cog):
                 close = get_close_matches(search_query_lower, list(BRAND_INDEX.keys()), n=3, cutoff=0.5)
                 msg = f"❌ No brand found matching '{query}'"
                 if close:
-                    msg += f"\nDid you mean: {', '.join(c.title() for c in close)}?"
+                    msg += f"\nDid you mean: {', '.join(display_brand(c) for c in close)}?"
                 await interaction.response.send_message(msg, ephemeral=True)
                 return
 
             if len(matching_brands) == 1:
-                brand = matching_brands[0]
-                mashbill_names = BRAND_INDEX[brand]
-                embed = discord.Embed(
-                    title=f"🏷️ {brand.title()}",
-                    color=discord.Color.blue(),
-                )
-                embed.add_field(
-                    name="Mashbills",
-                    value="\n".join(f"• {name}" for name in mashbill_names),
-                    inline=False,
-                )
-                await interaction.response.send_message(embed=embed)
+                await self.send_brand(interaction, matching_brands[0])
                 return
 
             # Multiple brand matches - show pick-list
@@ -381,7 +535,7 @@ class LookupCog(commands.Cog):
             )
             embed.add_field(
                 name="Matches",
-                value="\n".join(f"• {b.title()}" for b in matching_brands[:25]),
+                value="\n".join(f"• {display_brand(b)}" for b in matching_brands[:25])[:1024],
                 inline=False,
             )
             if len(matching_brands) > 25:
@@ -422,8 +576,8 @@ class LookupCog(commands.Cog):
         # and on a slow free host file loading can blow past that (error 10062).
         await interaction.response.defer(ephemeral=True, thinking=True)
 
-        global CATEGORIES, MASHBILLS, BRAND_INDEX
-        new_categories, new_mashbills, new_index = load_all()
+        global CATEGORIES, MASHBILLS, BRAND_INDEX, VARIANT_PARENT
+        new_categories, new_mashbills, new_index, new_parent = load_all()
         errors = dict(LOAD_ERRORS)
 
         # Don't wipe good in-memory data with an empty dict from a broken file
@@ -434,6 +588,7 @@ class LookupCog(commands.Cog):
         if "mashbills.json" not in errors:
             MASHBILLS = new_mashbills
             BRAND_INDEX = new_index
+            VARIANT_PARENT = new_parent
 
         summary = (
             f"RC codes: {len(CATEGORIES['rc'])}\n"

@@ -1,716 +1,1608 @@
 {
-  "E-MX": {
-    "name": "Exceptional Series Malt Whiskey",
-    "type": "Malt Whiskey",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "",
-    "note": "X indicates barrel age",
-    "confirmed": false
-  },
-  "E-KB": {
-    "name": "Exceptional Series Bourbon",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "",
-    "confirmed": false
-  },
   "RIO": {
-    "name": "RIO",
+    "name": "RIO (Spanish for 'river')",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "75/21/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "KY - Castle & Key stone warehouse (built 1887), Frankfort area, closest warehouse to the river",
     "source": "MGP",
-    "aging_location": "KY (Castle and Key Distillery stone warehouse)",
+    "source_status": "reported",
+    "age": "6y7m+ (many ~8 yrs)",
     "color": "Copper",
+    "cooperage": "Kelvin",
+    "note": "RIO-200s lot on RC site; Seelbach's 'Origin Series' (Rye/Corn/Barley labels) picks are all RIO barrels",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Whisky Advocate code guide w/ Pablo Moix (Jul 2024)",
+      "Seelbach's RC single barrel guide (Jul 2026)"
+    ],
     "confirmed": true
   },
   "NIO": {
     "name": "NIO",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "75/21/4",
-    "source": "MGP",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "IN",
     "aging_location": "IN",
-    "note": "Low rye, younger than NIO",
+    "source": "MGP",
+    "source_status": "inferred",
+    "age": "6y9m+",
+    "note": "Low rye (21%). Only a few released early, incl. RC Clubhouse 'Polebridge Mercantile'",
+    "research_notes": "RC says distilled and aged IN; Prime Barrel says aged IN and KY.",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Prime Barrel RC overview (Oct 2024)"
+    ],
     "confirmed": true
   },
   "I21": {
     "name": "I21",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "75/21/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "IN, with additional finishing time in KY",
     "source": "MGP",
-    "aging_location": "IN",
+    "source_status": "inferred",
+    "age": "4y9m+",
     "color": "Dark Red",
     "note": "Low rye, younger than NIO. MDB1:Fudge Zinger",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
     "confirmed": true
   },
   "IRT": {
-    "name": "IRT",
+    "name": "IRT (Indiana Rye in Tennessee)",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "60/36/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "TN (small warehouse)",
     "source": "MGP",
-    "aging_location": "TN",
-    "note": "High rye",
+    "source_status": "reported",
+    "age": "5y+",
+    "color": "Red",
+    "note": "High rye; drier than typical bourbon due to TN temperature swings",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Whisky Advocate code guide w/ Pablo Moix (Jul 2024)",
+      "Seelbach's RC single barrel guide (Jul 2026)"
+    ],
     "confirmed": true
   },
   "HR7": {
     "name": "HR7",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "60/36/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "IN (Moix: some barrels aged in KY)",
     "source": "MGP",
-    "aging_location": "KY/IN",
-    "age": "7yrs+",
-    "note": "High rye",
+    "source_status": "reported",
+    "age": "7y6m+",
+    "color": "Orange",
+    "family": "HR7/HRY sister barrels",
+    "note": "High rye; many over 120 proof; Moix calls it the most collected RC code",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Whisky Advocate code guide w/ Pablo Moix (Jul 2024)"
+    ],
     "confirmed": true
   },
   "HRY": {
     "name": "HRY",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "60/36/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "IN (Prime Barrel says some KY)",
     "source": "MGP",
-    "aging_location": "KY/IN",
-    "age": "under 7yrs",
+    "source_status": "inferred",
+    "age": "6y+ (6.5-7.5 yrs)",
     "color": "Dark Blue",
-    "note": "High rye, 6.5 to 7.5 year old Indiana bourbon, like thick mud",
-    "confirmed": true
-  },
-  "KHT": {
-    "name": "KHT",
-    "type": "Bourbon",
-    "mashbill": "75/21/4",
-    "source": "Unknown KY source",
-    "aging_location": "KY",
-    "note": "Only 1 released",
-    "confirmed": true
-  },
-  "KBT": {
-    "name": "KBT",
-    "type": "Bourbon",
-    "mashbill": "72/18/10",
-    "source": "BBC",
-    "aging_location": "KY",
-    "color": "Yellow",
-    "note": "First one was C18-27-KY",
-    "confirmed": true
-  },
-  "K13": {
-    "name": "K13",
-    "type": "Bourbon",
-    "mashbill": "78/13/9",
-    "source": "Unknown KY source",
-    "aging_location": "KY",
-    "color": "Yellow",
-    "note": "May be the heaviest liquid weight of any whiskey we've done",
-    "confirmed": true
-  },
-  "K21": {
-    "name": "K21",
-    "type": "Bourbon",
-    "mashbill": "70/21/9",
-    "source": "Unknown KY source",
-    "aging_location": "KY",
-    "color": "Yellow",
-    "note": "Tastes like 2012 E.H. Taylor Barrel Proof",
-    "confirmed": true
-  },
-  "KEL": {
-    "name": "KEL",
-    "type": "Bourbon",
-    "mashbill": "75/21/4",
-    "source": "MGP",
-    "aging_location": "KY",
-    "color": "Bright Red",
-    "note": "Low rye MGP, aged in Kelvin char #4 barrels",
+    "family": "HR7/HRY sister barrels",
+    "note": "High rye, 6.5 to 7.5 year old Indiana bourbon, like thick mud; 'sister barrels' of HR7; typically very high proof",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Whisky Advocate code guide w/ Pablo Moix (Jul 2024)",
+      "Prime Barrel RC overview (Oct 2024)"
+    ],
     "confirmed": true
   },
   "HIC": {
     "name": "HIC",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "60/36/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "IN (two different warehouses)",
     "source": "MGP",
-    "aging_location": "IN",
+    "source_status": "inferred",
+    "age": "8y+",
     "color": "Light Blue",
-    "age": "8yrs+",
-    "note": "High rye, over 8yrs old",
+    "note": "High rye; easy-drinking, lower-proof barrels",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
     "confirmed": true
   },
-  "KOA": {
-    "name": "KOA",
+  "HRK": {
+    "name": "HRK (High Rye Kelvin)",
+    "series": "Single Barrel Series",
+    "type": "Bourbon",
+    "mashbill": "60/36/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "IN",
+    "source": "MGP",
+    "source_status": "inferred",
+    "age": "11y+",
+    "color": "Yellow",
+    "cooperage": "Kelvin",
+    "note": "High rick aged, Kelvin",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "HRC": {
+    "name": "HRC (High Rye Canton)",
+    "series": "Single Barrel Series",
+    "type": "Bourbon",
+    "mashbill": "60/36/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "IN",
+    "source": "MGP",
+    "source_status": "inferred",
+    "age": "10y6m+",
+    "cooperage": "Canton (heavy char)",
+    "note": "NEW CODE. Small run filled into Canton barrels during a barrel shortage",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "KEL": {
+    "name": "KEL",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "75/21/4",
-    "source": "Barton",
-    "aging_location": "KY",
-    "color": "Burgundy",
-    "age": "8yrs+",
-    "note": "High proof, aged in Bardstown KY",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "IN",
+    "source": "MGP",
+    "source_status": "reported",
+    "age": "8y+",
+    "color": "Bright Red",
+    "cooperage": "Kelvin char #4",
+    "note": "Low rye MGP, aged in Kelvin char #4 barrels; only 14 barrels bought",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Whisky Advocate code guide w/ Pablo Moix (Jul 2024)"
+    ],
     "confirmed": true
   },
-  "VEN": {
-    "name": "VEN",
+  "VTO": {
+    "name": "VTO (Ventuno)",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "75/21/4",
-    "source": "Barton",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "IN",
     "aging_location": "KY",
-    "confirmed": true
-  },
-  "WTN": {
-    "name": "WTN",
-    "type": "Bourbon",
-    "mashbill": "60/22/18",
-    "source": "Unknown TN source",
-    "aging_location": "KY",
-    "note": "Wheated bourbon",
-    "confirmed": true
-  },
-  "KRY": {
-    "name": "KRY",
-    "type": "Rye",
-    "mashbill": "95/5",
-    "source": "KY",
-    "aging_location": "KY",
-    "confirmed": true
-  },
-  "RHY": {
-    "name": "RHY",
-    "type": "Rye",
-    "mashbill": "51/45/4",
     "source": "MGP",
+    "source_status": "inferred",
+    "age": "9y+",
+    "color": "Purple",
+    "cooperage": "Kelvin char #4",
+    "note": "Indiana distilled, Kentucky aged; cherry cola / tobacco profile",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": false
+  },
+  "W45": {
+    "name": "W45",
+    "series": "Single Barrel Series",
+    "type": "Wheated Bourbon",
+    "mashbill": "51/45/4",
+    "mashbill_grains": "corn/wheat/malted barley",
+    "distilled_in": "IN",
     "aging_location": "IN",
-    "note": "Replaced by SRY",
+    "source": "MGP",
+    "source_status": "inferred",
+    "age": "8y+",
+    "note": "NEW CODE. 45% wheat, 'barely legal' 51% corn wheater; small run",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
     "confirmed": true
   },
-  "SRY": {
-    "name": "SRY",
-    "type": "Rye",
-    "mashbill": "51/45/4",
-    "source": "MGP",
+  "99C": {
+    "name": "99C",
+    "series": "Single Barrel Series",
+    "type": "Corn Whiskey: RC labels it '10.5+ Year Straight Bourbon Whiskey' (new charred oak)",
+    "mashbill": "99/1",
+    "mashbill_grains": "corn/1% (small grain not specified)",
+    "distilled_in": "IN",
     "aging_location": "IN",
-    "color": "Dark Green",
-    "note": "Replaced RHY",
+    "source": "MGP (inferred)",
+    "source_status": "inferred",
+    "age": "10y6m+",
+    "color": "Red",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "20L": {
+    "name": "20L",
+    "series": "Single Barrel Series",
+    "type": "American Light Whiskey",
+    "mashbill": "99/1",
+    "mashbill_grains": "corn/1% (small grain not specified)",
+    "distilled_in": "IN",
+    "aging_location": "IN",
+    "source": "Lawrenceburg, IN (Seagram/LDI-era, now MGP) - inferred",
+    "source_status": "inferred",
+    "age": "20y+",
+    "color": "Gray",
+    "note": "High aged, high proof",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
     "confirmed": true
   },
   "I95": {
     "name": "I95",
+    "series": "Single Barrel Series",
     "type": "Rye",
     "mashbill": "95/5",
+    "mashbill_grains": "rye/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "IN",
     "source": "MGP",
-    "aging_location": "IN",
+    "source_status": "reported",
+    "age": "5y+",
+    "color": "Dark Green",
+    "note": "Tropical-fruit-forward 95/5; 11 barrels total, 7 released as of 2024",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Whisky Advocate code guide w/ Pablo Moix (Jul 2024)"
+    ],
     "confirmed": true
   },
-  "TNR": {
-    "name": "TNR",
+  "SRY": {
+    "name": "SRY",
+    "series": "Single Barrel Series",
+    "type": "Rye",
+    "mashbill": "51/45/4",
+    "mashbill_grains": "rye/corn/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "IN per RC page (Moix/Prime Barrel: aged in KY)",
+    "source": "MGP",
+    "source_status": "reported",
+    "age": "6y3m+ (RHY lots 4y2m+)",
+    "color": "Dark Green",
+    "aliases": [
+      "RHY"
+    ],
+    "note": "'Barely legal' rye; replaced RHY (same mashbill). RHY: only ~5 barrels released",
+    "research_notes": "RHY merged here. Aging location conflicts between sources",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Whisky Advocate code guide w/ Pablo Moix (Jul 2024)",
+      "Prime Barrel RC overview (Oct 2024)",
+      "Seelbach's RC single barrel guide (Jul 2026)"
+    ],
+    "confirmed": true
+  },
+  "RHY": {
+    "name": "RHY",
+    "series": "Single Barrel Series",
+    "type": "Rye",
+    "mashbill": "51/45/4",
+    "mashbill_grains": "rye/corn/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "IN",
+    "source": "MGP",
+    "source_status": "reported",
+    "age": "4y2m+",
+    "color": "Dark Green",
+    "family": "RHY/SRY (same mashbill)",
+    "note": "Earlier code for the MGP 51% 'barely legal' rye; replaced by SRY. Only ~5 barrels released. RC describes it as more 'Kentucky style' than the traditional Indiana 95/5; Moix: 'very sweet and spicy'",
+    "research_notes": "Same mashbill, distiller and wax color as SRY, but a separate, younger, earlier lot with its own code. Wax color from Whisky Advocate, which lists SRY (previously RHY) under Dark Green",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Whisky Advocate code guide w/ Pablo Moix (Jul 2024)",
+      "Bourboneur SBS guide (2025)"
+    ],
+    "confirmed": true
+  },
+  "KBT": {
+    "name": "KBT",
+    "series": "Single Barrel Series",
+    "type": "Bourbon",
+    "mashbill": "72/18/10",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY (central KY, traditional rickhouses)",
+    "source": "Bardstown Bourbon Co. (contract for White Dog Trading & Storage; recreation of BT Mash #1)",
+    "source_status": "reported",
+    "age": "6y+",
+    "color": "Yellow",
+    "note": "First one was C18-27-KY. SFWSC Double Gold",
+    "research_notes": "Bourboneur lists KBT as 60/36/4 - that's an error; RC and Moix both say 72/18/10",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Whisky Advocate code guide w/ Pablo Moix (Jul 2024)",
+      "Bourboneur SBS guide (2025)"
+    ],
+    "confirmed": true
+  },
+  "KRY": {
+    "name": "KRY",
+    "series": "Single Barrel Series",
     "type": "Rye",
     "mashbill": "95/5",
-    "source": "Dickel",
-    "aging_location": "KY/TN",
+    "mashbill_grains": "rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY",
+    "source": "Bardstown Bourbon Co.",
+    "source_status": "reported",
+    "age": "7y+",
+    "color": "Light Green",
+    "note": "Noses/drinks like a wheated bourbon; tropical undercurrent",
+    "research_notes": "Bourbon Culture identified BBCo; Prime Barrel says 'produced by a bourbon Hall of Fame distiller'",
+    "sources": [
+      "Whisky Advocate code guide w/ Pablo Moix (Jul 2024)",
+      "Bourbon Culture: RC Kentucky 95/5 rye review (2024)",
+      "Prime Barrel RC overview (Oct 2024)"
+    ],
     "confirmed": true
   },
-  "TKO": {
-    "name": "IKO",
-    "type": "Rye",
-    "mashbill": "70/25/5",
-    "source": "Dickel",
-    "aging_location": "KY/TN",
-    "color": "Pink wax",
-    "age": "8yrs+",
-    "note": "High Proof Dickel",
+  "K13": {
+    "name": "K13",
+    "series": "Single Barrel Series",
+    "type": "Bourbon",
+    "mashbill": "78/13/9",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY",
+    "source": "Undisclosed KY distillery (experimental mashbill + yeast)",
+    "source_status": "unknown",
+    "age": "6y8m+",
+    "color": "Pastel Yellow",
+    "family": "K13/K21 (shared yeast)",
+    "note": "May be the heaviest liquid weight of any whiskey we've done. Just over two dozen barrels (Moix earlier said 15)",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Whisky Advocate code guide w/ Pablo Moix (Jul 2024)"
+    ],
     "confirmed": true
   },
-  "MAD-B": {
-    "name": "MAD-B",
+  "K21": {
+    "name": "K21",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Madeira cask",
-    "confirmed": false
-  },
-  "MAD-R": {
-    "name": "MAD-R",
-    "type": "Rye",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Madeira cask",
-    "confirmed": false
-  },
-  "CC": {
-    "name": "CC",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Cognac cask",
-    "confirmed": false
-  },
-  "CC-R": {
-    "name": "CC-R",
-    "type": "Rye",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Cognac cask",
-    "confirmed": false
-  },
-  "AMB": {
-    "name": "AMB",
-    "type": "Rye",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Amburana cask",
-    "confirmed": false
-  },
-  "AMB-B": {
-    "name": "AMB-B",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Amburana cask",
-    "confirmed": false
-  },
-  "OLS": {
-    "name": "OLS",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Oloroso sherry cask",
-    "confirmed": false
-  },
-  "OLS-R": {
-    "name": "OLS-R",
-    "type": "Rye",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Oloroso sherry cask",
-    "confirmed": false
-  },
-  "JR": {
-    "name": "JR",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Jamaican rum cask",
-    "confirmed": false
-  },
-  "BAL": {
-    "name": "BAL",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Balsamo cask",
-    "confirmed": false
-  },
-  "WP-B": {
-    "name": "WP-B",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "White port cask",
-    "confirmed": false
-  },
-  "WP-R": {
-    "name": "WP-R",
-    "type": "Rye",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "White port cask",
-    "confirmed": false
-  },
-  "TP-B": {
-    "name": "TP-B",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Tawny port cask",
-    "confirmed": false
-  },
-  "TP-R": {
-    "name": "TP-R",
-    "type": "Rye",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Tawny port cask",
-    "confirmed": false
-  },
-  "EUC": {
-    "name": "EUC",
-    "type": "Rye",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Eucalipto cask",
-    "confirmed": false
-  },
-  "BR": {
-    "name": "BR",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Barbados rum cask",
-    "confirmed": false
-  },
-  "FSR-B": {
-    "name": "FSR-B",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Barbados rum cask",
-    "confirmed": false
-  },
-  "FSR-R": {
-    "name": "FSR-R",
-    "type": "Rye",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Barbados rum cask",
-    "confirmed": false
-  },
-  "JAQ": {
-    "name": "JAQ",
-    "type": "Rye",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Jacqueira (jackwood) cask",
-    "confirmed": false
-  },
-  "TO-B": {
-    "name": "TO-B",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Tokaji cask",
-    "confirmed": false
-  },
-  "TO-R": {
-    "name": "TO-R",
-    "type": "Rye",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Tokaji cask",
-    "confirmed": false
-  },
-  "PXS-R": {
-    "name": "PXS-R",
-    "type": "Rye",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "PX sherry cask",
-    "note": "101-95 was first one",
-    "confirmed": false
-  },
-  "PXS-B": {
-    "name": "PXS-B",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "PX sherry cask",
-    "note": "IRT-29 was first one",
-    "confirmed": false
-  },
-  "RP-B": {
-    "name": "RP-B",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Ruby port cask",
-    "confirmed": false
-  },
-  "VDN-B": {
-    "name": "VDN-B",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "VDN cask",
-    "confirmed": false
-  },
-  "MAP-R": {
-    "name": "MAP-R",
-    "type": "Rye",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Maple cask",
-    "confirmed": false
-  },
-  "MAP-B": {
-    "name": "MAP-B",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "American oak Maple cask",
-    "confirmed": false
-  },
-  "FOM-B": {
-    "name": "FOM-B",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "French oak Maple cask",
-    "confirmed": false
-  },
-  "HON-B": {
-    "name": "HON-B",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Honey cask",
-    "confirmed": false
-  },
-  "APR-B": {
-    "name": "APR-B",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Apricot brandy cask",
-    "confirmed": false
-  },
-  "TST-R": {
-    "name": "TST-R",
-    "type": "Rye",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "Toasted American/French oak cask",
-    "note": "First French oak was FO-R",
-    "confirmed": false
-  },
-  "PSB": {
-    "name": "PSB",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "Pot distilled",
-    "aging_location": "TN",
-    "confirmed": false
-  },
-  "E-WB": {
-    "name": "E-WB",
-    "type": "Bourbon",
-    "mashbill": "71/21/8",
-    "source": "WV distilled and aged",
-    "aging_location": "WV",
-    "note": "Exceptional Series: Wheated Bourbon",
+    "mashbill": "70/21/9",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY (western and central KY)",
+    "source": "Undisclosed KY (70/21/9 matches Green River's recipe - inferred)",
+    "source_status": "inferred",
+    "age": "6y6m+",
+    "color": "Pastel Yellow",
+    "family": "K13/K21 (shared yeast)",
+    "note": "Tastes like 2012 E.H. Taylor Barrel Proof; experimental yeast",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Whisky Advocate code guide w/ Pablo Moix (Jul 2024)"
+    ],
     "confirmed": true
-  },
-  "P90": {
-    "name": "P90",
-    "type": "Rye",
-    "mashbill": "90/10",
-    "source": "",
-    "aging_location": "IN",
-    "color": "Dark Green",
-    "age": "",
-    "note": "High Proof",
-    "confirmed": false
   },
   "N21": {
     "name": "N21",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "70/21/9",
-    "source": "GR",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
     "aging_location": "KY",
+    "source": "Green River (Owensboro) - per original file",
+    "source_status": "inferred",
+    "age": "8y+",
     "color": "Yellow",
+    "cooperage": "Mix of ISC and Kelvin",
+    "family": "KY 70/21/9 (N21/BRW/AQU)",
     "note": "Distilled and aged in KY - ISC and Kelvin",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "original rc_codes.json"
+    ],
     "confirmed": true
-  },
-  "ELE": {
-    "name": "ELE",
-    "type": "Bourbon",
-    "mashbill": "78/13/9",
-    "source": "",
-    "aging_location": "KY",
-    "color": "Maroon",
-    "note": "Distilled and aged in KY - ISC",
-    "confirmed": false
   },
   "BRW": {
     "name": "BRW",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "70/21/9",
-    "source": "",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
     "aging_location": "KY",
+    "source": "Likely Green River (contract-distilled before the distillery reopened) - inferred",
+    "source_status": "inferred",
+    "age": "10y+",
     "color": "White/Offwhite",
+    "cooperage": "Kelvin",
+    "family": "KY 70/21/9 (N21/BRW/AQU)",
     "note": "Distilled and aged in KY - Kelvin",
-    "confirmed": false
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
   },
   "AQU": {
     "name": "AQU",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "70/21/9",
-    "source": "GR",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
     "aging_location": "KY",
+    "source": "Green River (Owensboro) - per original file",
+    "source_status": "inferred",
+    "age": "9y+",
     "color": "Aqua",
-    "note": "Distilled and aged in KY - Kelvin",
-    "confirmed": false
-  },
-  "HRK": {
-    "name": "HRK",
-    "type": "Bourbon",
-    "mashbill": "60/36/4",
-    "source": "MGP",
-    "aging_location": "IN",
-    "color": "Yellow",
-    "note": "High rick aged, Kelvin",
+    "cooperage": "Kelvin",
+    "family": "KY 70/21/9 (N21/BRW/AQU)",
+    "note": "Some of the oldest stocks from 'this historic distillery'",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "original rc_codes.json"
+    ],
     "confirmed": true
-  },
-  "MEL": {
-    "name": "MEL",
-    "type": "Bourbon",
-    "mashbill": "75/13/12",
-    "source": "WT",
-    "aging_location": "KY",
-    "color": "Off pink",
-    "note": "KY distilled and aged",
-    "confirmed": false
-  },
-  "99C": {
-    "name": "99C",
-    "type": "Corn Whiskey",
-    "mashbill": "99/1",
-    "source": "",
-    "aging_location": "",
-    "color": "Red",
-    "confirmed": false
-  },
-  "20L": {
-    "name": "20L",
-    "type": "Corn Whiskey",
-    "mashbill": "99/1",
-    "source": "ALW",
-    "aging_location": "",
-    "color": "Gray",
-    "note": "High aged, high proof",
-    "confirmed": false
   },
   "F13": {
     "name": "F13",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "78/13/9",
-    "source": "Beam",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
     "aging_location": "KY",
+    "source": "Beam (per original file; Beam-distilled 78/13/9 barrels trade on the broker market)",
+    "source_status": "inferred",
+    "age": "8y+ (e.g. F13-3590 distilled May 2017)",
     "color": "Gold",
-    "note": "Distilled and aged in KY",
+    "family": "KY 78/13/9",
+    "aliases": [
+      "HF13"
+    ],
+    "note": "RC groups F13 and HF13 together; meaning of the H prefix isn't published",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Mira Loma Market F13-3590 listing",
+      "Chevalier Casks broker listing: Beam-distilled 78/13/9"
+    ],
     "confirmed": true
   },
   "HF13": {
     "name": "HF13",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "78/13/9",
-    "source": "Beam",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
     "aging_location": "KY",
+    "source": "Beam (per original file; Beam-distilled 78/13/9 barrels trade on the broker market)",
+    "source_status": "inferred",
+    "age": "8y+",
     "color": "Gold",
-    "note": "Distilled and aged in KY",
+    "family": "KY 78/13/9",
+    "note": "Overlaps with F13: Rare Character lists F13 and HF13 as one entry (same 78/13/9 mashbill, KY distilled and aged, 8+ years). HF13 appears as its own barrel code on bottles (e.g. HF13-3484); the meaning of the H prefix isn't published",
+    "research_notes": "Kept as a separate code at user request; all data mirrors F13",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Hi Proof HF13-3484 listing"
+    ],
     "confirmed": true
   },
-  "JIT": {
-    "name": "JIT",
+  "PLT": {
+    "name": "PLT (Platinum)",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
-    "mashbill": "75/21/4",
-    "source": "Barton",
+    "mashbill": "78/13/9",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
     "aging_location": "KY",
-    "color": "Purple",
-    "note": "Aged and distilled in KY",
+    "source": "Beam (per original file) - unverified",
+    "source_status": "unverified",
+    "age": "10y+",
+    "color": "Platinum",
+    "family": "KY 78/13/9",
+    "note": "Averages ~65% ABV",
+    "research_notes": "Mashbill from Seelbach's (PLT-110); RC page doesn't list one",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Seelbach's RC single barrel guide (Jul 2026)"
+    ],
+    "confirmed": false
+  },
+  "ELE": {
+    "name": "ELE",
+    "series": "Single Barrel Series",
+    "type": "Bourbon",
+    "mashbill": "78/13/9",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY (top floors of the distillery's original warehouse)",
+    "source": "Undisclosed KY (possibly Beam, based on mashbill)",
+    "source_status": "inferred",
+    "age": "11y+",
+    "color": "Maroon",
+    "cooperage": "ISC",
+    "family": "KY 78/13/9",
+    "note": "Vintage-leaning, high proof",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
     "confirmed": true
   },
-  "SBG": {
-    "name": "SBG",
+  "MEL": {
+    "name": "MEL",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
-    "mashbill": "75/21/4",
-    "source": "Barton",
-    "aging_location": "KY",
-    "color": "Yellow",
-    "note": "Aged and distilled in KY",
+    "mashbill": "75/13/12",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY (lower floors of traditional rickhouses)",
+    "source": "Wild Turkey (per original file) - unverified",
+    "source_status": "unverified",
+    "age": "9y+",
+    "color": "Off pink",
+    "family": "KY 75/13/12",
+    "note": "KY distilled and aged",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Seelbach's RC single barrel guide (Jul 2026)"
+    ],
     "confirmed": true
   },
   "10K": {
     "name": "10K",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "75/13/12",
-    "source": "Beam",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
     "aging_location": "KY",
+    "source": "Undisclosed KY (original file said Beam; 75/13/12 is more often linked to Wild Turkey)",
+    "source_status": "unverified",
+    "age": "10y+",
     "color": "Black",
-    "note": "Aged and distilled in KY",
-    "confirmed": false
+    "family": "KY 75/13/12",
+    "note": "Fewer than 30 barrels; originally set aside for RCLR blends",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
   },
-  "VER": {
-    "name": "VER",
+  "KOA": {
+    "name": "KOA",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "75/21/4",
-    "source": "Spice yeast",
-    "aging_location": "KY",
-    "color": "Dark yellow",
-    "note": "Aged and distilled in KY",
-    "confirmed": false
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY - Bardstown, high floors of a special rickhouse",
+    "source": "Undisclosed KY (original file: Barton; Bourbon Culture traces older KY-distilled 75/21/4 to Barton)",
+    "source_status": "inferred",
+    "age": "8y+ (8.5-9.5 yrs)",
+    "color": "Burgundy",
+    "family": "KY 75/21/4 'one company, two distilleries' run (KOA/VEN/GLN/SBG)",
+    "note": "18 barrels; 137-146 proof",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Whisky Advocate code guide w/ Pablo Moix (Jul 2024)",
+      "Bourbon Culture: KY 75/21/4 investigation (2024)"
+    ],
+    "confirmed": true
   },
-  "PLT": {
-    "name": "PLT",
+  "VEN": {
+    "name": "VEN",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
-    "mashbill": "",
-    "source": "Beam",
-    "aging_location": "KY",
-    "color": "Platinum",
-    "confirmed": false
-  },
-  "K45": {
-    "name": "K45",
-    "type": "Bourbon",
-    "mashbill": "51/45/4",
-    "source": "Bardstown",
-    "aging_location": "KY",
-    "color": "Gold",
-    "note": "High rye bourbon",
-    "confirmed": false
-  },
-  "VTO": {
-    "name": "VTO",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "KY",
-    "color": "Purple",
-    "note": "Burb distilled and aged in KY, Kelvin barrel",
-    "confirmed": false
-  },
-  "SEG": {
-    "name": "SEG",
-    "type": "Rye",
-    "mashbill": "64/30/6",
-    "source": "Bardstown",
-    "aging_location": "KY",
-    "color": "Blue",
-    "note": "Distilled and aged in KY",
+    "mashbill": "75/21/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY - central KY, ~45 min from Bardstown, mid-high floors (Prime Barrel: Shelbyville)",
+    "source": "Undisclosed KY (original file: Barton; Bourbon Culture traces older KY-distilled 75/21/4 to Barton)",
+    "source_status": "inferred",
+    "age": "8y+",
+    "family": "KY 75/21/4 'one company, two distilleries' run (KOA/VEN/GLN/SBG)",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Prime Barrel RC overview (Oct 2024)",
+      "Bourbon Culture: KY 75/21/4 investigation (2024)"
+    ],
     "confirmed": true
   },
   "GLN": {
     "name": "GLN",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "75/21/4",
-    "source": "Barton",
-    "aging_location": "KY",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY - Owensboro",
+    "source": "Undisclosed KY (original file: Barton; Bourbon Culture traces older KY-distilled 75/21/4 to Barton)",
+    "source_status": "inferred",
+    "age": "8y+",
     "color": "Silver",
-    "note": "Similar to KOA but different aging",
+    "family": "KY 75/21/4 'one company, two distilleries' run (KOA/VEN/GLN/SBG)",
+    "note": "Similar to KOA but different aging; reads almost like a wheater; originally meant for blends",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Prime Barrel RC overview (Oct 2024)",
+      "Bourbon Culture: KY 75/21/4 investigation (2024)"
+    ],
+    "confirmed": true
+  },
+  "SBG": {
+    "name": "SBG",
+    "series": "Single Barrel Series",
+    "type": "Bourbon",
+    "mashbill": "75/21/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY - palletized warehouse",
+    "source": "Undisclosed KY (original file: Barton; Bourbon Culture traces older KY-distilled 75/21/4 to Barton)",
+    "source_status": "inferred",
+    "age": "8y+",
+    "color": "Yellow",
+    "family": "KY 75/21/4 'one company, two distilleries' run (KOA/VEN/GLN/SBG)",
+    "note": "4th of the KOA/VEN/GLN run; more spice-forward",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "JIT": {
+    "name": "JIT (Just In Time)",
+    "series": "Single Barrel Series",
+    "type": "Bourbon",
+    "mashbill": "75/21/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY",
+    "source": "Undisclosed KY (original file: Barton; Bourbon Culture traces older KY-distilled 75/21/4 to Barton)",
+    "source_status": "unverified",
+    "age": "7y+",
+    "color": "Purple",
+    "note": "Aged and distilled in KY",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "VER": {
+    "name": "VER",
+    "series": "Single Barrel Series",
+    "type": "Bourbon",
+    "mashbill": "75/21/4 (spice yeast)",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY",
+    "source": "Undisclosed KY",
+    "source_status": "unknown",
+    "age": "7y+",
+    "color": "Dark yellow",
+    "note": "Uses a 'spice' yeast strain",
+    "research_notes": "'Spice yeast' moved out of the source field",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "DYN": {
+    "name": "DYN",
+    "series": "Single Barrel Series",
+    "type": "Bourbon",
+    "mashbill": "74/18/8",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY",
+    "source": "Undisclosed 'revered KY distillery' (74/18/8 matches Barton 1792's widely reported recipe - inferred)",
+    "source_status": "inferred",
+    "age": "10y+",
+    "cooperage": "ISC",
+    "family": "DYN/DYM",
+    "note": "NEW CODE. Cherry cola & tobacco",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "DYM": {
+    "name": "DYM",
+    "series": "Single Barrel Series",
+    "type": "Bourbon",
+    "mashbill": "74/18/8",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY",
+    "source": "Undisclosed KY (74/18/8 matches Barton 1792's widely reported recipe - inferred)",
+    "source_status": "inferred",
+    "age": "10y+",
+    "cooperage": "ISC char #4",
+    "family": "DYN/DYM",
+    "note": "NEW CODE. Cask strength; tobacco/leather/oak",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "K45": {
+    "name": "K45",
+    "series": "Single Barrel Series",
+    "type": "Bourbon",
+    "mashbill": "51/45/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY (historic warehouse)",
+    "source": "Bardstown Bourbon Co. (per original file) - unverified",
+    "source_status": "unverified",
+    "age": "7y+",
+    "color": "Gold",
+    "note": "High rye bourbon (45% rye, minimum corn)",
+    "research_notes": "RC gives 51% corn / 45% rye; 4% barley is by subtraction",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "KHR": {
+    "name": "KHR (Kentucky High Rye)",
+    "series": "Single Barrel Series",
+    "type": "Bourbon",
+    "mashbill": "60/36/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY",
+    "source": "Undisclosed KY (likely Bardstown Bourbon Co., whose house high-rye is 60/36/4 - inferred)",
+    "source_status": "inferred",
+    "age": "~9y11m (KHR-042)",
+    "color": "Silver",
+    "sources": [
+      "Seelbach's RC single barrel guide (Jul 2026)"
+    ],
     "confirmed": true
   },
   "KNF": {
     "name": "KNF",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "60/36/4",
-    "source": "BBC",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
     "aging_location": "KY",
+    "source": "Bardstown Bourbon Co. (per original file)",
+    "source_status": "inferred",
     "color": "Light blue",
     "note": "KY distilled and aged",
+    "sources": [
+      "original rc_codes.json"
+    ],
     "confirmed": true
   },
-  "KHR": {
-    "name": "KHR",
-    "type": "Bourbon",
-    "mashbill": "",
-    "source": "",
-    "aging_location": "KY",
-    "color": "Silver",
-    "note": "TBD",
-    "confirmed": false
-  },
-  "GIN": {
-    "name": "GIN",
+  "KHT": {
+    "name": "KHT",
+    "series": "Single Barrel Series",
     "type": "Bourbon",
     "mashbill": "75/21/4",
-    "source": "Barton",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "KY",
     "aging_location": "KY",
-    "color": "Silver",
-    "note": "Aged in Owensboro, KY",
+    "source": "Undisclosed KY",
+    "source_status": "unknown",
+    "note": "Only 1 released",
+    "sources": [
+      "original rc_codes.json"
+    ],
     "confirmed": true
+  },
+  "SEG": {
+    "name": "SEG (segale = rye)",
+    "series": "Single Barrel Series",
+    "type": "Rye",
+    "mashbill": "64/30/6",
+    "mashbill_grains": "rye/corn/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY",
+    "source": "Bardstown Bourbon Co. (per original file) - unverified",
+    "source_status": "unverified",
+    "age": "8y+",
+    "color": "Blue",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "WTN": {
+    "name": "WTN",
+    "series": "Single Barrel Series",
+    "type": "Wheated Bourbon",
+    "mashbill": "60/22/18",
+    "mashbill_grains": "corn/wheat/malted barley",
+    "distilled_in": "TN",
+    "aging_location": "TN",
+    "source": "Undisclosed TN distillery",
+    "source_status": "unknown",
+    "age": "8y+",
+    "note": "First wheated SBS release; fewer than 10 barrels",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Prime Barrel RC overview (Oct 2024)"
+    ],
+    "confirmed": true
+  },
+  "PSB": {
+    "name": "PSB",
+    "series": "Single Barrel Series",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "TN",
+    "aging_location": "TN",
+    "source": "Undisclosed TN distillery (pot distilled)",
+    "source_status": "unknown",
+    "note": "Pot-distilled Tennessee bourbon",
+    "sources": [
+      "Prime Barrel RC overview (Oct 2024)"
+    ],
+    "confirmed": false
+  },
+  "TNR": {
+    "name": "TNR",
+    "series": "Single Barrel Series",
+    "type": "Rye",
+    "mashbill": "95/5",
+    "mashbill_grains": "rye/malted barley",
+    "distilled_in": "TN",
+    "aging_location": "KY - western KY brick warehouse per RC (Whisky Advocate says TN-aged)",
+    "source": "Undisclosed 1800s-era TN distillery (original file: Dickel - unverified)",
+    "source_status": "unverified",
+    "age": "5y8m+",
+    "color": "Light Green",
+    "note": "Only ~10 barrels; honeyed, grain-scotch-like",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Whisky Advocate code guide w/ Pablo Moix (Jul 2024)"
+    ],
+    "confirmed": true
+  },
+  "TKO": {
+    "name": "TKO",
+    "series": "Single Barrel Series",
+    "type": "Rye",
+    "mashbill": "70/25/5",
+    "mashbill_grains": "rye/corn/malted barley",
+    "distilled_in": "TN",
+    "aging_location": "KY (old, famous warehouse)",
+    "source": "Undisclosed TN distillery, experimental mashbill (original file: Dickel - unverified)",
+    "source_status": "unverified",
+    "age": "8y+",
+    "color": "Pink",
+    "note": "High proof (130-140); bubble gum note; drinks like a bourye",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Whisky Advocate code guide w/ Pablo Moix (Jul 2024)"
+    ],
+    "confirmed": true
+  },
+  "P90": {
+    "name": "P90",
+    "series": "Single Barrel Series",
+    "type": "Rye",
+    "mashbill": "90/10",
+    "mashbill_grains": "rye/malted barley",
+    "distilled_in": "TN",
+    "aging_location": "TN",
+    "source": "Undisclosed TN distillery",
+    "source_status": "unknown",
+    "color": "Dark Green",
+    "note": "High Proof",
+    "research_notes": "Original file had aging IN; two retailer guides say TN distilled and aged",
+    "sources": [
+      "Prime Barrel RC overview (Oct 2024)"
+    ],
+    "confirmed": false
+  },
+  "WP-B": {
+    "name": "WP-B",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "60/36/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "IN, finished in KY",
+    "source": "MGP",
+    "source_status": "inferred",
+    "finish_cask": "White port",
+    "base_whiskey": "MGP 60/36/4 straight bourbon, distilled & aged IN",
+    "age": "5y+",
+    "aliases": [
+      "WP"
+    ],
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Seelbach's RC single barrel guide (Jul 2026)"
+    ],
+    "confirmed": true
+  },
+  "OLS": {
+    "name": "OLS",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "60/36/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "IN, finished in KY",
+    "source": "MGP",
+    "source_status": "inferred",
+    "finish_cask": "Oloroso sherry",
+    "base_whiskey": "MGP 60/36/4 straight bourbon, distilled & aged IN",
+    "age": "5y6m+",
+    "aliases": [
+      "OLS-B"
+    ],
+    "note": "6+ releases",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "MAD-B": {
+    "name": "MAD-B",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "60/36/4",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "IN, finished in KY",
+    "source": "MGP",
+    "source_status": "inferred",
+    "finish_cask": "Madeira",
+    "base_whiskey": "MGP 60/36/4 straight bourbon, distilled & aged IN",
+    "age": "5y+",
+    "aliases": [
+      "MADB"
+    ],
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Seelbach's RC single barrel guide (Jul 2026)"
+    ],
+    "confirmed": true
+  },
+  "TP-B": {
+    "name": "TP-B",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "IN",
+    "aging_location": "IN, finished in KY",
+    "source": "MGP (inferred)",
+    "source_status": "inferred",
+    "finish_cask": "Tawny port (~6 months)",
+    "base_whiskey": "Indiana straight bourbon 5y+ (mashbill not stated)",
+    "age": "5y+",
+    "sources": [
+      "Total Wine TP-B listing"
+    ],
+    "confirmed": false
+  },
+  "PXS-B": {
+    "name": "PXS-B",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "60/36/4 (first barrel)",
+    "mashbill_grains": "corn/rye/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "TN (IRT base), finished in KY",
+    "source": "MGP",
+    "source_status": "inferred",
+    "finish_cask": "PX sherry",
+    "base_whiskey": "First barrel was IRT-29 (MGP high rye, TN-aged); later bases not confirmed",
+    "note": "IRT-29 was first one",
+    "sources": [
+      "original rc_codes.json",
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": false
+  },
+  "AMB-R": {
+    "name": "AMB-R",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Rye",
+    "mashbill": "51/45/4",
+    "mashbill_grains": "rye/corn/malted barley",
+    "distilled_in": "IN (inferred)",
+    "aging_location": "finished in KY",
+    "source": "MGP (inferred)",
+    "source_status": "inferred",
+    "finish_cask": "Amburana",
+    "base_whiskey": "MGP 51/45/4 straight rye, distilled & aged IN",
+    "age": "6y+",
+    "aliases": [
+      "AMB"
+    ],
+    "note": "Uproxx Best Rye Whiskey of 2022",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "JAQ-R": {
+    "name": "JAQ-R",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Rye",
+    "mashbill": "51/45/4",
+    "mashbill_grains": "rye/corn/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "IN, finished in KY",
+    "source": "MGP",
+    "source_status": "inferred",
+    "finish_cask": "Jaqueira (jackwood)",
+    "base_whiskey": "MGP 51/45/4 straight rye, distilled & aged IN",
+    "age": "4y6m+",
+    "aliases": [
+      "JAQ"
+    ],
+    "note": "SFWSC 2023 Best of Class (ReserveBar pick)",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "MAP-R": {
+    "name": "MAP-R",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Rye",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "IN",
+    "aging_location": "KY, then maple finish",
+    "source": "MGP (inferred)",
+    "source_status": "inferred",
+    "finish_cask": "Maple",
+    "base_whiskey": "Indiana-distilled rye (MAP-R-02 distilled 10/31/2016), Kentucky-aged; mashbill not stated",
+    "age": "~7y (MAP-R-02)",
+    "note": "Maple finishes have been sunset",
+    "sources": [
+      "Amongst the Whiskey MAP-R-02 review (2024)"
+    ],
+    "confirmed": false
+  },
+  "PXS-R": {
+    "name": "PXS-R",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Rye",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "PX sherry",
+    "note": "101-95 was first one",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "TST-R": {
+    "name": "TST-R",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Rye",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Toasted American/French oak",
+    "aliases": [
+      "FO-R"
+    ],
+    "note": "First French oak was FO-R",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "MAD-R": {
+    "name": "MAD-R",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Rye",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Madeira",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "CC": {
+    "name": "CC",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Cognac",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "CC-R": {
+    "name": "CC-R",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Rye",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Cognac",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "AMB-B": {
+    "name": "AMB-B",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Amburana",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "OLS-R": {
+    "name": "OLS-R",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Rye",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Oloroso sherry",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "JR": {
+    "name": "JR",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Jamaican rum",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "BAL": {
+    "name": "BAL",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Balsamo",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "WP-R": {
+    "name": "WP-R",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Rye",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "White port",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "TP-R": {
+    "name": "TP-R",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Rye",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Tawny port",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "EUC": {
+    "name": "EUC",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Rye",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Eucalipto",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "BR": {
+    "name": "BR",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Barbados rum",
+    "research_notes": "BR and FSR-B are both 'Barbados rum cask' bourbon - possible overlap, left separate until confirmed",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "FSR-B": {
+    "name": "FSR-B",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Barbados rum (FSR likely = Foursquare)",
+    "research_notes": "BR and FSR-B are both 'Barbados rum cask' bourbon - possible overlap, left separate until confirmed",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "FSR-R": {
+    "name": "FSR-R",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Rye",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Barbados rum (FSR likely = Foursquare)",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "TO-B": {
+    "name": "TO-B",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Tokaji",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "TO-R": {
+    "name": "TO-R",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Rye",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Tokaji",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "RP-B": {
+    "name": "RP-B",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Ruby port",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "VDN-B": {
+    "name": "VDN-B",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Vin Doux Naturel (VDN)",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "MAP-B": {
+    "name": "MAP-B",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "American oak maple",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "FOM-B": {
+    "name": "FOM-B",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "French oak maple",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "HON-B": {
+    "name": "HON-B",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Honey",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "APR-B": {
+    "name": "APR-B",
+    "series": "Native Wood & Finishing Series (largely sunset)",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "",
+    "aging_location": "",
+    "source": "",
+    "source_status": "unknown",
+    "finish_cask": "Apricot brandy",
+    "sources": [
+      "original rc_codes.json"
+    ],
+    "confirmed": false
+  },
+  "EM-X": {
+    "name": "Exceptional Series Malt Whiskey",
+    "series": "Exceptional Series",
+    "type": "Kentucky Straight Malt Whiskey",
+    "mashbill": "65/35",
+    "mashbill_grains": "malted barley/corn",
+    "distilled_in": "KY",
+    "aging_location": "KY",
+    "source": "Undisclosed KY distillery (one unverified community claim: Heaven Hill)",
+    "source_status": "unknown",
+    "age": "9y+ (X = age)",
+    "aliases": [
+      "E-MX",
+      "EM-9",
+      "EM-11"
+    ],
+    "note": "X indicates barrel age: EM-11 = 2011 distillate, EM-9 = 2013 distillate. Column-distilled straight malt in new barrels, cask strength",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "E-MX": {
+    "name": "Exceptional Series Malt Whiskey (E-MX)",
+    "series": "Exceptional Series",
+    "type": "Kentucky Straight Malt Whiskey",
+    "mashbill": "65/35",
+    "mashbill_grains": "malted barley/corn",
+    "distilled_in": "KY",
+    "aging_location": "KY",
+    "source": "Undisclosed KY distillery (one unverified community claim: Heaven Hill)",
+    "source_status": "unknown",
+    "age": "9y+ (X = barrel age)",
+    "family": "Exceptional Series Malt (EM-X)",
+    "note": "Overlaps with EM-X: E-MX is the same Exceptional Series Kentucky straight malt, 65% malted barley / 35% corn. The X stands for the barrel's age; the codes actually seen on bottles are EM-9 and EM-11",
+    "research_notes": "Original code from the user's file, kept as its own entry so it can be looked up; all data mirrors EM-X",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "EM-9": {
+    "name": "Exceptional Series Malt Whiskey 9 (EM-9)",
+    "series": "Exceptional Series",
+    "type": "Kentucky Straight Malt Whiskey",
+    "mashbill": "65/35",
+    "mashbill_grains": "malted barley/corn",
+    "distilled_in": "KY",
+    "aging_location": "KY",
+    "source": "Undisclosed KY distillery (one unverified community claim: Heaven Hill)",
+    "source_status": "unknown",
+    "age": "9y (2013 distillate)",
+    "family": "Exceptional Series Malt (EM-X)",
+    "note": "Overlaps with EM-X and EM-11: same Kentucky straight malt, 65% malted barley / 35% corn, column distilled and aged in new barrels, cask strength. The 2013-distilled lot. Rare Character's tasting notes: dark chocolate, mint, oak, berries, stone fruit, vanilla, clove, leather, honey, baking spice",
+    "research_notes": "Kept as its own entry so it can be looked up; shared data mirrors EM-X",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "EM-11": {
+    "name": "Exceptional Series Malt Whiskey 11 (EM-11)",
+    "series": "Exceptional Series",
+    "type": "Kentucky Straight Malt Whiskey",
+    "mashbill": "65/35",
+    "mashbill_grains": "malted barley/corn",
+    "distilled_in": "KY",
+    "aging_location": "KY",
+    "source": "Undisclosed KY distillery (one unverified community claim: Heaven Hill)",
+    "source_status": "unknown",
+    "age": "11y (2011 distillate)",
+    "family": "Exceptional Series Malt (EM-X)",
+    "note": "Overlaps with EM-X and EM-9: same Kentucky straight malt, 65% malted barley / 35% corn, column distilled and aged in new barrels, cask strength. The 2011-distilled lot. Rare Character's tasting notes: caramel, baking spice, spearmint, pepper, berries, apple, stone fruit, clove, vanilla, leather, tobacco",
+    "research_notes": "Kept as its own entry so it can be looked up; shared data mirrors EM-X",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "E-KB": {
+    "name": "Exceptional Series Bourbon",
+    "series": "Exceptional Series",
+    "type": "Bourbon",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "KY",
+    "aging_location": "KY",
+    "source": "Undisclosed KY distillery",
+    "source_status": "unknown",
+    "age": "9y+",
+    "note": "Only three barrels released at time of RC write-up",
+    "research_notes": "RC page lists 'Traditional Indiana Style rye' under E-KB - looks like a copy/paste error on their site",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": false
+  },
+  "E-WB": {
+    "name": "Exceptional Series Wheated Bourbon",
+    "series": "Exceptional Series",
+    "type": "Wheated Bourbon",
+    "mashbill": "71/21/8",
+    "mashbill_grains": "corn/wheat/malted barley",
+    "distilled_in": "WV",
+    "aging_location": "WV",
+    "source": "Undisclosed West Virginia distillery (column still)",
+    "source_status": "unknown",
+    "age": "9y+ (picks seen at 10y1m-10y2m)",
+    "cooperage": "Char #4",
+    "research_notes": "Mashbill carried from original file - no public source found to verify it",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "K&L Wines E-WB listing (2026)",
+      "Prime Barrel E-WB listing"
+    ],
+    "confirmed": true
+  },
+  "E-TN": {
+    "name": "Exceptional Series Gen 3 Tennessee Whiskey",
+    "series": "Exceptional Series - Gen 3",
+    "type": "Straight Tennessee Whiskey",
+    "mashbill": "",
+    "mashbill_grains": "",
+    "distilled_in": "TN",
+    "aging_location": "TN",
+    "source": "Undisclosed TN distillery",
+    "source_status": "unknown",
+    "age": "13y+",
+    "note": "NEW CODE. Super-limited run; some barrels yield only 1-2 bottles",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": false
   }
 }

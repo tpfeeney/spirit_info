@@ -1,23 +1,37 @@
 {
-	 "100B": {
+  "100B": {
     "name": "100B",
     "grains": {
       "barley": "100%"
     },
     "raw": "100b",
     "brands": [
-      "ASW Burns Night Single Malt",
-      "ASW Druid Hill Irish-Style Whiskey",
-      "ASW Maris Otter Single Malt",
-      "ASW Tire Fire Single Malt Whiskey",
-      "Bull Run Oregon Single Malt Whiskey",
+      "ASW Single Malts",
+      "Bull Run Single Malt",
       "FEW Single Malt Whiskey",
       "Hillrock Single Malt Whiskey",
-      "Journeyman Distillery Three Oaks Single Malt Whiskey",
-      "Laws Henry Road Straight Malt Whiskey (Bonded)",
+      "Journeyman Three Oaks Single Malt Whiskey",
+      "Laws Henry Road Malt",
       "Manifest Whiskey Project No. 2",
       "Pearse Lyons Reserve"
-    ]
+    ],
+    "variants": {
+      "ASW Single Malts": [
+        "ASW Burns Night Single Malt",
+        "ASW Druid Hill Irish-Style Whiskey",
+        "ASW Maris Otter Single Malt",
+        "ASW Tire Fire Single Malt Whiskey"
+      ],
+      "Bull Run Single Malt": [
+        "Bull Run Oregon Single Malt Whiskey"
+      ],
+      "Journeyman Three Oaks Single Malt Whiskey": [
+        "Journeyman Distillery Three Oaks Single Malt Whiskey"
+      ],
+      "Laws Henry Road Malt": [
+        "Laws Henry Road Straight Malt Whiskey (Bonded)"
+      ]
+    }
   },
   "100C": {
     "name": "100C",
@@ -26,11 +40,22 @@
     },
     "raw": "100c",
     "brands": [
-      "Hickory Hill Cask Strength Bourbon Whiskey",
+      "Hickory Hill Cask Strength Bourbon",
       "Hudson Baby Bourbon",
-      "Reservoir Bourbon Whiskey",
-      "Yellow Banks Kentucky Straight Bourbon"
+      "Reservoir Bourbon",
+      "Yellow Banks Bourbon"
     ],
+    "variants": {
+      "Hickory Hill Cask Strength Bourbon": [
+        "Hickory Hill Cask Strength Bourbon Whiskey"
+      ],
+      "Reservoir Bourbon": [
+        "Reservoir Bourbon Whiskey"
+      ],
+      "Yellow Banks Bourbon": [
+        "Yellow Banks Kentucky Straight Bourbon"
+      ]
+    },
     "verified_manually": true
   },
   "100MB": {
@@ -44,23 +69,61 @@
       "Bear Fight American Single Malt Whiskey",
       "Big Moustache American Single Malt",
       "Frey Ranch American Single Malt Smoked Whiskey",
-      "Lost Lantern \"Gentle Giant\" Balcones Distilling Texas Single Malt",
-      "Orphan Barrel Muckety-Muck 25 Year",
-      "Orphan Barrel Muckety-Muck 26 Year",
+      "Lost Lantern Gentle Giant (Balcones)",
+      "Orphan Barrel Forager's Keep",
+      "Orphan Barrel Muckety-Muck",
+      "Stranahan's",
       "Union Horse Rivalist American Single Malt Whiskey",
-      "Virginia Distillery Co. VHW Brewers Batch Whisky",
-      "Virginia Distillery Co. VHW Chardonnay Cask Finished Whisky",
-      "Virginia Distillery Co. VHW Cider Cask Finished Whisky",
-      "Virginia Distillery Co. VHW Port Cask Finished Whisky",
-      "WhistlePig The Beholden 21 Year Single Malt Whiskey",
-      "Stranahan's Blue Peak Single Malt Whiskey",
-      "Stranahan's Diamond Peak Single Malt Whiskey",
-      "Stranahan's Mountain Angel 10-Year Single Malt Whiskey",
-      "Stranahan's Original Single Malt Whiskey",
-      "Stranahan's Sherry Cask Single Malt Whiskey",
-      "Stranahan's Single Barrel Single Malt Whiskey",
-      "Stranahan's Snowflake"
-    ]
+      "Virginia Distillery Co. VHW",
+      "WhistlePig The Beholden 21 Year"
+    ],
+    "variants": {
+      "Lost Lantern Gentle Giant (Balcones)": [
+        "Lost Lantern \"Gentle Giant\" Balcones Distilling Texas Single Malt"
+      ],
+      "Orphan Barrel Muckety-Muck": [
+        "Orphan Barrel Muckety-Muck 24 Year",
+        "Orphan Barrel Muckety-Muck 25 Year",
+        "Orphan Barrel Muckety-Muck 26 Year"
+      ],
+      "Stranahan's": [
+        "Stranahan's Blue Peak Single Malt Whiskey",
+        "Stranahan's Diamond Peak Single Malt Whiskey",
+        "Stranahan's Mountain Angel 10-Year Single Malt Whiskey",
+        "Stranahan's Original Single Malt Whiskey",
+        "Stranahan's Sherry Cask Single Malt Whiskey",
+        "Stranahan's Single Barrel Single Malt Whiskey",
+        "Stranahan's Snowflake"
+      ],
+      "Virginia Distillery Co. VHW": [
+        "Virginia Distillery Co. VHW Brewers Batch Whisky",
+        "Virginia Distillery Co. VHW Chardonnay Cask Finished Whisky",
+        "Virginia Distillery Co. VHW Cider Cask Finished Whisky",
+        "Virginia Distillery Co. VHW Port Cask Finished Whisky"
+      ],
+      "WhistlePig The Beholden 21 Year": [
+        "WhistlePig The Beholden 21 Year Single Malt Whiskey"
+      ]
+    }
+  },
+  "100MER": {
+    "name": "100MER",
+    "grains": {
+      "merced_rye": "100%"
+    },
+    "raw": "100mer",
+    "brands": [
+      "Corbin Cash Merced Rye",
+      "Lost Lantern Corbin Cash 7 Year Rye"
+    ],
+    "variants": {
+      "Corbin Cash Merced Rye": [
+        "Corbin Cash Merced Rye Whiskey"
+      ],
+      "Lost Lantern Corbin Cash 7 Year Rye": [
+        "Lost Lantern Corbin Cash California Straight Rye Whiskey 7 Years Old"
+      ]
+    }
   },
   "100MR": {
     "name": "100MR",
@@ -70,19 +133,13 @@
     "raw": "100mr",
     "brands": [
       "Basil Hayden Malted Rye",
-      "Oppidan Malted Rye Whiskey"
-    ]
-  },
-  "100MER": {
-    "name": "100MER",
-    "grains": {
-      "merced_rye": "100%"
-    },
-    "raw": "100mer",
-    "brands": [
-      "Corbin Cash Merced Rye Whiskey",
-      "Lost Lantern Corbin Cash California Straight Rye Whiskey 7 Years Old"
-    ]
+      "Oppidan Malted Rye"
+    ],
+    "variants": {
+      "Oppidan Malted Rye": [
+        "Oppidan Malted Rye Whiskey"
+      ]
+    }
   },
   "100R": {
     "name": "100R",
@@ -91,27 +148,67 @@
     },
     "raw": "100r",
     "brands": [
+      "All Nations Rye",
       "ASW Resurgens Rye",
-      "All Nations Straight Rye Whiskey",
-      "Barrell Craft Spirits 16 Year Gray Label Seagrass",
-      "Boondocks Straight Rye Whiskey",
+      "Barrell Seagrass 16 Year",
+      "Boondocks Rye",
       "Catoctin Creek Roundstone Rye",
       "Creek Water Something Y Whiskey",
-      "Giant Texas Straight Rye Whiskey",
-      "Hickory Hill Rye Whiskey",
-      "Lock Stock & Barrel 13 Year Straight Rye Whiskey",
-      "Lock Stock & Barrel 21 Year Straight Rye Whiskey",
-      "Lock Stock & Barrel Vatted Straight Rye Whiskey",
-      "Masterson's 10 Year Old Rye Whiskey",
-      "New Riff Balboa Rye Whiskey",
-      "Old Henry Clay Straight Rye Whiskey",
+      "Giant Texas Rye",
+      "Hickory Hill Rye",
+      "Lock Stock & Barrel",
+      "Masterson's 10 Year Old Rye",
+      "Old Henry Clay Rye",
       "Pendleton 1910",
-      "Reservoir Rye Whiskey",
-      "Russell's Reserve Single Barrel Bourbon",
-      "Shortbarrel Small Batch Rye 101",
+      "Reservoir Rye",
+      "Shortbarrel Rye",
       "The Prideful Goat 15yr Straight Rye Cask Strength",
-      "Woodinville Straight Rye Whiskey"
-    ]
+      "WhistlePig Rye",
+      "Woodinville Rye"
+    ],
+    "variants": {
+      "All Nations Rye": [
+        "All Nations Straight Rye Whiskey"
+      ],
+      "Barrell Seagrass 16 Year": [
+        "Barrell Craft Spirits 16 Year Gray Label Seagrass"
+      ],
+      "Boondocks Rye": [
+        "Boondocks Straight Rye Whiskey"
+      ],
+      "Giant Texas Rye": [
+        "Giant Texas Straight Rye Whiskey"
+      ],
+      "Hickory Hill Rye": [
+        "Hickory Hill Rye Whiskey"
+      ],
+      "Lock Stock & Barrel": [
+        "Lock Stock & Barrel 13 Year Straight Rye Whiskey",
+        "Lock Stock & Barrel 21 Year Straight Rye Whiskey",
+        "Lock Stock & Barrel Vatted Straight Rye Whiskey"
+      ],
+      "Masterson's 10 Year Old Rye": [
+        "Masterson's 10 Year Old Rye Whiskey"
+      ],
+      "Old Henry Clay Rye": [
+        "Old Henry Clay Straight Rye Whiskey"
+      ],
+      "Reservoir Rye": [
+        "Reservoir Rye Whiskey"
+      ],
+      "Shortbarrel Rye": [
+        "Shortbarrel Small Batch Rye 101"
+      ],
+      "WhistlePig Rye": [
+        "WhistlePig 10 Year Small Batch Rye",
+        "WhistlePig 12 Year Old World Cask Finish",
+        "WhistlePig 15 Year Rye",
+        "WhistlePig PiggyBack Rye"
+      ],
+      "Woodinville Rye": [
+        "Woodinville Straight Rye Whiskey"
+      ]
+    }
   },
   "100W": {
     "name": "100W",
@@ -120,14 +217,31 @@
     },
     "raw": "100w",
     "brands": [
-      "Broken Barrel The Wreckoner Wheat Whiskey Cognac Finish",
-      "Journeyman Distillery Buggy Whip Wheat Whiskey",
-      "Journeyman Distillery Corsets, Whips & Whiskey",
-      "Laws Centennial Straight Wheat Whiskey (Bonded)",
-      "Laws Straight Wheat Whiskey Finished in Curacao Casks",
+      "Broken Barrel The Wreckoner Wheat",
+      "Journeyman Buggy Whip Wheat Whiskey",
+      "Journeyman Corsets, Whips & Whiskey",
+      "Laws Straight Wheat",
       "Reservoir Wheat Whiskey",
-      "Woodford Reserve Wheat Whiskey Bottled in Bond"
-    ]
+      "Woodford Reserve Wheat"
+    ],
+    "variants": {
+      "Broken Barrel The Wreckoner Wheat": [
+        "Broken Barrel The Wreckoner Wheat Whiskey Cognac Finish"
+      ],
+      "Journeyman Buggy Whip Wheat Whiskey": [
+        "Journeyman Distillery Buggy Whip Wheat Whiskey"
+      ],
+      "Journeyman Corsets, Whips & Whiskey": [
+        "Journeyman Distillery Corsets, Whips & Whiskey"
+      ],
+      "Laws Straight Wheat": [
+        "Laws Centennial Straight Wheat Whiskey (Bonded)",
+        "Laws Straight Wheat Whiskey Finished in Curacao Casks"
+      ],
+      "Woodford Reserve Wheat": [
+        "Woodford Reserve Wheat Whiskey Bottled in Bond"
+      ]
+    }
   },
   "45R/30W/25B": {
     "name": "45R/30W/25B",
@@ -137,8 +251,18 @@
       "barley": "25%"
     },
     "raw": "45r/30w/25b",
-    "brands": [ 
-		"none yet"
+    "brands": []
+  },
+  "51C/45R/4MB": {
+    "name": "51C/45R/4MB",
+    "grains": {
+      "corn": "51%",
+      "rye": "45%",
+      "malted_barley": "4%"
+    },
+    "raw": "51c/45r/4mb",
+    "brands": [
+      "Rare Char code K45"
     ]
   },
   "51C/45W/4MB": {
@@ -150,17 +274,47 @@
     },
     "raw": "51c/45w/4mb",
     "brands": [
-      "ASW Fiddler Chin Music Bourbon",
-      "ASW Fiddler Georgia Heartwood",
-      "ASW Fiddler Straight Bourbon Whiskey",
+      "ASW Fiddler",
       "ASW Wheated & Repeated",
-      "Boone County Wheated Bourbon Single Barrel",
-      "Oak & Eden Wheat & Honey",
-      "Oak & Eden Wheat & Spire",
+      "Boone County Wheated Bourbon",
+      "Oak & Eden Wheat",
       "Old Elk Straight Wheated Bourbon",
+      "Rare Char code W45",
       "Redemption Wheated Bourbon",
       "Wheat Penny 1958 Bourbon"
-    ]
+    ],
+    "variants": {
+      "ASW Fiddler": [
+        "ASW Fiddler Chin Music Bourbon",
+        "ASW Fiddler Georgia Heartwood",
+        "ASW Fiddler Straight Bourbon Whiskey"
+      ],
+      "Boone County Wheated Bourbon": [
+        "Boone County Wheated Bourbon Single Barrel"
+      ],
+      "Oak & Eden Wheat": [
+        "Oak & Eden Wheat & Honey",
+        "Oak & Eden Wheat & Spire"
+      ]
+    }
+  },
+  "51R/34C/15MB": {
+    "name": "51R/34C/15MB",
+    "grains": {
+      "rye": "51%",
+      "corn": "34%",
+      "malted_barley": "15%"
+    },
+    "raw": "51r/34c/15mb",
+    "brands": [
+      "Willett Family Estate Rye (low-rye barrels)",
+      "Willett Family Estate Small Batch Rye (blend: ~10% of batch)"
+    ],
+    "variants": {
+      "Willett Family Estate Rye (low-rye barrels)": [
+        "Willett Family Estate Single Barrel Rye (low-rye barrels)"
+      ]
+    }
   },
   "51R/35C/14MB": {
     "name": "51R/35C/14MB",
@@ -171,9 +325,22 @@
     },
     "raw": "51r/35c/14mb",
     "brands": [
-      "Elijah Craig Straight Rye",
-      "Parker's Heritage Collection - 13th Edition - Heavy Char Rye Whiskey (2019)"
-    ]
+      "Elijah Craig Rye",
+      "Parker's Heritage Collection (rye edition)",
+      "Pikesville Rye",
+      "Rittenhouse Rye Bottled-in-Bond"
+    ],
+    "variants": {
+      "Elijah Craig Rye": [
+        "Elijah Craig Straight Rye"
+      ],
+      "Parker's Heritage Collection (rye edition)": [
+        "Parker's Heritage Collection - 13th Edition - Heavy Char Rye Whiskey (2019)"
+      ],
+      "Pikesville Rye": [
+        "Pikesville Straight Rye"
+      ]
+    }
   },
   "51R/37C/12MB": {
     "name": "51R/37C/12MB",
@@ -184,11 +351,19 @@
     },
     "raw": "51r/37c/12mb",
     "brands": [
-      "Russell's Reserve 6 Year Rye",
-      "Wild Turkey 101 Rye",
-      "Wild Turkey Rare Breed Rye Barrel Proof",
+      "Russell's Reserve Rye",
       "Wild Turkey Rye"
-    ]
+    ],
+    "variants": {
+      "Russell's Reserve Rye": [
+        "Russell's Reserve 6 Year Rye"
+      ],
+      "Wild Turkey Rye": [
+        "Wild Turkey 101 Rye",
+        "Wild Turkey Rare Breed Rye Barrel Proof",
+        "Wild Turkey Rye"
+      ]
+    }
   },
   "51R/45C/4MB": {
     "name": "51R/45C/4MB",
@@ -199,9 +374,21 @@
     },
     "raw": "51r/45c/4mb",
     "brands": [
-      "Ezra Brooks Rye Whiskey",
-      "Lip Service Rye Whiskey"
-    ]
+      "Ezra Brooks Rye",
+      "Lip Service Rye",
+      "Rare Char code AMB-R",
+      "Rare Char code JAQ-R",
+      "Rare Char code RHY",
+      "Rare Char code SRY"
+    ],
+    "variants": {
+      "Ezra Brooks Rye": [
+        "Ezra Brooks Rye Whiskey"
+      ],
+      "Lip Service Rye": [
+        "Lip Service Rye Whiskey"
+      ]
+    }
   },
   "51R/49MB": {
     "name": "51R/49MB",
@@ -211,9 +398,17 @@
     },
     "raw": "51r/49mb",
     "brands": [
-      "Rossville Union Bottled in Bond Straight Rye Whiskey",
-      "Smoke Wagon Malted Straight Rye Whiskey"
-    ]
+      "Rossville Union Bottled in Bond Rye",
+      "Smoke Wagon Malted Rye"
+    ],
+    "variants": {
+      "Rossville Union Bottled in Bond Rye": [
+        "Rossville Union Bottled in Bond Straight Rye Whiskey"
+      ],
+      "Smoke Wagon Malted Rye": [
+        "Smoke Wagon Malted Straight Rye Whiskey"
+      ]
+    }
   },
   "51W/37C/12MB": {
     "name": "51W/37C/12MB",
@@ -224,9 +419,27 @@
     },
     "raw": "51w/37c/12mb",
     "brands": [
-	  "Parker's Heritage Collection - 15th Edition - Heavy Char Wheat (2021)",
       "Bernheim Original Wheat Whiskey",
-      "Parker's Heritage Collection - 8th Edition - Original Batch Wheat Whiskey (2014)"
+      "Parker's Heritage Collection (wheat editions)"
+    ],
+    "variants": {
+      "Parker's Heritage Collection (wheat editions)": [
+        "Parker's Heritage Collection - 15th Edition - Heavy Char Wheat (2021)",
+        "Parker's Heritage Collection - 8th Edition - Original Batch Wheat Whiskey (2014)"
+      ]
+    }
+  },
+  "52C/38R/10MB": {
+    "name": "52C/38R/10MB",
+    "grains": {
+      "corn": "52%",
+      "rye": "38%",
+      "malted_barley": "10%"
+    },
+    "raw": "52c/38r/10mb",
+    "brands": [
+      "Johnny Drum Private Stock (blend: ~35% of batch)",
+      "Willett High Rye Bourbon"
     ]
   },
   "55R/35C/10MB": {
@@ -237,28 +450,7 @@
       "malted_barley": "10%"
     },
     "raw": "55r/35c/10mb",
-    "brands": [
-      "Knob Creek Rye",
-      "Knob Creek Single Barrel Select Rye"
-    ]
-  },
-  "56C/38R/6MB": {
-    "name": "56C/38R/6MB",
-    "grains": {
-      "corn": "56%",
-      "rye": "38%",
-      "malted_barley": "6%"
-    },
-    "raw": "56c/38r/6mb",
-    "brands": [
-      "Breckenridge Buddy Pass Imperial Stout Cask",
-      "Breckenridge Distillers High Proof",
-      "Breckenridge Reserve Blend",
-      "Breckenridge Rum Cask Finish",
-      "Breckenridge Whiskey Madeira Finish",
-      "Breckenridge Whiskey Port Cask Finish",
-      "Breckenridge Whiskey Px Cask Finish"
-    ]
+    "brands": []
   },
   "56C/38R/6UB": {
     "name": "56C/38R/6UB",
@@ -269,9 +461,21 @@
     },
     "raw": "56c/38r/6ub",
     "brands": [
-      "Breckenridge Bourbon",
-      "Breckenridge Bourbon Single Barrel"
-    ]
+      "Breckenridge Bourbon"
+    ],
+    "variants": {
+      "Breckenridge Bourbon": [
+        "Breckenridge Bourbon",
+        "Breckenridge Bourbon Single Barrel",
+        "Breckenridge Buddy Pass Imperial Stout Cask",
+        "Breckenridge Distillers High Proof",
+        "Breckenridge Reserve Blend",
+        "Breckenridge Rum Cask Finish",
+        "Breckenridge Whiskey Madeira Finish",
+        "Breckenridge Whiskey Port Cask Finish",
+        "Breckenridge Whiskey Px Cask Finish"
+      ]
+    }
   },
   "60C/14W/14R/12MB": {
     "name": "60C/14W/14R/12MB",
@@ -283,10 +487,15 @@
     },
     "raw": "60c/14w/14r/12mb",
     "brands": [
-      "J. Henry & Sons Cask Strength Bourbon (Patton Road Reserve)",
-      "J. Henry & Sons Cognac Finished Five Year Aged (Bellefontaine Reserve)",
-      "J. Henry & Sons Five Year Aged Bourbon Small Batch"
-    ]
+      "J. Henry & Sons (early batches)"
+    ],
+    "variants": {
+      "J. Henry & Sons (early batches)": [
+        "J. Henry & Sons Cask Strength Bourbon (Patton Road Reserve)",
+        "J. Henry & Sons Cognac Finished Five Year Aged (Bellefontaine Reserve)",
+        "J. Henry & Sons Five Year Aged Bourbon Small Batch"
+      ]
+    }
   },
   "60C/20W/10R/10MB": {
     "name": "60C/20W/10R/10MB",
@@ -298,25 +507,47 @@
     },
     "raw": "60c/20w/10r/10mb",
     "brands": [
-      "Laws Four Grain Straight Bourbon",
-      "Laws Four Grain Straight Bourbon (Bonded)",
-      "Laws Four Grain Straight Bourbon (Cask)",
-      "Laws Four Grain Straight Bourbon (Farmers Select)",
-      "Laws Straight Bourbon Finished in Honey Cask"
-    ]
+      "Laws Four Grain Bourbon"
+    ],
+    "variants": {
+      "Laws Four Grain Bourbon": [
+        "Laws Four Grain Straight Bourbon",
+        "Laws Four Grain Straight Bourbon (Bonded)",
+        "Laws Four Grain Straight Bourbon (Cask)",
+        "Laws Four Grain Straight Bourbon (Farmers Select)",
+        "Laws Straight Bourbon Finished in Honey Cask"
+      ]
+    }
   },
-  "60C/22B/18W": {
-    "name": "60C/22B/18W",
+  "60C/22MB/18W": {
+    "name": "60C/22MB/18W",
     "grains": {
       "corn": "60%",
-      "barley": "22%",
+      "malted_barley": "22%",
       "wheat": "18%"
     },
-    "raw": "60c/22b/18w",
+    "raw": "60c/22mb/18w",
     "brands": [
-      "St. Augustine Distillery Florida Straight Bourbon",
-      "St. Augustine Distillery Port Finished Bourbon",
-      "St. Augustine Distillery The Saint Bourbon"
+      "St. Augustine Florida Bourbon"
+    ],
+    "variants": {
+      "St. Augustine Florida Bourbon": [
+        "St. Augustine Distillery Florida Straight Bourbon",
+        "St. Augustine Distillery Port Finished Bourbon",
+        "St. Augustine Distillery The Saint Bourbon"
+      ]
+    }
+  },
+  "60C/22W/18MB": {
+    "name": "60C/22W/18MB",
+    "grains": {
+      "corn": "60%",
+      "wheat": "22%",
+      "malted_barley": "18%"
+    },
+    "raw": "60c/22w/18mb",
+    "brands": [
+      "Rare Char code WTN"
     ]
   },
   "60C/30R/10MB": {
@@ -328,10 +559,15 @@
     },
     "raw": "60c/30r/10mb",
     "brands": [
-      "Jefferson's Reserve",
-      "Jefferson's Reserve Single Barrel",
-      "Jefferson's Very Small Batch"
-    ]
+      "Jefferson's"
+    ],
+    "variants": {
+      "Jefferson's": [
+        "Jefferson's Reserve",
+        "Jefferson's Reserve Single Barrel",
+        "Jefferson's Very Small Batch"
+      ]
+    }
   },
   "60C/30W/10MB": {
     "name": "60C/30W/10MB",
@@ -342,9 +578,14 @@
     },
     "raw": "60c/30w/10mb",
     "brands": [
-      "Belfour Bourbon",
-      "Belfour Small Batch Bourbon"
-    ]
+      "Belfour Bourbon"
+    ],
+    "variants": {
+      "Belfour Bourbon": [
+        "Belfour Bourbon",
+        "Belfour Small Batch Bourbon"
+      ]
+    }
   },
   "60C/35R/5MB": {
     "name": "60C/35R/5MB",
@@ -355,16 +596,34 @@
     },
     "raw": "60c/35r/5mb",
     "brands": [
-      "Four Roses 16 Year Single Barrel OBSV",
-      "Four Roses 17 Year Single Barrel OBSV",
-      "Four Roses OBSF ",
-      "Four Roses OBSK ",
-      "Four Roses OBSO ",
-      "Four Roses OBSQ ",
-      "Four Roses OBSV ",
+      "Four Roses OBSF",
+      "Four Roses OBSK",
+      "Four Roses OBSO",
+      "Four Roses OBSQ",
+      "Four Roses OBSV",
       "High West American Prairie Bourbon",
       "Rough Rider The Happy Warrior Bourbon"
-    ]
+    ],
+    "variants": {
+      "Four Roses OBSF": [
+        "Four Roses OBSF Single Barrel Private Selection Barrel Strength Bourbon"
+      ],
+      "Four Roses OBSK": [
+        "Four Roses OBSK Single Barrel Private Selection Barrel Strength Bourbon"
+      ],
+      "Four Roses OBSO": [
+        "Four Roses OBSO Single Barrel Private Selection Barrel Strength Bourbon"
+      ],
+      "Four Roses OBSQ": [
+        "Four Roses OBSQ Single Barrel Private Selection Barrel Strength Bourbon"
+      ],
+      "Four Roses OBSV": [
+        "Four Roses 16 Year Single Barrel OBSV",
+        "Four Roses 17 Year Single Barrel OBSV",
+        "Four Roses OBSV Single Barrel Private Selection Barrel Strength Bourbon",
+        "Four Roses Single Barrel"
+      ]
+    }
   },
   "60C/36R/4MB": {
     "name": "60C/36R/4MB",
@@ -375,8 +634,56 @@
     },
     "raw": "60c/36r/4mb",
     "brands": [
-	  "MGP High Rye Bourbon"
-    ]
+      "1776 Straight Bourbon (James E. Pepper)",
+      "Bardstown Bourbon Co. x Copper & Kings",
+      "Blue Note Crossroads",
+      "Four Gate BRBN DownUnder",
+      "MGP High Rye Bourbon",
+      "Nulu Bourbon",
+      "O.K.I. Single Barrel Bourbon",
+      "Oak & Eden Bourbon & Vine",
+      "Rare Char code HIC",
+      "Rare Char code HR7",
+      "Rare Char code HRC",
+      "Rare Char code HRK",
+      "Rare Char code HRY",
+      "Rare Char code IRT",
+      "Rare Char code KHR",
+      "Rare Char code KNF",
+      "Rare Char code MAD-B",
+      "Rare Char code OLS",
+      "Rare Char code PXS-B",
+      "Rare Char code WP-B",
+      "Redemption High Rye Bourbon",
+      "Smoke Wagon Bourbon",
+      "Smooth Ambler Old Scout"
+    ],
+    "variants": {
+      "Bardstown Bourbon Co. x Copper & Kings": [
+        "Bardstown Bourbon Copper & Kings Spanish Oloroso Sherry Finish"
+      ],
+      "Nulu Bourbon": [
+        "Nulu Amburana Finished Bourbon Whiskey",
+        "Nulu Honey Finished Bourbon Whiskey"
+      ],
+      "Redemption High Rye Bourbon": [
+        "Redemption 10 Year Barrel Proof High Rye Bourbon",
+        "Redemption High Rye Bourbon",
+        "Redemption High Rye Bourbon Single Barrel Select"
+      ],
+      "Smoke Wagon Bourbon": [
+        "Smoke Wagon Private Barrel",
+        "Smoke Wagon Small Batch Bourbon",
+        "Smoke Wagon Straight Bourbon",
+        "Smoke Wagon Uncut Unfiltered"
+      ],
+      "Smooth Ambler Old Scout": [
+        "Smooth Ambler Old Scout 11 Year-Old \"FS/FT\"",
+        "Smooth Ambler Old Scout 11 Year-Old \"Jawbreaker\"",
+        "Smooth Ambler Old Scout Bourbon",
+        "Smooth Ambler Old Scout Single Barrel Bourbon"
+      ]
+    }
   },
   "60R/40W": {
     "name": "60R/40W",
@@ -386,9 +693,17 @@
     },
     "raw": "60r/40w",
     "brands": [
-      "Journeyman Distillery Last Feather Rye Whiskey",
-      "Journeyman Distillery W. R. Whiskey"
-    ]
+      "Journeyman Last Feather Rye",
+      "Journeyman W. R. Whiskey"
+    ],
+    "variants": {
+      "Journeyman Last Feather Rye": [
+        "Journeyman Distillery Last Feather Rye Whiskey"
+      ],
+      "Journeyman W. R. Whiskey": [
+        "Journeyman Distillery W. R. Whiskey"
+      ]
+    }
   },
   "60UMB/40MMB": {
     "name": "60UMB/40MMB",
@@ -398,8 +713,25 @@
     },
     "raw": "60umb/40mmb",
     "brands": [
-      "Lost Lantern \"Desert Dessert\" Whiskey Del Bac Arizona Single Malt",
-      "Lost Lantern \"Mega Mesquite\" Whiskey Del Bac Arizona Single Malt"
+      "Lost Lantern Whiskey Del Bac Single Malt"
+    ],
+    "variants": {
+      "Lost Lantern Whiskey Del Bac Single Malt": [
+        "Lost Lantern \"Desert Dessert\" Whiskey Del Bac Arizona Single Malt",
+        "Lost Lantern \"Mega Mesquite\" Whiskey Del Bac Arizona Single Malt"
+      ]
+    }
+  },
+  "63C/27BR/10MB": {
+    "name": "63C/27BR/10MB",
+    "grains": {
+      "corn": "63%",
+      "brown_rice": "27%",
+      "malted_barley": "10%"
+    },
+    "raw": "63c/27br/10mb",
+    "brands": [
+      "Basil Hayden Toast"
     ]
   },
   "63C/27R/10MB": {
@@ -411,11 +743,19 @@
     },
     "raw": "63c/27r/10mb",
     "brands": [
-      "Basil Hayden's Bourbon",
-      "Old Grand Dad 114",
-      "Old Grand Dad 80",
-      "Old Grand Dad Bottled in Bond"
-    ]
+      "Basil Hayden",
+      "Old Grand-Dad"
+    ],
+    "variants": {
+      "Basil Hayden": [
+        "Basil Hayden's Bourbon"
+      ],
+      "Old Grand-Dad": [
+        "Old Grand Dad 114",
+        "Old Grand Dad 80",
+        "Old Grand Dad Bottled in Bond"
+      ]
+    }
   },
   "64C/24R/12MB": {
     "name": "64C/24R/12MB",
@@ -426,11 +766,19 @@
     },
     "raw": "64c/24r/12mb",
     "brands": [
-      "All Nations 6 Year Straight Bourbon",
-      "Wilderness Trail 6-Year Bourbon (Wheated)",
-      "Wilderness Trail Family Reserve Single Barrel Kentucky Straight Bourbon",
-      "Wilderness Trail Kentucky Straight Bourbon Small Batch BiB"
-    ]
+      "All Nations Bourbon",
+      "Wilderness Trail High Rye Bourbon"
+    ],
+    "variants": {
+      "All Nations Bourbon": [
+        "All Nations 6 Year Straight Bourbon"
+      ],
+      "Wilderness Trail High Rye Bourbon": [
+        "Wilderness Trail 6-Year Bourbon (High-Rye)",
+        "Wilderness Trail Family Reserve Single Barrel Kentucky Straight Bourbon",
+        "Wilderness Trail Kentucky Straight Bourbon Small Batch BiB"
+      ]
+    }
   },
   "64C/24W/12MB": {
     "name": "64C/24W/12MB",
@@ -441,9 +789,14 @@
     },
     "raw": "64c/24w/12mb",
     "brands": [
-      "Wilderness Trail 6-Year Bourbon (High-Rye)",
-      "Wilderness Trail Kentucky Straight Bourbon Single Barrel BiB (Wheated)"
-    ]
+      "Wilderness Trail Wheated Bourbon"
+    ],
+    "variants": {
+      "Wilderness Trail Wheated Bourbon": [
+        "Wilderness Trail 6-Year Bourbon (Wheated)",
+        "Wilderness Trail Kentucky Straight Bourbon Single Barrel BiB (Wheated)"
+      ]
+    }
   },
   "64C/30R/6MB": {
     "name": "64C/30R/6MB",
@@ -454,28 +807,93 @@
     },
     "raw": "64c/30r/6mb",
     "brands": [
-      "Belle Meade Bourbon",
-      "Belle Meade Bourbon Finished in XO Cognac Cask",
-      "Belle Meade Bourbon Madeira Cask Finish",
-      "Belle Meade Bourbon Sherry Cask Finish",
-      "Belle Meade Cask Strength Reserve",
-      "Belle Meade Single Barrel Bourbon"
+      "Belle Meade Bourbon"
+    ],
+    "variants": {
+      "Belle Meade Bourbon": [
+        "Belle Meade Bourbon",
+        "Belle Meade Bourbon Finished in XO Cognac Cask",
+        "Belle Meade Bourbon Madeira Cask Finish",
+        "Belle Meade Bourbon Sherry Cask Finish",
+        "Belle Meade Cask Strength Reserve",
+        "Belle Meade Single Barrel Bourbon"
+      ]
+    }
+  },
+  "64R/14W/14C/8MB": {
+    "name": "64R/14W/14C/8MB",
+    "grains": {
+      "rye": "64%",
+      "wheat": "14%",
+      "corn": "14%",
+      "malted_barley": "8%"
+    },
+    "raw": "64r/14w/14c/8mb",
+    "brands": [
+      "Two Souls x J. Henry The Genius Rye"
+    ],
+    "variants": {
+      "Two Souls x J. Henry The Genius Rye": [
+        "Two Souls x J. Henry & Sons 'The Genius' Rum Cask Rye"
+      ]
+    }
+  },
+  "64R/30C/6MB": {
+    "name": "64R/30C/6MB",
+    "grains": {
+      "rye": "64%",
+      "corn": "30%",
+      "malted_barley": "6%"
+    },
+    "raw": "64r/30c/6mb",
+    "brands": [
+      "Rare Char code SEG"
     ]
   },
-  "64WRC/14R/14W/8B": {
-    "name": "64WRC/14R/14W/8B",
+  "64WRC/14R/14W/8MB": {
+    "name": "64WRC/14R/14W/8MB",
     "grains": {
       "wisconsin_red_corn": "64%",
       "rye": "14%",
       "wheat": "14%",
-      "barley": "8%"
+      "malted_barley": "8%"
     },
-    "raw": "64wrc/14r/14w/8b",
+    "raw": "64wrc/14r/14w/8mb",
     "brands": [
-      "J. Henry & Sons La Flamme Reserve Bourbon Finished in Armagnac Barrels",
-      "J. Henry & Sons Patton Road Reserve Wisconsin Straight Bourbon Whiskey",
-      "J. Henry & Sons Small Batch Bourbon"
-    ]
+      "J. Henry & Sons",
+      "Two Souls x J. Henry The Hero"
+    ],
+    "variants": {
+      "J. Henry & Sons": [
+        "J. Henry & Sons 10th Anniversary Bourbon",
+        "J. Henry & Sons La Flamme Reserve Bourbon Finished in Armagnac Barrels",
+        "J. Henry & Sons Patton Road Reserve Wisconsin Straight Bourbon Whiskey",
+        "J. Henry & Sons Small Batch Bourbon"
+      ],
+      "Two Souls x J. Henry The Hero": [
+        "Two Souls x J. Henry & Sons 'The Hero' Rum Cask Bourbon"
+      ]
+    }
+  },
+  "65C/20W/15MB": {
+    "name": "65C/20W/15MB",
+    "grains": {
+      "corn": "65%",
+      "wheat": "20%",
+      "malted_barley": "15%"
+    },
+    "raw": "65c/20w/15mb",
+    "brands": [
+      "Willett Family Estate Wheated Bourbon (Single Barrel)",
+      "Willett Pot Still Reserve",
+      "Willett Wheated Bourbon (8 Year)"
+    ],
+    "variants": {
+      "Willett Pot Still Reserve": [
+        "Willett Pot Still Reserve",
+        "Willett Pot Still Reserve Cask Strength"
+      ]
+    }
   },
   "65C/25R/10MB": {
     "name": "65C/25R/10MB",
@@ -486,9 +904,14 @@
     },
     "raw": "65c/25r/10mb",
     "brands": [
-      "Bull Run Barrel Strength Bourbon",
-      "Bull Run Straight Bourbon Whiskey"
-    ]
+      "Bull Run Bourbon"
+    ],
+    "variants": {
+      "Bull Run Bourbon": [
+        "Bull Run Barrel Strength Bourbon",
+        "Bull Run Straight Bourbon Whiskey"
+      ]
+    }
   },
   "65C/30R/5MB": {
     "name": "65C/30R/5MB",
@@ -500,10 +923,29 @@
     "raw": "65c/30r/5mb",
     "brands": [
       "Horse Soldier Bourbon",
-      "New Riff Backsetter Bourbon",
-      "New Riff Kentucky Straight Bourbon",
-      "New Riff Malster Bourbon with Malted Rye",
-      "New Riff Single Barrel"
+      "New Riff Bourbon"
+    ],
+    "variants": {
+      "New Riff Bourbon": [
+        "New Riff Backsetter Bourbon",
+        "New Riff Kentucky Straight Bourbon",
+        "New Riff Malster Bourbon with Malted Rye",
+        "New Riff Single Barrel"
+      ]
+    }
+  },
+  "65MB/35C": {
+    "name": "65MB/35C",
+    "grains": {
+      "malted_barley": "65%",
+      "corn": "35%"
+    },
+    "raw": "65mb/35c",
+    "brands": [
+      "Rare Char code E-MX",
+      "Rare Char code EM-11",
+      "Rare Char code EM-9",
+      "Rare Char code EM-X"
     ]
   },
   "65R/20MB/15C": {
@@ -515,9 +957,14 @@
     },
     "raw": "65r/20mb/15c",
     "brands": [
-      "J.W. Kelly Golden Age Straight Rye Whiskey",
+      "J.W. Kelly Golden Age Rye",
       "Old Forester Rye"
-    ]
+    ],
+    "variants": {
+      "J.W. Kelly Golden Age Rye": [
+        "J.W. Kelly Golden Age Straight Rye Whiskey"
+      ]
+    }
   },
   "66R/30C/4B": {
     "name": "66R/30C/4B",
@@ -528,9 +975,14 @@
     },
     "raw": "66r/30c/4b",
     "brands": [
-      "Found North Cask Strength Rye Whisky Batch 001",
-      "Found North Rye Whiskey Single Barrel 006"
-    ]
+      "Found North Rye (Batch 001, SB 006)"
+    ],
+    "variants": {
+      "Found North Rye (Batch 001, SB 006)": [
+        "Found North Cask Strength Rye Whisky Batch 001",
+        "Found North Rye Whiskey Single Barrel 006"
+      ]
+    }
   },
   "68C/16R/16MB": {
     "name": "68C/16R/16MB",
@@ -541,9 +993,14 @@
     },
     "raw": "68c/16r/16mb",
     "brands": [
-      "Ragged Branch Double Oaked Signature Bourbon",
-      "Ragged Branch Signature Bourbon"
-    ]
+      "Ragged Branch Bourbon"
+    ],
+    "variants": {
+      "Ragged Branch Bourbon": [
+        "Ragged Branch Double Oaked Signature Bourbon",
+        "Ragged Branch Signature Bourbon"
+      ]
+    }
   },
   "68C/16W/16MB": {
     "name": "68C/16W/16MB",
@@ -554,26 +1011,15 @@
     },
     "raw": "68c/16w/16mb",
     "brands": [
-      "Ragged Branch Double Oaked Wheated Bourbon",
-      "Ragged Branch Wheated Bourbon",
-      "Ragged Branch Wheated Bourbon Bottled in Bond"
-    ]
-  },
-  "68C/20W/10MB": {
-    "name": "68C/20W/10MB",
-    "grains": {
-      "corn": "68%",
-      "wheat": "20%",
-      "malted_barley": "10%"
-    },
-    "raw": "68c/20w/10mb",
-    "brands": [
-      "David Nicholson 1843 Bourbon",
-      "Rebel 10 Year Single Barrel Bourbon",
-      "Rebel Bourbon 100",
-      "Rebel Distiller's Collection Single Barrel Bourbon",
-      "Rebel Kentucky Straight Bourbon"
-    ]
+      "Ragged Branch Wheated Bourbon"
+    ],
+    "variants": {
+      "Ragged Branch Wheated Bourbon": [
+        "Ragged Branch Double Oaked Wheated Bourbon",
+        "Ragged Branch Wheated Bourbon",
+        "Ragged Branch Wheated Bourbon Bottled in Bond"
+      ]
+    }
   },
   "68C/20W/12MB": {
     "name": "68C/20W/12MB",
@@ -584,25 +1030,60 @@
     },
     "raw": "68c/20w/12mb",
     "brands": [
-      "Bardstown Origin Series Wheated Bottled-In-Bond Bourbon",
-      "Larceny 1870 Small Batch",
-      "Larceny Barrel Proof A120",
-      "Larceny Barrel Proof A121",
-      "Larceny Barrel Proof A122",
-      "Larceny Barrel Proof A123",
-      "Larceny Barrel Proof B521",
-      "Larceny Barrel Proof B522",
-      "Larceny Barrel Proof B523",
-      "Larceny Barrel Proof Batch C922",
-      "Larceny Barrel Proof C520",
-      "Larceny Barrel Proof C920",
-      "Larceny Barrel Proof C921",
-      "Old Fitzgerald Bottled-in-Bond 14 Year Bourbon (Fall 2020)",
-      "Rebel Cask Strength Single Barrel (Special Limited Edition)",
-      "Rebel Yell",
-      "Wyoming Whiskey Single Barrel Bourbon",
-      "Wyoming Whiskey Small Batch Bourbon"
-    ]
+      "Bardstown Origin Series Wheated BiB",
+      "David Nicholson 1843",
+      "Larceny",
+      "Old Fitzgerald Bottled-in-Bond",
+      "Rebel",
+      "Wyoming Whiskey"
+    ],
+    "variants": {
+      "Bardstown Origin Series Wheated BiB": [
+        "Bardstown Origin Series Wheated Bottled-In-Bond Bourbon"
+      ],
+      "David Nicholson 1843": [
+        "David Nicholson 1843 Bourbon"
+      ],
+      "Larceny": [
+        "Larceny 1870 Small Batch",
+        "Larceny Barrel Proof",
+        "Larceny Barrel Proof A120",
+        "Larceny Barrel Proof A121",
+        "Larceny Barrel Proof A122",
+        "Larceny Barrel Proof A123",
+        "Larceny Barrel Proof B521",
+        "Larceny Barrel Proof B522",
+        "Larceny Barrel Proof B523",
+        "Larceny Barrel Proof Batch C922",
+        "Larceny Barrel Proof C520",
+        "Larceny Barrel Proof C920",
+        "Larceny Barrel Proof C921"
+      ],
+      "Old Fitzgerald Bottled-in-Bond": [
+        "Old Fitzgerald 7 Year Old Bottled-in-Bond",
+        "Old Fitzgerald Bottled-in-Bond",
+        "Old Fitzgerald Bottled-in-Bond 11 Year Bourbon (Fall 2021)",
+        "Old Fitzgerald Bottled-in-Bond 11 Year Bourbon (Spring 2018)",
+        "Old Fitzgerald Bottled-in-Bond 13 Year Bourbon (Spring 2019)",
+        "Old Fitzgerald Bottled-in-Bond 14 Year Bourbon (Fall 2020)",
+        "Old Fitzgerald Bottled-in-Bond 15 Year Bourbon (Fall 2019)",
+        "Old Fitzgerald Bottled-in-Bond 8 Year Bourbon (Spring 2021)",
+        "Old Fitzgerald Bottled-in-Bond 9 Year Bourbon (Fall 2018)",
+        "Old Fitzgerald Bottled-in-Bond 9 Year Bourbon (Spring 2020)"
+      ],
+      "Rebel": [
+        "Rebel 10 Year Single Barrel Bourbon",
+        "Rebel Bourbon 100",
+        "Rebel Cask Strength Single Barrel (Special Limited Edition)",
+        "Rebel Distiller's Collection Single Barrel Bourbon",
+        "Rebel Kentucky Straight Bourbon",
+        "Rebel Yell"
+      ],
+      "Wyoming Whiskey": [
+        "Wyoming Whiskey Single Barrel Bourbon",
+        "Wyoming Whiskey Small Batch Bourbon"
+      ]
+    }
   },
   "68C/28R/4MB": {
     "name": "68C/28R/4MB",
@@ -613,9 +1094,32 @@
     },
     "raw": "68c/28r/4mb",
     "brands": [
-      "Bulleit Bourbon",
-      "Bulleit Bourbon 10 Year Old"
-    ]
+      "Bulleit Bourbon"
+    ],
+    "variants": {
+      "Bulleit Bourbon": [
+        "Bulleit Bourbon",
+        "Bulleit Bourbon 10 Year Old"
+      ]
+    }
+  },
+  "70C/10MW/10HMB/10MB": {
+    "name": "70C/10MW/10HMB/10MB",
+    "grains": {
+      "corn": "70%",
+      "malted_wheat": "10%",
+      "honey_malted_barley": "10%",
+      "malted_barley": "10%"
+    },
+    "raw": "70c/10mw/10hmb/10mb",
+    "brands": [
+      "Rabbit Hole Cavehill Bourbon"
+    ],
+    "variants": {
+      "Rabbit Hole Cavehill Bourbon": [
+        "Rabbit Hole Cavehill Kentucky Straight Bourbon"
+      ]
+    }
   },
   "70C/15R/15W": {
     "name": "70C/15R/15W",
@@ -626,10 +1130,15 @@
     },
     "raw": "70c/15r/15w",
     "brands": [
-      "Holland's Blade Rummer Bourbon",
-      "Holland's Ghost Bourbon",
-      "Holland's Milkman Bourbon"
-    ]
+      "Holland's Bourbon"
+    ],
+    "variants": {
+      "Holland's Bourbon": [
+        "Holland's Blade Rummer Bourbon",
+        "Holland's Ghost Bourbon",
+        "Holland's Milkman Bourbon"
+      ]
+    }
   },
   "70C/16W/14MB": {
     "name": "70C/16W/14MB",
@@ -640,13 +1149,35 @@
     },
     "raw": "70c/16w/14mb",
     "brands": [
-      "Maker's 46",
-      "Maker's 46 Cask Strength",
-      "Maker's Mark Cask Strength",
-      "Maker's Mark FAE-01 2021 Limited Release",
-      "Maker's Mark FAE-02 2021 Limited Release",
+      "Maker's Mark",
       "Southern Star Paragon Single Barrel Cask Strength Wheated Bourbon"
-    ]
+    ],
+    "variants": {
+      "Maker's Mark": [
+        "Maker's 46",
+        "Maker's 46 Cask Strength",
+        "Maker's Mark Cask Strength",
+        "Maker's Mark FAE-01 2021 Limited Release",
+        "Maker's Mark FAE-02 2021 Limited Release"
+      ]
+    }
+  },
+  "70C/18R/12MB": {
+    "name": "70C/18R/12MB",
+    "grains": {
+      "corn": "70%",
+      "rye": "18%",
+      "malted_barley": "12%"
+    },
+    "raw": "70c/18r/12mb",
+    "brands": [
+      "Old McBrayer Bourbon"
+    ],
+    "variants": {
+      "Old McBrayer Bourbon": [
+        "Old McBrayer Kentucky Straight Bourbon"
+      ]
+    }
   },
   "70C/20R/10MB": {
     "name": "70C/20R/10MB",
@@ -657,11 +1188,19 @@
     },
     "raw": "70c/20r/10mb",
     "brands": [
-      "Bluff Springs Kentucky Straight Bourbon",
+      "Bluff Springs Bourbon",
       "FEW Bourbon",
       "Hidden Barn Kentucky Straight Bourbon Batch #001",
-      "Lost Lantern FEW Spirits Illinois Straight Bourbon"
-    ]
+      "Lost Lantern FEW Bourbon"
+    ],
+    "variants": {
+      "Bluff Springs Bourbon": [
+        "Bluff Springs Kentucky Straight Bourbon"
+      ],
+      "Lost Lantern FEW Bourbon": [
+        "Lost Lantern FEW Spirits Illinois Straight Bourbon"
+      ]
+    }
   },
   "70C/20W/10MB": {
     "name": "70C/20W/10MB",
@@ -672,20 +1211,14 @@
     },
     "raw": "70c/20w/10mb",
     "brands": [
-      "Horse Soldier Barrel Strength Bourbon",
-      "Horse Soldier Small Batch Bourbon"
-    ]
-  },
-  "70C/10HW/10HMB/10DM": {
-    "name": "70C/10HW/10HMB/10DM",
-    "grains": {
-      "corn": "70%",
-      "honeyed_wheat": "10%",
-      "honeyed_malted_barley": "10%",
-      "distillers_malt": "10%"
-    },
-    "raw": "70c/10hw/10hmb/10dm",
-    "brands": []
+      "Horse Soldier Wheated Bourbon"
+    ],
+    "variants": {
+      "Horse Soldier Wheated Bourbon": [
+        "Horse Soldier Barrel Strength Bourbon",
+        "Horse Soldier Small Batch Bourbon"
+      ]
+    }
   },
   "70C/21R/9MB": {
     "name": "70C/21R/9MB",
@@ -696,22 +1229,50 @@
     },
     "raw": "70c/21r/9mb",
     "brands": [
-      "Green River/OZtyler",
-      "Blue Note Juke Joint Uncut Bourbon",
-      "Blue Note Juke Joint Whiskey",
-      "Bradshaw Straight Bourbon",
-      "Broken Barrel California Oak Bourbon",
-      "Broken Barrel Cask Strength Bourbon",
-      "Broken Barrel Small Batch Bourbon",
-      "Chicken Cock Double Barrel 10 Year Old Bourbon",
-      "Chicken Cock Single Barrel 8 Year Old Bourbon",
-      "Copper Still Straight Bourbon Whiskey",
-      "Green River Bourbon Whiskey",
-      "Green River Single Barrel Bourbon",
+      "Blue Note Juke Joint",
+      "Bradshaw Bourbon",
+      "Broken Barrel Bourbon",
+      "Chicken Cock Bourbon",
+      "Copper Still Bourbon",
+      "Green River Bourbon",
+      "Rare Char code AQU",
+      "Rare Char code BRW",
+      "Rare Char code K21",
+      "Rare Char code N21",
       "Shady Mile High Rye Bourbon",
-      "Thirteenth Colony Double Oaked Bourbon",
-      "Thirteenth Colony Southern Bourbon"
-    ]
+      "Thirteenth Colony Bourbon"
+    ],
+    "variants": {
+      "Blue Note Juke Joint": [
+        "Blue Note Honey Bourbon Cask",
+        "Blue Note Juke Joint Uncut Bourbon",
+        "Blue Note Juke Joint Whiskey"
+      ],
+      "Bradshaw Bourbon": [
+        "Bradshaw Straight Bourbon"
+      ],
+      "Broken Barrel Bourbon": [
+        "Broken Barrel California Oak Bourbon",
+        "Broken Barrel Cask Strength Bourbon",
+        "Broken Barrel Small Batch Bourbon"
+      ],
+      "Chicken Cock Bourbon": [
+        "Chicken Cock Double Barrel 10 Year Old Bourbon",
+        "Chicken Cock Single Barrel 8 Year Old Bourbon"
+      ],
+      "Copper Still Bourbon": [
+        "Copper Still Straight Bourbon Whiskey"
+      ],
+      "Green River Bourbon": [
+        "Green River Bourbon Whiskey",
+        "Green River Single Barrel Bourbon",
+        "Green River/OZtyler"
+      ],
+      "Thirteenth Colony Bourbon": [
+        "Thirteenth Colony Double Oaked Bourbon",
+        "Thirteenth Colony Southern Bourbon"
+      ]
+    }
   },
   "70C/21W/9MB": {
     "name": "70C/21W/9MB",
@@ -735,12 +1296,17 @@
     },
     "raw": "70c/25r/5mb",
     "brands": [
-      "Still Austin Cask Strength Bourbon",
-      "Still Austin Cask Strength Monster Mash Bourbon",
-      "Still Austin Cognac Cask Strength Bourbon",
-      "Still Austin High Rye Bourbon",
-      "Still Austin Straight Bourbon \"The Musician\""
-    ]
+      "Still Austin Bourbon"
+    ],
+    "variants": {
+      "Still Austin Bourbon": [
+        "Still Austin Cask Strength Bourbon",
+        "Still Austin Cask Strength Monster Mash Bourbon",
+        "Still Austin Cognac Cask Strength Bourbon",
+        "Still Austin High Rye Bourbon",
+        "Still Austin Straight Bourbon \"The Musician\""
+      ]
+    }
   },
   "70C/25W/5R": {
     "name": "70C/25W/5R",
@@ -751,9 +1317,17 @@
     },
     "raw": "70c/25w/5r",
     "brands": [
-      "Journeyman Distillery Featherbone Bourbon",
-      "Journeyman Distillery Kissing Cousins Whiskey"
-    ]
+      "Journeyman Featherbone Bourbon",
+      "Journeyman Kissing Cousins Whiskey"
+    ],
+    "variants": {
+      "Journeyman Featherbone Bourbon": [
+        "Journeyman Distillery Featherbone Bourbon"
+      ],
+      "Journeyman Kissing Cousins Whiskey": [
+        "Journeyman Distillery Kissing Cousins Whiskey"
+      ]
+    }
   },
   "70C/26R/4MB": {
     "name": "70C/26R/4MB",
@@ -764,11 +1338,16 @@
     },
     "raw": "70c/26r/4mb",
     "brands": [
-      "Bib & Tucker 10-Year-Old Small Batch Bourbon",
-      "Bib & Tucker 12-Year-Old Small Batch Bourbon",
-      "Bib & Tucker 6-Year-Old Small Batch Bourbon",
+      "Bib & Tucker",
       "H.Deringer Bourbon"
-    ]
+    ],
+    "variants": {
+      "Bib & Tucker": [
+        "Bib & Tucker 10-Year-Old Small Batch Bourbon",
+        "Bib & Tucker 12-Year-Old Small Batch Bourbon",
+        "Bib & Tucker 6-Year-Old Small Batch Bourbon"
+      ]
+    }
   },
   "70R/18C/12MB": {
     "name": "70R/18C/12MB",
@@ -779,10 +1358,14 @@
     },
     "raw": "70r/18c/12mb",
     "brands": [
-      "Jack Daniel's Single Barrel Rye",
-      "Jack Daniel's Tennessee Rye",
-      "Old McBrayer Kentucky Straight Bourbon"
-    ]
+      "Jack Daniel's Rye"
+    ],
+    "variants": {
+      "Jack Daniel's Rye": [
+        "Jack Daniel's Single Barrel Rye",
+        "Jack Daniel's Tennessee Rye"
+      ]
+    }
   },
   "70R/20C/10MB": {
     "name": "70R/20C/10MB",
@@ -793,40 +1376,75 @@
     },
     "raw": "70r/20c/10mb",
     "brands": [
-      "Belfour Limited Edition Rye",
-      "Belfour Rye Whiskey",
-      "Belfour Special Edition Rye",
-      "Bluebird Distilling Sportsman Bourbon",
+      "Belfour Rye",
       "FEW Rye"
+    ],
+    "variants": {
+      "Belfour Rye": [
+        "Belfour Limited Edition Rye",
+        "Belfour Rye Whiskey",
+        "Belfour Special Edition Rye"
+      ]
+    }
+  },
+  "70R/25C/5MB": {
+    "name": "70R/25C/5MB",
+    "grains": {
+      "rye": "70%",
+      "corn": "25%",
+      "malted_barley": "5%"
+    },
+    "raw": "70r/25c/5mb",
+    "brands": [
+      "Rare Char code TKO"
     ]
   },
-  "72C/16R/12MB": {
-    "name": "72C/16R/12MB",
+  "72C/13R/15MB": {
+    "name": "72C/13R/15MB",
     "grains": {
       "corn": "72%",
-      "rye": "16%",
-      "malted_barley": "12%"
+      "rye": "13%",
+      "malted_barley": "15%"
     },
-    "raw": "72c/16r/12mb",
+    "raw": "72c/13r/15mb",
     "brands": [
-      "Old Forester 2002 Birthday Bourbon",
-      "Old Forester 2003 Birthday Bourbon Fall",
-      "Old Forester 2003 Birthday Bourbon Spring",
-      "Old Forester 2004 Birthday Bourbon",
-      "Old Forester 2005 Birthday Bourbon",
-      "Old Forester 2006 Birthday Bourbon",
-      "Old Forester 2007 Birthday Bourbon",
-      "Old Forester 2008 Birthday Bourbon",
-      "Old Forester 2009 Birthday Bourbon",
-      "Old Forester 2010 Birthday Bourbon",
-      "Old Forester 2011 Birthday Bourbon",
-      "Old Forester 2012 Birthday Bourbon",
-      "Old Forester 2013 Birthday Bourbon",
-      "Old Forester 2014 Birthday Bourbon",
-      "Old Forester 2015 Birthday Bourbon",
-      "Old Forester 2016 Birthday Bourbon",
-      "Old Forester 2019 Birthday Bourbon"
-    ]
+      "Johnny Drum Private Stock (blend: ~65% of batch)",
+      "Old Bardstown Bourbon",
+      "Willett Family Estate Bourbon"
+    ],
+    "variants": {
+      "Old Bardstown Bourbon": [
+        "Old Bardstown Kentucky Straight Bourbon"
+      ],
+      "Willett Family Estate Bourbon": [
+        "Willett Family Estate Bourbon (Single Barrel)",
+        "Willett Family Estate Rare Release 10 Year Bourbon"
+      ]
+    }
+  },
+  "72C/15R/13MB": {
+    "name": "72C/15R/13MB",
+    "grains": {
+      "corn": "72%",
+      "rye": "15%",
+      "malted_barley": "13%"
+    },
+    "raw": "72c/15r/13mb",
+    "brands": [
+      "Hirsch Bourbon",
+      "Town Branch Bourbon"
+    ],
+    "variants": {
+      "Hirsch Bourbon": [
+        "Hirsch \"The Cask Strength\" Bourbon",
+        "Hirsch \"The Single Barrel\" Bourbon"
+      ],
+      "Town Branch Bourbon": [
+        "Town Branch Bourbon",
+        "Town Branch Bourbon Sherry Cask Finished",
+        "Town Branch Double Oaked Kentucky Straight Bourbon"
+      ]
+    }
   },
   "72C/18R/10MB": {
     "name": "72C/18R/10MB",
@@ -837,27 +1455,60 @@
     },
     "raw": "72c/18r/10mb",
     "brands": [
-      "Angel's Envy Cask Strength Bourbon",
-      "Angel's Envy Port Finish",
-      "Angel's Envy Sherry Cask 2019",
-      "Old Forester 100 Kentucky Straight Bourbon",
-      "Old Forester 1870 Original Batch",
-      "Old Forester 1897 Bottled in Bond",
-      "Old Forester 1910 Old Fine Whisky",
-      "Old Forester 1920 Prohibition Style",
-      "Old Forester 86 Kentucky Straight Bourbon",
-      "Old Forester Single Barrel 100 Proof",
-      "Old Forester Single Barrel 90 Proof",
-      "Old Forester Single Barrel Barrel Strength Bourbon",
-      "Old Forester Statesman",
-      "Old Forester The 117 Series: High Angels' Share",
-      "Woodford Reserve Baccarat Edition",
-      "Woodford Reserve Double Oaked",
-      "Woodford Reserve Kentucky Derby Bottle",
-      "Woodford Reserve Maple Wood Finish",
-      "Woodford Reserve Master's Collection Batch Proof Bourbon",
-      "Woodford Reserve Straight Bourbon Whiskey"
-    ]
+      "Angel's Envy Bourbon",
+      "Old Forester",
+      "Old Forester Birthday Bourbon",
+      "Rare Char code KBT",
+      "Woodford Reserve"
+    ],
+    "variants": {
+      "Angel's Envy Bourbon": [
+        "Angel's Envy Cask Strength Bourbon",
+        "Angel's Envy Port Finish",
+        "Angel's Envy Sherry Cask 2019"
+      ],
+      "Old Forester": [
+        "Old Forester 100 Kentucky Straight Bourbon",
+        "Old Forester 1870 Original Batch",
+        "Old Forester 1897 Bottled in Bond",
+        "Old Forester 1910 Old Fine Whisky",
+        "Old Forester 1920 Prohibition Style",
+        "Old Forester 86 Kentucky Straight Bourbon",
+        "Old Forester Single Barrel 100 Proof",
+        "Old Forester Single Barrel 90 Proof",
+        "Old Forester Single Barrel Barrel Strength Bourbon",
+        "Old Forester Statesman",
+        "Old Forester The 117 Series: High Angels' Share"
+      ],
+      "Old Forester Birthday Bourbon": [
+        "Old Forester 2002 Birthday Bourbon",
+        "Old Forester 2003 Birthday Bourbon Fall",
+        "Old Forester 2003 Birthday Bourbon Spring",
+        "Old Forester 2004 Birthday Bourbon",
+        "Old Forester 2005 Birthday Bourbon",
+        "Old Forester 2006 Birthday Bourbon",
+        "Old Forester 2007 Birthday Bourbon",
+        "Old Forester 2008 Birthday Bourbon",
+        "Old Forester 2009 Birthday Bourbon",
+        "Old Forester 2010 Birthday Bourbon",
+        "Old Forester 2011 Birthday Bourbon",
+        "Old Forester 2012 Birthday Bourbon",
+        "Old Forester 2013 Birthday Bourbon",
+        "Old Forester 2014 Birthday Bourbon",
+        "Old Forester 2015 Birthday Bourbon",
+        "Old Forester 2016 Birthday Bourbon",
+        "Old Forester 2019 Birthday Bourbon",
+        "Old Forester Birthday Bourbon"
+      ],
+      "Woodford Reserve": [
+        "Woodford Reserve Baccarat Edition",
+        "Woodford Reserve Double Oaked",
+        "Woodford Reserve Kentucky Derby Bottle",
+        "Woodford Reserve Maple Wood Finish",
+        "Woodford Reserve Master's Collection Batch Proof Bourbon",
+        "Woodford Reserve Straight Bourbon Whiskey"
+      ]
+    }
   },
   "72C/22R/6MB": {
     "name": "72C/22R/6MB",
@@ -868,10 +1519,15 @@
     },
     "raw": "72c/22r/6mb",
     "brands": [
-      "Woodinville Double Barrel Whiskey",
-      "Woodinville Straight Bourbon",
-      "Woodinville Straight Bourbon Port Finished"
-    ]
+      "Woodinville Bourbon"
+    ],
+    "variants": {
+      "Woodinville Bourbon": [
+        "Woodinville Double Barrel Whiskey",
+        "Woodinville Straight Bourbon",
+        "Woodinville Straight Bourbon Port Finished"
+      ]
+    }
   },
   "73C/18R/9MB": {
     "name": "73C/18R/9MB",
@@ -882,9 +1538,13 @@
     },
     "raw": "73c/18r/9mb",
     "brands": [
-      "I.W. Harper 15-Year Old Bourbon",
-      "I.W. Harper Bourbon"
-    ]
+      "I.W. Harper"
+    ],
+    "variants": {
+      "I.W. Harper": [
+        "I.W. Harper Bourbon"
+      ]
+    }
   },
   "73C/23R/4MB": {
     "name": "73C/23R/4MB",
@@ -895,9 +1555,14 @@
     },
     "raw": "73c/23r/4mb",
     "brands": [
-      "Barrell Bourbon Cask Finish Series Tale of Two Islands",
-      "Barrell Foundation Bourbon"
-    ]
+      "Barrell Bourbon"
+    ],
+    "variants": {
+      "Barrell Bourbon": [
+        "Barrell Bourbon Cask Finish Series Tale of Two Islands",
+        "Barrell Foundation Bourbon"
+      ]
+    }
   },
   "74C/15W/11MB": {
     "name": "74C/15W/11MB",
@@ -908,11 +1573,16 @@
     },
     "raw": "74c/15w/11mb",
     "brands": [
-      "Garrison Brothers Boot Flask Bourbon",
-      "Garrison Brothers HoneyDew Bourbon",
-      "Garrison Brothers Single Barrel Bourbon",
-      "Garrison Brothers Small Batch Bourbon"
-    ]
+      "Garrison Brothers"
+    ],
+    "variants": {
+      "Garrison Brothers": [
+        "Garrison Brothers Boot Flask Bourbon",
+        "Garrison Brothers HoneyDew Bourbon",
+        "Garrison Brothers Single Barrel Bourbon",
+        "Garrison Brothers Small Batch Bourbon"
+      ]
+    }
   },
   "74C/18R/8MB": {
     "name": "74C/18R/8MB",
@@ -923,19 +1593,61 @@
     },
     "raw": "74c/18r/8mb",
     "brands": [
-      "1792 Full Proof",
-      "Calumet Farm 10 Year Old Single Rack Black Bourbon",
-      "Calumet Farm 12 Year Old Single Rack Black Bourbon",
-      "Calumet Farm 14 Year Old Single Rack Black Bourbon",
-      "Calumet Farm 15 Year Old Single Rack Black Bourbon",
-      "Calumet Farm 8 Year Old Bourbon",
-      "Calumet Farm Small Batch Bourbon",
-      "Four Gate The Kelvin Collaboration I",
-      "Four Gate The Kelvin Collaboration II",
-      "Sam Houston 14 Year Old Kentucky Straight Bourbon",
-      "Sam Houston 15 Year Old Kentucky Straight Bourbon",
-      "Western Reserve 12 Year Kentucky Straight Bourbon"
-    ]
+      "1792",
+      "Calumet Farm",
+      "Four Gate Kelvin Collaboration",
+      "Rare Char code DYM",
+      "Rare Char code DYN",
+      "Sam Houston Bourbon",
+      "Western Reserve 12 Year Bourbon"
+    ],
+    "variants": {
+      "1792": [
+        "1792 Bottled in Bond",
+        "1792 Full Proof",
+        "1792 Port Finish",
+        "1792 Single Barrel",
+        "1792 Small Batch"
+      ],
+      "Calumet Farm": [
+        "Calumet Farm 10 Year Old Single Rack Black Bourbon",
+        "Calumet Farm 12 Year Old Single Rack Black Bourbon",
+        "Calumet Farm 14 Year Old Single Rack Black Bourbon",
+        "Calumet Farm 15 Year Old Single Rack Black Bourbon",
+        "Calumet Farm 8 Year Old Bourbon",
+        "Calumet Farm Small Batch Bourbon"
+      ],
+      "Four Gate Kelvin Collaboration": [
+        "Four Gate The Kelvin Collaboration I",
+        "Four Gate The Kelvin Collaboration II"
+      ],
+      "Sam Houston Bourbon": [
+        "Sam Houston 14 Year Old Kentucky Straight Bourbon",
+        "Sam Houston 15 Year Old Kentucky Straight Bourbon"
+      ],
+      "Western Reserve 12 Year Bourbon": [
+        "Western Reserve 12 Year Kentucky Straight Bourbon"
+      ]
+    }
+  },
+  "74R/11C/15MB": {
+    "name": "74R/11C/15MB",
+    "grains": {
+      "rye": "74%",
+      "corn": "11%",
+      "malted_barley": "15%"
+    },
+    "raw": "74r/11c/15mb",
+    "brands": [
+      "Willett Family Estate Rye (high-rye barrels)",
+      "Willett Family Estate Small Batch Rye (blend: ~90% of batch)"
+    ],
+    "variants": {
+      "Willett Family Estate Rye (high-rye barrels)": [
+        "Willett Family Estate Rare Release 8 Year Rye",
+        "Willett Family Estate Single Barrel Rye (high-rye barrels)"
+      ]
+    }
   },
   "75C/13BR/12MB": {
     "name": "75C/13BR/12MB",
@@ -946,10 +1658,13 @@
     },
     "raw": "75c/13br/12mb",
     "brands": [
-      "Jim Beam Repeal Batch",
-      "Jim Beam Single Barrel",
-      "Jim Beam's Choice"
-    ]
+      "Jim Beam Harvest Collection Brown Rice"
+    ],
+    "variants": {
+      "Jim Beam Harvest Collection Brown Rice": [
+        "Jim Beam Signature Craft Harvest Bourbon Collection Brown Rice 11 Year"
+      ]
+    }
   },
   "75C/13R/12MB": {
     "name": "75C/13R/12MB",
@@ -960,28 +1675,44 @@
     },
     "raw": "75c/13r/12mb",
     "brands": [
-      "rc  10k",
-      "Elijah Craig Barrel Proof Batch B516",
-      "Elijah Craig Barrel Proof Batch B521",
-      "Evan Williams Bourbon (Black Label)",
       "Glenns Creek Cuervito Vivo Bourbon",
-      "Jim Beam Old Tub Bourbon",
-      "Knob Creek 12 Year",
-      "Knob Creek 9 Year",
-      "Knob Creek Single Barrel Reserve 9 Year",
-      "Knob Creek Single Barrel Select Bourbon",
-      "Knob Creek Smoked Maple",
-      "Legent Bourbon",
-      "Russell's Reserve 13 Year Old Bourbon",
-      "Wild Turkey 101 Bourbon",
-      "Wild Turkey American Honey",
-      "Wild Turkey Bourbon",
-      "Wild Turkey Kentucky Spirit Single Barrel",
-      "Wild Turkey Longbranch",
-      "Wild Turkey Master's Keep Voyage",
-      "Wild Turkey Rare Breed Bourbon Barrel Proof",
+      "Knob Creek",
+      "Legent",
+      "Old Tub",
+      "Rare Char code 10K",
+      "Rare Char code MEL",
+      "Russell's Reserve Bourbon",
+      "Wild Turkey",
       "Yellowstone Select Bourbon"
-    ]
+    ],
+    "variants": {
+      "Knob Creek": [
+        "Knob Creek 12 Year",
+        "Knob Creek 9 Year",
+        "Knob Creek Single Barrel Reserve 9 Year",
+        "Knob Creek Single Barrel Select Bourbon",
+        "Knob Creek Smoked Maple"
+      ],
+      "Legent": [
+        "Legent Bourbon"
+      ],
+      "Old Tub": [
+        "Jim Beam Old Tub Bourbon"
+      ],
+      "Russell's Reserve Bourbon": [
+        "Russell's Reserve 13 Year Old Bourbon",
+        "Russell's Reserve Single Barrel Bourbon"
+      ],
+      "Wild Turkey": [
+        "Wild Turkey 101 Bourbon",
+        "Wild Turkey American Honey",
+        "Wild Turkey Bourbon",
+        "Wild Turkey Kentucky Spirit Single Barrel",
+        "Wild Turkey Longbranch",
+        "Wild Turkey Master's Keep Voyage",
+        "Wild Turkey Rare Breed Bourbon Barrel Proof"
+      ]
+    }
   },
   "75C/15R/10MB": {
     "name": "75C/15R/10MB",
@@ -992,14 +1723,26 @@
     },
     "raw": "75c/15r/10mb",
     "brands": [
-      "1792 Port Finish",
-      "Pinhook Bohemian Bourbon",
-      "Pinhook Bohemian Bourbon High Proof",
-      "Pinhook Bourbon Heist",
-      "Pinhook Bourbon Heist High Proof",
-      "Seelbach's Private Reserve Batch 006 Kentucky Straight Bourbon",
-      "Very Old Barton 6 Year-Old BIB"
-    ]
+      "King of Kentucky Small Batch",
+      "Pinhook Bourbon",
+      "Seelbach's Private Reserve",
+      "Very Old Barton"
+    ],
+    "variants": {
+      "Pinhook Bourbon": [
+        "Pinhook Bohemian Bourbon",
+        "Pinhook Bohemian Bourbon High Proof",
+        "Pinhook Bourbon Heist",
+        "Pinhook Bourbon Heist High Proof"
+      ],
+      "Seelbach's Private Reserve": [
+        "Seelbach's Private Reserve Batch 006 Kentucky Straight Bourbon"
+      ],
+      "Very Old Barton": [
+        "Very Old Barton",
+        "Very Old Barton 6 Year-Old BIB"
+      ]
+    }
   },
   "75C/15W/7R/3MB": {
     "name": "75C/15W/7R/3MB",
@@ -1011,11 +1754,26 @@
     },
     "raw": "75c/15w/7r/3mb",
     "brands": [
-      "Penelope Bourbon",
-      "Penelope Bourbon Architect Series",
-      "Penelope Bourbon Barrel Strength",
-      "Penelope Bourbon Rosé Cask Finish"
-    ]
+      "Penelope Bourbon"
+    ],
+    "variants": {
+      "Penelope Bourbon": [
+        "Penelope Bourbon",
+        "Penelope Bourbon Architect Series",
+        "Penelope Bourbon Barrel Strength",
+        "Penelope Bourbon Rosé Cask Finish"
+      ]
+    }
+  },
+  "75C/20.5R/4.5MB": {
+    "name": "75C/20.5R/4.5MB",
+    "grains": {
+      "corn": "75%",
+      "rye": "20.5%",
+      "malted_barley": "4.5%"
+    },
+    "raw": "75c/20.5r/4.5mb",
+    "brands": []
   },
   "75C/20R/5MB": {
     "name": "75C/20R/5MB",
@@ -1033,34 +1791,6 @@
       "Four Roses OESV"
     ]
   },
-  "75C/20W/5MB": {
-    "name": "75C/20W/5MB",
-    "grains": {
-      "corn": "75%",
-      "wheat": "20%",
-      "malted_barley": "5%"
-    },
-    "raw": "75c/20w/5mb",
-    "brands": [
-      "Old Fitzgerald Bottled-in-Bond 11 Year Bourbon (Fall 2021)",
-      "Old Fitzgerald Bottled-in-Bond 11 Year Bourbon (Spring 2018)",
-      "Old Fitzgerald Bottled-in-Bond 13 Year Bourbon (Spring 2019)",
-      "Old Fitzgerald Bottled-in-Bond 15 Year Bourbon (Fall 2019)",
-      "Old Fitzgerald Bottled-in-Bond 8 Year Bourbon (Spring 2021)",
-      "Old Fitzgerald Bottled-in-Bond 9 Year Bourbon (Fall 2018)",
-      "Old Fitzgerald Bottled-in-Bond 9 Year Bourbon (Spring 2020)"
-    ]
-  },
-  "75C/20.5R/4.5MB": {
-    "name": "75C/20.5R/4.5MB",
-    "grains": {
-      "corn": "75%",
-      "rye": "20.5%",
-      "malted_barley": "4.5%"
-    },
-    "raw": "75c/20.5r/4.5mb",
-    "brands": []
-  },
   "75C/21R/4MB": {
     "name": "75C/21R/4MB",
     "grains": {
@@ -1070,28 +1800,59 @@
     },
     "raw": "75c/21r/4mb",
     "brands": [
-	"MGP Low Rye Bourbon",
       "Agitator Kentucky Straight Bourbon Finished in Red Wine Barrels",
       "Bad Sweater Whiskey",
-      "Billy Banks Rye Whiskey",
       "Bluegrass Distillers Toasted Oak Bourbon (Limited Edition)",
-      "Boone County Small Batch Bourbon",
+      "Boone County Bourbon",
       "Brough Brothers Bourbon",
       "Cleveland Christmas Bourbon",
       "Coopers' Craft Barrel Reserve Bourbon",
       "Creek Water Whiskey",
-      "Four Gate FOUR BY FOUR",
-      "Four Gate Indiana Foundation",
-      "Four Gate Whiskey Batch 18 Saint Charente",
-      "Giant Texas Bourbon Whiskey",
+      "Four Gate Bourbon",
+      "Giant Texas Bourbon",
       "Lost Republic Bourbon",
-      "Lost Republic Single Barrel Cask Strength Bourbon",
-      "Maryland Heritage Series Lorely 16-Year Straight Bourbon Whiskey",
-      "Old Soul High Rye Bourbon Whiskey",
-      "Old Soul Tintype Series 1 Straight Bourbon",
+      "Maryland Heritage Series Lorely 16-Year Bourbon",
+      "MGP Low Rye Bourbon",
+      "Old Soul Bourbon",
+      "Rare Char code GLN",
+      "Rare Char code I21",
+      "Rare Char code JIT",
+      "Rare Char code KEL",
+      "Rare Char code KHT",
+      "Rare Char code KOA",
+      "Rare Char code NIO",
+      "Rare Char code RIO",
+      "Rare Char code SBG",
+      "Rare Char code VEN",
+      "Rare Char code VER",
+      "Rare Char code VTO",
       "Redemption Bourbon",
       "The Burning Chair Bourbon"
-    ]
+    ],
+    "variants": {
+      "Boone County Bourbon": [
+        "Boone County Small Batch Bourbon"
+      ],
+      "Four Gate Bourbon": [
+        "Four Gate FOUR BY FOUR",
+        "Four Gate Indiana Foundation",
+        "Four Gate Whiskey Batch 18 Saint Charente"
+      ],
+      "Giant Texas Bourbon": [
+        "Giant Texas Bourbon Whiskey"
+      ],
+      "Lost Republic Bourbon": [
+        "Lost Republic Bourbon",
+        "Lost Republic Single Barrel Cask Strength Bourbon"
+      ],
+      "Maryland Heritage Series Lorely 16-Year Bourbon": [
+        "Maryland Heritage Series Lorely 16-Year Straight Bourbon Whiskey"
+      ],
+      "Old Soul Bourbon": [
+        "Old Soul High Rye Bourbon Whiskey",
+        "Old Soul Tintype Series 1 Straight Bourbon"
+      ]
+    }
   },
   "75C/21W/4MB": {
     "name": "75C/21W/4MB",
@@ -1102,11 +1863,16 @@
     },
     "raw": "75c/21w/4mb",
     "brands": [
-      "Bluegrass Distillers Kentucky Straight Blue Corn Bourbon Whiskey",
-      "Bluegrass Distillers Santa's Helper Cinnamon",
-      "Bluegrass Distillers Wheated Bottled-in-Bond Bourbon",
-      "Bluegrass Distillers Wheated Bourbon Whiskey"
-    ]
+      "Bluegrass Distillers Wheated Bourbon"
+    ],
+    "variants": {
+      "Bluegrass Distillers Wheated Bourbon": [
+        "Bluegrass Distillers Kentucky Straight Blue Corn Bourbon Whiskey",
+        "Bluegrass Distillers Santa's Helper Cinnamon",
+        "Bluegrass Distillers Wheated Bottled-in-Bond Bourbon",
+        "Bluegrass Distillers Wheated Bourbon Whiskey"
+      ]
+    }
   },
   "75R/25MB": {
     "name": "75R/25MB",
@@ -1116,10 +1882,15 @@
     },
     "raw": "75r/25mb",
     "brands": [
-      "Driftless Glen 51 Rye Whiskey",
-      "Driftless Glen Rye Whiskey",
-      "Driftless Glen Single Barrel Rye"
-    ]
+      "Driftless Glen Rye"
+    ],
+    "variants": {
+      "Driftless Glen Rye": [
+        "Driftless Glen 51 Rye Whiskey",
+        "Driftless Glen Rye Whiskey",
+        "Driftless Glen Single Barrel Rye"
+      ]
+    }
   },
   "77C/13R/10MB": {
     "name": "77C/13R/10MB",
@@ -1130,58 +1901,41 @@
     },
     "raw": "77c/13r/10mb",
     "brands": [
-      "Baker's Bourbon 7 Year Single Barrel",
-      "Booker's 2015-02 \"Dot's Batch\"",
-      "Booker's 2015-05 \"Maw Maw's Batch\"",
-      "Booker's 2015-06 \"Noe Secret\"",
-      "Booker's 2016-02 \"Annis' Answer\"",
-      "Booker's 2016-05 \"Off Your Rocker\"",
-      "Booker's 2016-06 \"Noe Hard Times\"",
-      "Booker's 2017-02 \"Blue Knights Batch\"",
-      "Booker's 2017-03 \"Front Porch Batch\"",
-      "Booker's 2018-03 \"Kentucky Chew\"",
-      "Booker's 2019-02 \"Shiny Barrel Batch\"",
-      "Booker's 2019-04 \"Beaten Biscuits\"",
-      "Booker's 2021-01 \"Donohoe's Batch\"",
-      "Booker's 2021-03 \"Bardstown Batch\"",
-      "Booker's 2021-04 \"Noe Stranger's Batch\"",
-      "Jim Beam Black 8 Year",
-      "Jim Beam Bonded",
-      "Jim Beam Devil's Cut",
-      "Jim Beam Double Oak",
-      "Jim Beam Original (White Label) Kentucky Straight Bourbon"
-    ]
-  },
-  "78C/10R/12MB": {
-    "name": "78C/10R/12MB",
-    "grains": {
-      "corn": "78%",
-      "rye": "10%",
-      "malted_barley": "12%"
-    },
-    "raw": "78c/10r/12mb",
-    "brands": [
-      "Ezra Brooks Bourbon",
-      "Heaven Hill Heritage Collection 17-Year-Old Barrel Proof Bourbon (First Edition)",
-      "J.T.S. Brown Bourbon",
-      "Elijah Craig Bourbons",
-      "Parker's Heritage Collection - 10th Edition - 24 Year-Old Bottled-in-Bond Bourbon (2016)",
-      "Parker's Heritage Collection - 11th Edition - 11 Year-Old Single Barrel (2017)",
-      "Parker's Heritage Collection - 12th Edition - Orange Curaçao Finish (2018)",
-      "Parker's Heritage Collection - 14th Edition - Heavy Char Bourbon (2020)",
-      "David Nicholson Reserve"
-    ]
-  },
-  "78C/12R/10MB": {
-  	"name": "78C/12R/10MB",
-  	"grains": {
- 	  "corn": "78%",
-  	  "rye": "12%",
-  	  "malted_barley": "10%"
-  },
-  	"raw": "78c/12r/10mb",
-  	"brands": "Evan Williams",
-  	"verified_manually": true
+      "Baker's",
+      "Booker's",
+      "Jim Beam"
+    ],
+    "variants": {
+      "Baker's": [
+        "Baker's Bourbon 7 Year Single Barrel"
+      ],
+      "Booker's": [
+        "Booker's 2015-02 \"Dot's Batch\"",
+        "Booker's 2015-05 \"Maw Maw's Batch\"",
+        "Booker's 2015-06 \"Noe Secret\"",
+        "Booker's 2016-02 \"Annis' Answer\"",
+        "Booker's 2016-05 \"Off Your Rocker\"",
+        "Booker's 2016-06 \"Noe Hard Times\"",
+        "Booker's 2017-02 \"Blue Knights Batch\"",
+        "Booker's 2017-03 \"Front Porch Batch\"",
+        "Booker's 2018-03 \"Kentucky Chew\"",
+        "Booker's 2019-02 \"Shiny Barrel Batch\"",
+        "Booker's 2019-04 \"Beaten Biscuits\"",
+        "Booker's 2021-01 \"Donohoe's Batch\"",
+        "Booker's 2021-03 \"Bardstown Batch\"",
+        "Booker's 2021-04 \"Noe Stranger's Batch\""
+      ],
+      "Jim Beam": [
+        "Jim Beam Black 8 Year",
+        "Jim Beam Bonded",
+        "Jim Beam Devil's Cut",
+        "Jim Beam Double Oak",
+        "Jim Beam Original (White Label) Kentucky Straight Bourbon",
+        "Jim Beam Repeal Batch",
+        "Jim Beam Single Barrel",
+        "Jim Beam's Choice"
+      ]
+    }
   },
   "78.5C/13R/8.5MB": {
     "name": "78.5C/13R/8.5MB",
@@ -1193,6 +1947,86 @@
     "raw": "78.5c/13r/8.5mb",
     "brands": []
   },
+  "78C/10R/12MB": {
+    "name": "78C/10R/12MB",
+    "grains": {
+      "corn": "78%",
+      "rye": "10%",
+      "malted_barley": "12%"
+    },
+    "raw": "78c/10r/12mb",
+    "brands": [
+      "David Nicholson Reserve",
+      "Elijah Craig",
+      "Evan Williams",
+      "Ezra Brooks Bourbon",
+      "Heaven Hill Heritage Collection 17 Year",
+      "J.T.S. Brown",
+      "Nashville Barrel Company Bourbon",
+      "Parker's Heritage Collection (bourbon editions)"
+    ],
+    "variants": {
+      "Elijah Craig": [
+        "Elijah Craig Barrel Proof Batch B516",
+        "Elijah Craig Barrel Proof Batch B521",
+        "Elijah Craig Bourbons"
+      ],
+      "Evan Williams": [
+        "Evan Williams",
+        "Evan Williams Bourbon (Black Label)"
+      ],
+      "Heaven Hill Heritage Collection 17 Year": [
+        "Heaven Hill Heritage Collection 17-Year-Old Barrel Proof Bourbon (First Edition)"
+      ],
+      "J.T.S. Brown": [
+        "J.T.S. Brown Bourbon"
+      ],
+      "Nashville Barrel Company Bourbon": [
+        "Nashville Barrel Company Cask Strength Straight Bourbon"
+      ],
+      "Parker's Heritage Collection (bourbon editions)": [
+        "Parker's Heritage Collection - 10th Edition - 24 Year-Old Bottled-in-Bond Bourbon (2016)",
+        "Parker's Heritage Collection - 11th Edition - 11 Year-Old Single Barrel (2017)",
+        "Parker's Heritage Collection - 12th Edition - Orange Curaçao Finish (2018)",
+        "Parker's Heritage Collection - 14th Edition - Heavy Char Bourbon (2020)"
+      ]
+    }
+  },
+  "78C/13R/9MB": {
+    "name": "78C/13R/9MB",
+    "grains": {
+      "corn": "78%",
+      "rye": "13%",
+      "malted_barley": "9%"
+    },
+    "raw": "78c/13r/9mb",
+    "brands": [
+      "Rare Char code ELE",
+      "Rare Char code F13",
+      "Rare Char code HF13",
+      "Rare Char code K13",
+      "Rare Char code PLT"
+    ]
+  },
+  "79C/11R/10MB": {
+    "name": "79C/11R/10MB",
+    "grains": {
+      "corn": "79%",
+      "rye": "11%",
+      "malted_barley": "10%"
+    },
+    "raw": "79c/11r/10mb",
+    "brands": [
+      "Early Times Bottled-in-Bond",
+      "King of Kentucky",
+      "Old Forester 1924"
+    ],
+    "variants": {
+      "Early Times Bottled-in-Bond": [
+        "Early Times BiB"
+      ]
+    }
+  },
   "80C/12MB/8R": {
     "name": "80C/12MB/8R",
     "grains": {
@@ -1203,14 +2037,22 @@
     "raw": "80c/12mb/8r",
     "brands": [
       "Gentleman Jack",
-      "Heaven Hill Heritage Collection 20 Year Corn Whiskey",
-      "Jack Daniel's No. 27 Gold",
-      "Jack Daniel's Sinatra Select",
-      "Jack Daniel's Single Barrel 100",
-      "Jack Daniel's Single Barrel Barrel Proof",
-      "Jack Daniel's Single Barrel Select",
-      "Jack Daniel's Tennessee Whiskey"
-    ]
+      "Heaven Hill Heritage Collection 20 Year Corn",
+      "Jack Daniel's"
+    ],
+    "variants": {
+      "Heaven Hill Heritage Collection 20 Year Corn": [
+        "Heaven Hill Heritage Collection 20 Year Corn Whiskey"
+      ],
+      "Jack Daniel's": [
+        "Jack Daniel's No. 27 Gold",
+        "Jack Daniel's Sinatra Select",
+        "Jack Daniel's Single Barrel 100",
+        "Jack Daniel's Single Barrel Barrel Proof",
+        "Jack Daniel's Single Barrel Select",
+        "Jack Daniel's Tennessee Whiskey"
+      ]
+    }
   },
   "80C/14R/6MB": {
     "name": "80C/14R/6MB",
@@ -1221,9 +2063,14 @@
     },
     "raw": "80c/14r/6mb",
     "brands": [
-      "Jesse James American Outlaw Barrel Strength Whiskey",
-      "Jesse James American Outlaw Bourbon"
-    ]
+      "Jesse James American Outlaw"
+    ],
+    "variants": {
+      "Jesse James American Outlaw": [
+        "Jesse James American Outlaw Barrel Strength Whiskey",
+        "Jesse James American Outlaw Bourbon"
+      ]
+    }
   },
   "80C/19R/1MB": {
     "name": "80C/19R/1MB",
@@ -1234,9 +2081,31 @@
     },
     "raw": "80c/19r/1mb",
     "brands": [
-      "Found North Cask Strength Whisky Batch 002",
-      "Found North Cask Strength Whisky Batch 004"
-    ]
+      "Found North Whisky (Batches 002, 004)"
+    ],
+    "variants": {
+      "Found North Whisky (Batches 002, 004)": [
+        "Found North Cask Strength Whisky Batch 002",
+        "Found North Cask Strength Whisky Batch 004"
+      ]
+    }
+  },
+  "80R/14C/6MB": {
+    "name": "80R/14C/6MB",
+    "grains": {
+      "rye": "80%",
+      "corn": "14%",
+      "malted_barley": "6%"
+    },
+    "raw": "80r/14c/6mb",
+    "brands": [
+      "Breckenridge Rye"
+    ],
+    "variants": {
+      "Breckenridge Rye": [
+        "Breckenridge Blended Rye Whiskey"
+      ]
+    }
   },
   "81C/13R/6MB": {
     "name": "81C/13R/6MB",
@@ -1259,27 +2128,44 @@
     },
     "raw": "84c/8r/8mb",
     "brands": [
-      "Bardstown Bourbon Destillare Orange Curaçao Finish",
-      "Bardstown Bourbon Goodwood Walnut Brown Ale Finish",
-      "Bardstown Bourbon Phifer Pavitt Cabernet Finish",
-      "Bardstown Bourbon Phifer Pavitt XO",
-      "Bardstown Bourbon Plantation Rum Finish",
-      "Bardstown Bourbon The Prisoner Wine Company Finish",
-      "Bardstown Bourbon The Prisoner Wine Company Finish II",
-      "George Dickel Barrel Select",
-      "George Dickel Bottled in Bond",
-      "George Dickel Bourbon",
-      "George Dickel Classic Recipe No. 8 Whisky",
-      "George Dickel No. 12 Whisky",
-      "George Dickel Single Barrel 15 Year Old",
-      "George Dickel Single Barrel 9 Year Old",
-      "Guero Bourbon Whiskey 17 year",
-      "High n' Wicked The Honorable Bourbon 12 Year",
-      "High n' Wicked The Judge 14-Year Straight Bourbon",
-      "Peg Leg Porker Bourbon",
-      "Peg Leg Porker Bourbon 8 Year",
+      "Bardstown Bourbon Co. Collaborative Series",
+      "George Dickel",
+      "Guero Bourbon 17 Year",
+      "High n' Wicked",
+      "Peg Leg Porker",
       "Sweetens Cove Bourbon"
-    ]
+    ],
+    "variants": {
+      "Bardstown Bourbon Co. Collaborative Series": [
+        "Bardstown Bourbon Destillare Orange Curaçao Finish",
+        "Bardstown Bourbon Goodwood Walnut Brown Ale Finish",
+        "Bardstown Bourbon Phifer Pavitt Cabernet Finish",
+        "Bardstown Bourbon Phifer Pavitt XO",
+        "Bardstown Bourbon Plantation Rum Finish",
+        "Bardstown Bourbon The Prisoner Wine Company Finish",
+        "Bardstown Bourbon The Prisoner Wine Company Finish II"
+      ],
+      "George Dickel": [
+        "George Dickel Barrel Select",
+        "George Dickel Bottled in Bond",
+        "George Dickel Bourbon",
+        "George Dickel Classic Recipe No. 8 Whisky",
+        "George Dickel No. 12 Whisky",
+        "George Dickel Single Barrel 15 Year Old",
+        "George Dickel Single Barrel 9 Year Old"
+      ],
+      "Guero Bourbon 17 Year": [
+        "Guero Bourbon Whiskey 17 year"
+      ],
+      "High n' Wicked": [
+        "High n' Wicked The Honorable Bourbon 12 Year",
+        "High n' Wicked The Judge 14-Year Straight Bourbon"
+      ],
+      "Peg Leg Porker": [
+        "Peg Leg Porker Bourbon",
+        "Peg Leg Porker Bourbon 8 Year"
+      ]
+    }
   },
   "86C/8MB/6R": {
     "name": "86C/8MB/6R",
@@ -1290,33 +2176,47 @@
     },
     "raw": "86c/8mb/6r",
     "brands": [
+      "I.W. Harper 15 Year",
       "Orphan Barrel Barterhouse",
-      "Orphan Barrel Forager's Keep",
       "Orphan Barrel Forged Oak",
-      "Orphan Barrel Lost Prophet",
-      "Orphan Barrel Muckety-Muck 24 Year",
-      "Orphan Barrel Rhetoric 20 Years Old Bourbon",
-      "Orphan Barrel Rhetoric 21 Years Old Bourbon",
-      "Orphan Barrel Rhetoric 22 Years Old Bourbon",
-      "Orphan Barrel Rhetoric 23 Years Old Bourbon",
-      "Orphan Barrel Rhetoric 24 Years Old Bourbon",
-      "Orphan Barrel Rhetoric 25 Years Old Bourbon",
-      "Orphan Barrel The Gifted Horse"
-    ]
+      "Orphan Barrel Gifted Horse",
+      "Orphan Barrel Rhetoric"
+    ],
+    "variants": {
+      "I.W. Harper 15 Year": [
+        "I.W. Harper 15-Year Old Bourbon"
+      ],
+      "Orphan Barrel Gifted Horse": [
+        "Orphan Barrel The Gifted Horse"
+      ],
+      "Orphan Barrel Rhetoric": [
+        "Orphan Barrel Rhetoric 20 Years Old Bourbon",
+        "Orphan Barrel Rhetoric 21 Years Old Bourbon",
+        "Orphan Barrel Rhetoric 22 Years Old Bourbon",
+        "Orphan Barrel Rhetoric 23 Years Old Bourbon",
+        "Orphan Barrel Rhetoric 24 Years Old Bourbon",
+        "Orphan Barrel Rhetoric 25 Years Old Bourbon"
+      ]
+    }
   },
-  "87C/12R/6MB": {
-    "name": "87C/12R/6MB",
+  "87C/12R/1MB": {
+    "name": "87C/12R/1MB",
     "grains": {
       "corn": "87%",
       "rye": "12%",
-      "malted_barley": "6%"
+      "malted_barley": "1%"
     },
-    "raw": "87c/12r/6mb",
+    "raw": "87c/12r/1mb",
     "brands": [
-      "Found North Cask Strength Whisky Batch 006",
-      "Found North Cask Strength Whisky Batch 007",
-      "Found North Cask Strength Whisky Batch 008"
-    ]
+      "Found North Whisky (Batches 006-008)"
+    ],
+    "variants": {
+      "Found North Whisky (Batches 006-008)": [
+        "Found North Cask Strength Whisky Batch 006",
+        "Found North Cask Strength Whisky Batch 007",
+        "Found North Cask Strength Whisky Batch 008"
+      ]
+    }
   },
   "91C/9MB": {
     "name": "91C/9MB",
@@ -1326,10 +2226,15 @@
     },
     "raw": "91c/9mb",
     "brands": [
-      "Shortbarrel Bee Keeper Whiskey",
-      "Shortbarrel El Jefe American Straight Whiskey",
-      "Shortbarrel The Bee's Knees Whiskey"
-    ]
+      "Shortbarrel Whiskey"
+    ],
+    "variants": {
+      "Shortbarrel Whiskey": [
+        "Shortbarrel Bee Keeper Whiskey",
+        "Shortbarrel El Jefe American Straight Whiskey",
+        "Shortbarrel The Bee's Knees Whiskey"
+      ]
+    }
   },
   "94R/6MB": {
     "name": "94R/6MB",
@@ -1339,9 +2244,17 @@
     },
     "raw": "94r/6mb",
     "brands": [
-      "Bespoken Spirits Rye Whiskey",
-      "Hard Truth Sweet Mash Rye Whiskey"
-    ]
+      "Bespoken Spirits Rye",
+      "Hard Truth Sweet Mash Rye"
+    ],
+    "variants": {
+      "Bespoken Spirits Rye": [
+        "Bespoken Spirits Rye Whiskey"
+      ],
+      "Hard Truth Sweet Mash Rye": [
+        "Hard Truth Sweet Mash Rye Whiskey"
+      ]
+    }
   },
   "95C/5MB": {
     "name": "95C/5MB",
@@ -1351,11 +2264,7 @@
     },
     "raw": "95c/5mb",
     "brands": [
-      "Hudson Bright Lights, Big Bourbon",
-      "Maryland Heritage Series Mount Vernon 14-Year Straight Rye Whiskey",
-      "Nashville Barrel Company Cask Strength Straight Rye",
-      "Nashville Barrel Company Single Barrel Straight Rye",
-      "Nashville Barrel Company Small Batch Rye"
+      "Hudson Bright Lights, Big Bourbon"
     ]
   },
   "95R/5MB": {
@@ -1366,27 +2275,97 @@
     },
     "raw": "95r/5mb",
     "brands": [
-      "Angel's Envy Rye Finished in Rum Barrels",
-      "Bardstown Origin Series Kentucky Straight Rye",
-      "Bone Snapper Rye Whiskey",
-      "Boone County Rye Single Barrel",
-      "Boone County Small Batch Rye",
-      "Buzzard's Roost Barrel Strength Straight Rye",
-      "Four Gate Port PerryPerry",
-      "Four Gate River Kelvin Rye",
-      "Four Gate Rye DownUnder",
-      "Hudson Short Stack Rye Whiskey",
-      "Locke + Co. Aspen Aged Rye Whiskey",
-      "Maryland Heritage Series B.P.R. 14-Year Straight Rye Whiskey",
-      "NULU Toasted Rye Whiskey Single Barrel Select",
-      "Old Elk Straight Rye",
+      "Angel's Envy Rye",
+      "Bardstown Origin Series Rye",
+      "Bone Snapper Rye",
+      "Boone County Rye",
+      "Buzzard's Roost Barrel Strength Rye",
+      "Four Gate Rye",
+      "Hudson Short Stack Rye",
+      "Locke + Co. Aspen Aged Rye",
+      "Maryland Heritage Series B.P.R. 14-Year Rye",
+      "Nashville Barrel Company Rye",
+      "Nulu Toasted Rye",
+      "Old Elk Rye",
       "Old Pepper Rye Single Barrel",
-      "Quarter Horse Kentucky Rye Whiskey",
+      "Quarter Horse Kentucky Rye",
+      "Rare Char code I95",
+      "Rare Char code KRY",
+      "Rare Char code TNR",
       "Rough Rider The Big Stick Cask Strength Rye",
-      "Sagamore Spirit Barleywine Cask Finish Rye Whiskey",
-      "Templeton Rye 10 Year Whiskey",
-      "Templeton Rye 6 Year Whiskey"
-    ]
+      "Sagamore Spirit Barleywine Cask Finish Rye",
+      "Templeton Rye"
+    ],
+    "variants": {
+      "Angel's Envy Rye": [
+        "Angel's Envy Rye Finished in Rum Barrels"
+      ],
+      "Bardstown Origin Series Rye": [
+        "Bardstown Origin Series Kentucky Straight Rye"
+      ],
+      "Bone Snapper Rye": [
+        "Bone Snapper Rye Whiskey"
+      ],
+      "Boone County Rye": [
+        "Boone County Rye Single Barrel",
+        "Boone County Small Batch Rye"
+      ],
+      "Buzzard's Roost Barrel Strength Rye": [
+        "Buzzard's Roost Barrel Strength Straight Rye"
+      ],
+      "Four Gate Rye": [
+        "Four Gate Port PerryPerry",
+        "Four Gate River Kelvin Rye",
+        "Four Gate Rye DownUnder"
+      ],
+      "Hudson Short Stack Rye": [
+        "Hudson Short Stack Rye Whiskey"
+      ],
+      "Locke + Co. Aspen Aged Rye": [
+        "Locke + Co. Aspen Aged Rye Whiskey"
+      ],
+      "Maryland Heritage Series B.P.R. 14-Year Rye": [
+        "Maryland Heritage Series B.P.R. 14-Year Straight Rye Whiskey"
+      ],
+      "Nashville Barrel Company Rye": [
+        "Nashville Barrel Company Cask Strength Straight Rye",
+        "Nashville Barrel Company Single Barrel Straight Rye",
+        "Nashville Barrel Company Small Batch Rye"
+      ],
+      "Nulu Toasted Rye": [
+        "NULU Toasted Rye Whiskey Single Barrel Select"
+      ],
+      "Old Elk Rye": [
+        "Old Elk Straight Rye"
+      ],
+      "Quarter Horse Kentucky Rye": [
+        "Quarter Horse Kentucky Rye Whiskey"
+      ],
+      "Sagamore Spirit Barleywine Cask Finish Rye": [
+        "Sagamore Spirit Barleywine Cask Finish Rye Whiskey"
+      ],
+      "Templeton Rye": [
+        "Templeton Rye 10 Year Whiskey",
+        "Templeton Rye 6 Year Whiskey"
+      ]
+    }
+  },
+  "95R/5MR": {
+    "name": "95R/5MR",
+    "grains": {
+      "rye": "95%",
+      "malted_rye": "5%"
+    },
+    "raw": "95r/5mr",
+    "brands": [
+      "New Riff Rye (incl. Balboa)"
+    ],
+    "variants": {
+      "New Riff Rye (incl. Balboa)": [
+        "New Riff Balboa Rye Whiskey",
+        "New Riff Kentucky Straight Rye Whiskey"
+      ]
+    }
   },
   "96C/4B": {
     "name": "96C/4B",
@@ -1396,9 +2375,14 @@
     },
     "raw": "96c/4b",
     "brands": [
-      "Bull Run Barrel Strength American Whiskey",
-      "Bull Run Pinot Noir Finished American Whiskey"
-    ]
+      "Bull Run American Whiskey"
+    ],
+    "variants": {
+      "Bull Run American Whiskey": [
+        "Bull Run Barrel Strength American Whiskey",
+        "Bull Run Pinot Noir Finished American Whiskey"
+      ]
+    }
   },
   "99C/1MB": {
     "name": "99C/1MB",
@@ -1409,103 +2393,292 @@
     "raw": "99c/1mb",
     "brands": [
       "Bespoken Spirits American Light Whiskey",
-      "Guero American Whiskey 14 year",
-      "Jacob's Pardon 15-Year-Old Single Barrel American Whiskey",
-      "Jacob's Pardon Small Batch Whiskey"
-    ]
+      "Guero American Whiskey 14 Year",
+      "Jacob's Pardon",
+      "Rare Char code 20L",
+      "Rare Char code 99C"
+    ],
+    "variants": {
+      "Guero American Whiskey 14 Year": [
+        "Guero American Whiskey 14 year"
+      ],
+      "Jacob's Pardon": [
+        "Jacob's Pardon 15-Year-Old Single Barrel American Whiskey",
+        "Jacob's Pardon Small Batch Whiskey"
+      ]
+    }
   },
   "Buffalo Trace Mash Bill": {
     "name": "Buffalo Trace Mash Bill",
     "grains": {},
     "raw": "buffalo-trace-mash-bill",
     "brands": [
-      "A. Smith Bowman Coffee Finished Bourbon",
-      "A. Smith Bowman Limited Edition 10-Year Cask Strength",
-      "Abraham Bowman Bourbon Whiskey 2011",
-      "Abraham Bowman Bourbon Whiskey 2019",
-      "Abraham Bowman Cider Finished Bourbon",
-      "Abraham Bowman Double Barrel Bourbon",
-      "Abraham Bowman Gingerbread 2",
-      "Abraham Bowman Gingerbread Beer Finished Bourbon",
-      "Abraham Bowman Gingerbread Cocoa Finished Bourbon",
-      "Abraham Bowman HazMat 2012 Bourbon",
-      "Abraham Bowman High Rye Bourbon",
-      "Abraham Bowman Last Millennium Bourbon",
-      "Abraham Bowman Port Finished Bourbon 2012",
-      "Abraham Bowman Rye Whiskey",
-      "Abraham Bowman Sequential Series 2nd Use Barrels",
-      "Abraham Bowman Sequential Series 4th Use Barrels",
-      "Abraham Bowman Sweet XVI",
-      "Abraham Bowman Touriga & Merlot Wine Finished Bourbon",
-      "Abraham Bowman Twice Finished Whiskey 2019",
-      "Abraham Bowman Wheat Bourbon"
-    ]
+      "A. Smith Bowman",
+      "Abraham Bowman"
+    ],
+    "variants": {
+      "A. Smith Bowman": [
+        "A. Smith Bowman Coffee Finished Bourbon",
+        "A. Smith Bowman Limited Edition 10-Year Cask Strength"
+      ],
+      "Abraham Bowman": [
+        "Abraham Bowman Bourbon Whiskey 2011",
+        "Abraham Bowman Bourbon Whiskey 2019",
+        "Abraham Bowman Cider Finished Bourbon",
+        "Abraham Bowman Double Barrel Bourbon",
+        "Abraham Bowman Gingerbread 2",
+        "Abraham Bowman Gingerbread Beer Finished Bourbon",
+        "Abraham Bowman Gingerbread Cocoa Finished Bourbon",
+        "Abraham Bowman HazMat 2012 Bourbon",
+        "Abraham Bowman High Rye Bourbon",
+        "Abraham Bowman Last Millennium Bourbon",
+        "Abraham Bowman Port Finished Bourbon 2012",
+        "Abraham Bowman Rye Whiskey",
+        "Abraham Bowman Sequential Series 2nd Use Barrels",
+        "Abraham Bowman Sequential Series 4th Use Barrels",
+        "Abraham Bowman Sweet XVI",
+        "Abraham Bowman Touriga & Merlot Wine Finished Bourbon",
+        "Abraham Bowman Twice Finished Whiskey 2019",
+        "Abraham Bowman Wheat Bourbon"
+      ]
+    }
   },
   "Buffalo Trace Mash Bill #1": {
     "name": "Buffalo Trace Mash Bill #1",
-    "grains": {"rye": "<10%"},
+    "grains": {},
     "raw": "buffalo-trace-mash-bill-1",
     "brands": [
       "Benchmark",
       "Buffalo Trace",
       "E.H. Taylor, Jr.",
-      "Eagle Rare 10 and 12",
-      "Eagle Rare 17 Year-Old (2021)",
-      "George T. Stagg 2008",
-      "Old Charter 8",
-      "Stagg Jr."
-    ]
+      "Eagle Rare",
+      "George T. Stagg",
+      "Old Charter",
+      "Stagg (incl. Stagg Jr.)"
+    ],
+    "variants": {
+      "Benchmark": [
+        "Benchmark Bonded",
+        "Benchmark Full Proof",
+        "Benchmark Old No. 8",
+        "Benchmark Single Barrel",
+        "Benchmark Small Batch",
+        "Benchmark Top Floor"
+      ],
+      "E.H. Taylor, Jr.": [
+        "E.H. Taylor, Jr. Single Barrel",
+        "E.H. Taylor, Jr. Small Batch"
+      ],
+      "Eagle Rare": [
+        "Eagle Rare 10 Year Single Barrel",
+        "Eagle Rare 12 Year",
+        "Eagle Rare 17 Year-Old (2021)",
+        "Eagle Rare 17 Year-Old (2022)"
+      ],
+      "George T. Stagg": [
+        "George T. Stagg 2008",
+        "George T. Stagg 2009",
+        "George T. Stagg 2020"
+      ],
+      "Old Charter": [
+        "Old Charter 8"
+      ],
+      "Stagg (incl. Stagg Jr.)": [
+        "Stagg 22B (Batch 19)",
+        "Stagg Batch 18",
+        "Stagg Jr. Batch 16",
+        "Stagg Jr. Batch 17"
+      ]
+    }
   },
   "Buffalo Trace Mash Bill #2": {
     "name": "Buffalo Trace Mash Bill #2",
-    "grains": {"rye": "high (10-15%)"},
+    "grains": {},
     "raw": "buffalo-trace-mash-bill-2",
     "brands": [
       "Ancient Age",
-      "Ancient Age (1990s)",
-      "Ancient Ancient Age 10 Star Bourbon",
-      "Ancient Ancient Age 10 Year",
-      "Blanton's Black Edition Bourbon",
-      "Hancock's President's Reserve Bourbon",
-	  "Elmer T Lee",
-	  "Rock Hill Farm"
-    ]
+      "Blanton's",
+      "Chestnut Farms",
+      "Elmer T. Lee",
+      "Hancock's President's Reserve",
+      "Orphan Barrel Lost Prophet",
+      "Rock Hill Farms"
+    ],
+    "variants": {
+      "Ancient Age": [
+        "Ancient Age",
+        "Ancient Age (1990s)",
+        "Ancient Ancient Age 10 Star Bourbon",
+        "Ancient Ancient Age 10 Year"
+      ],
+      "Blanton's": [
+        "Blanton's Black Edition Bourbon",
+        "Blanton's Gold Edition",
+        "Blanton's Paris by Day",
+        "Blanton's Paris by Night",
+        "Blanton's Silver Edition Bourbon",
+        "Blanton's Single Barrel",
+        "Blanton's Special Reserve",
+        "Blanton's Straight from the Barrel"
+      ],
+      "Chestnut Farms": [
+        "Chestnut Farms Bottled In Bond",
+        "Chestnut Farms Bourbon"
+      ],
+      "Elmer T. Lee": [
+        "Elmer T. Lee Single Barrel"
+      ],
+      "Hancock's President's Reserve": [
+        "Hancock's President's Reserve Bourbon"
+      ],
+      "Rock Hill Farms": [
+        "Rock Hill Farms Single Barrel"
+      ]
+    }
   },
   "Buffalo Trace Rye Mash Bill": {
     "name": "Buffalo Trace Rye Mash Bill",
-    "grains": {"rye": "~51%"},
+    "grains": {},
     "raw": "buffalo-trace-rye-mash-bill",
     "brands": [
+      "Sazerac 18 Year",
       "Sazerac Rye",
-      "Sazerac Rye 18",
-      "Thomas H. Handy"
-    ]
+      "Thomas H. Handy Sazerac"
+    ],
+    "variants": {
+      "Sazerac 18 Year": [
+        "Sazerac Rye 18 Year-Old (2000)",
+        "Sazerac Rye 18 Year-Old (2001)",
+        "Sazerac Rye 18 Year-Old (2002)",
+        "Sazerac Rye 18 Year-Old (2004)",
+        "Sazerac Rye 18 Year-Old (2006)",
+        "Sazerac Rye 18 Year-Old (2007)",
+        "Sazerac Rye 18 Year-Old (2008)",
+        "Sazerac Rye 18 Year-Old (2010)",
+        "Sazerac Rye 18 Year-Old (2012)",
+        "Sazerac Rye 18 Year-Old (2014)",
+        "Sazerac Rye 18 Year-Old (2018)",
+        "Sazerac Rye 18 Year-Old (2020)",
+        "Sazerac Rye 18 Year-Old (2021)",
+        "Sazerac Rye 18 Year-Old (2022)"
+      ],
+      "Thomas H. Handy Sazerac": [
+        "Thomas H. Handy Sazerac 2017",
+        "Thomas H. Handy Sazerac 2018",
+        "Thomas H. Handy Sazerac 2019",
+        "Thomas H. Handy Sazerac 2020",
+        "Thomas H. Handy Sazerac 2021"
+      ]
+    }
   },
   "Buffalo Trace Wheated Mash Bill": {
     "name": "Buffalo Trace Wheated Mash Bill",
     "grains": {},
     "raw": "buffalo-trace-wheated-mash-bill",
     "brands": [
-      "Buffalo Trace Single Oak Barrel 46",
-      "Weller",
-	  "William Larue Weller",
-	  "Modern Pappy Van Winkle"
-    ]
+      "Buffalo Trace Single Oak Project",
+      "Van Winkle (Old Rip, Lot B, Pappy)",
+      "W.L. Weller",
+      "William Larue Weller"
+    ],
+    "variants": {
+      "Buffalo Trace Single Oak Project": [
+        "Buffalo Trace Single Oak Barrel 46"
+      ],
+      "Van Winkle (Old Rip, Lot B, Pappy)": [
+        "Old Rip Van Winkle 10 Year",
+        "Pappy Van Winkle's Family Reserve 15 Year",
+        "Pappy Van Winkle's Family Reserve 20 Year",
+        "Pappy Van Winkle's Family Reserve 23 Year",
+        "Van Winkle Special Reserve 12 Year Lot B"
+      ],
+      "W.L. Weller": [
+        "W.L. Weller 12 Year",
+        "W.L. Weller Antique",
+        "W.L. Weller C.Y.P.B.",
+        "W.L. Weller Full Proof",
+        "W.L. Weller Single Barrel",
+        "W.L. Weller Special Reserve"
+      ],
+      "William Larue Weller": [
+        "William Larue Weller (2005)",
+        "William Larue Weller (2007)",
+        "William Larue Weller (2008)",
+        "William Larue Weller (2009)",
+        "William Larue Weller (2011)",
+        "William Larue Weller (2012)",
+        "William Larue Weller (2013)",
+        "William Larue Weller (2014)",
+        "William Larue Weller (2015)",
+        "William Larue Weller (2018)",
+        "William Larue Weller (2019)",
+        "William Larue Weller (2020)",
+        "William Larue Weller (2022)"
+      ]
+    }
   },
-  "72C/15R/13MB": {
-    "name": "72C/15R/13MB",
-    "grains": {
-      "corn": "72%",
-      "rye": "15%",
-      "malted_barley": "13%"
-    },
-    "raw": "72c/15r/13mb",
+  "Undisclosed mashbill": {
+    "name": "Undisclosed mashbill",
+    "grains": {},
+    "raw": "undisclosed-mashbill",
     "brands": [
-      "Hirsch \"The Cask Strength\" Bourbon",
-      "Hirsch \"The Single Barrel\" Bourbon",
-      "Town Branch Bourbon",
-      "Town Branch Bourbon Sherry Cask Finished",
-      "Town Branch Double Oaked Kentucky Straight Bourbon"
-    ]
+      "Knob Creek Rye",
+      "Noah's Mill",
+      "Rare Char code AMB-B",
+      "Rare Char code APR-B",
+      "Rare Char code BAL",
+      "Rare Char code BR",
+      "Rare Char code CC",
+      "Rare Char code CC-R",
+      "Rare Char code E-KB",
+      "Rare Char code E-TN",
+      "Rare Char code E-WB",
+      "Rare Char code EUC",
+      "Rare Char code FOM-B",
+      "Rare Char code FSR-B",
+      "Rare Char code FSR-R",
+      "Rare Char code HON-B",
+      "Rare Char code JR",
+      "Rare Char code MAD-R",
+      "Rare Char code MAP-B",
+      "Rare Char code MAP-R",
+      "Rare Char code OLS-R",
+      "Rare Char code P90",
+      "Rare Char code PSB",
+      "Rare Char code PXS-R",
+      "Rare Char code RP-B",
+      "Rare Char code TO-B",
+      "Rare Char code TO-R",
+      "Rare Char code TP-B",
+      "Rare Char code TP-R",
+      "Rare Char code TST-R",
+      "Rare Char code VDN-B",
+      "Rare Char code WP-R",
+      "Rowan's Creek"
+    ],
+    "variants": {
+      "Knob Creek Rye": [
+        "Knob Creek Rye",
+        "Knob Creek Single Barrel Select Rye"
+      ]
+    }
+  },
+  "Unplaced (needs verification)": {
+    "name": "Unplaced (needs verification)",
+    "grains": {},
+    "raw": "unplaced",
+    "brands": [
+      "Billy Banks Rye",
+      "Bluebird Distilling Sportsman Bourbon",
+      "Maryland Heritage Series Mount Vernon 14-Year Rye"
+    ],
+    "variants": {
+      "Billy Banks Rye": [
+        "Billy Banks Rye Whiskey"
+      ],
+      "Maryland Heritage Series Mount Vernon 14-Year Rye": [
+        "Maryland Heritage Series Mount Vernon 14-Year Straight Rye Whiskey"
+      ]
+    }
   }
 }
