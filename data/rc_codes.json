@@ -1604,5 +1604,58 @@
       "Rare Character Barrel Breakdown page"
     ],
     "confirmed": false
+  },
+  "R80": {
+    "name": "R80",
+    "series": "Single Barrel Series",
+    "type": "Rye",
+    "mashbill": "80/12/8",
+    "mashbill_grains": "rye/corn/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY",
+    "source": "Undisclosed KY distillery",
+    "source_status": "unknown",
+    "age": "7y+",
+    "note": "NEW CODE. Unusually high 80% rye for a Kentucky rye. Creme brulee, spearmint and cherry-cordial candy notes; lemon pound cake and root beer on the palate.",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
+  },
+  "R95": {
+    "name": "R95",
+    "series": "Single Barrel Series",
+    "type": "Rye",
+    "mashbill": "95/5",
+    "mashbill_grains": "rye/malted barley",
+    "distilled_in": "KY",
+    "aging_location": "KY",
+    "source": "Undisclosed KY distillery",
+    "source_status": "unknown",
+    "age": "8y+",
+    "note": "NEW CODE. Kentucky 95/5 rye leaning citrus and sweet baking spice rather than heat; honeyed green tea, ginger, lemon. R95-200 (St. Louis pick) was distilled Jan 2018, bottled Mar 2026, 115.44 proof.",
+    "research_notes": "RC calls R95 one of the 3 latest rye codes in the Single Barrel Series; R80 is another, the third isn't named on the page.",
+    "sources": [
+      "Rare Character Barrel Breakdown page",
+      "Bourbon Foxhound R95-200 pick write-up (2026)"
+    ],
+    "confirmed": true
+  },
+  "IWT": {
+    "name": "IWT",
+    "series": "Single Barrel Series",
+    "type": "Wheated Bourbon",
+    "mashbill": "51/45/4",
+    "mashbill_grains": "corn/wheat/malted barley",
+    "distilled_in": "IN",
+    "aging_location": "IN",
+    "source": "MGP",
+    "source_status": "inferred",
+    "age": "8y+",
+    "note": "NEW CODE. Indiana wheater at the legal-minimum 51% corn with 45% wheat; soft and sweet: caramel, toasted bread, strawberry preserves, vanilla cream. Same mashbill as W45.",
+    "sources": [
+      "Rare Character Barrel Breakdown page"
+    ],
+    "confirmed": true
   }
 }

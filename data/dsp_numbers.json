@@ -1,0 +1,1043 @@
+{
+  "DSP-CA-399": {
+    "location": "",
+    "manual": true,
+    "name": "Christian Brothers (Sacred Bond Brandy)",
+    "note": "",
+    "permits": [],
+    "sources": [
+      "Starter list"
+    ]
+  },
+  "DSP-IL-15018": {
+    "location": "Evanston, IL",
+    "manual": true,
+    "name": "FEW Spirits",
+    "note": "",
+    "permits": [
+      "IL-S-15015"
+    ],
+    "sources": [
+      "Starter list"
+    ]
+  },
+  "DSP-IN-15016": {
+    "location": "Lawrenceburg, IN",
+    "manual": true,
+    "name": "MGP Ingredients",
+    "note": "",
+    "permits": [
+      "IN-S-15016"
+    ],
+    "sources": [
+      "Starter list"
+    ]
+  },
+  "DSP-IN-31": {
+    "location": "Borden, IN",
+    "manual": true,
+    "name": "Starlight Distillery (Huber's)",
+    "note": "",
+    "permits": [
+      "IN-S-161"
+    ],
+    "sources": [
+      "Starter list"
+    ]
+  },
+  "DSP-KY-1": {
+    "location": "Louisville, KY",
+    "manual": true,
+    "name": "Heaven Hill Bernheim Distillery",
+    "note": "Bernheim also holds DSP-KY-2, from the former Astor Distillery still.",
+    "permits": [
+      "KY-S-779"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2006 thread)"
+    ]
+  },
+  "DSP-KY-113": {
+    "location": "Frankfort, KY",
+    "manual": true,
+    "name": "Buffalo Trace Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-9"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2006 thread)"
+    ]
+  },
+  "DSP-KY-12": {
+    "location": "Bardstown, KY",
+    "manual": true,
+    "name": "Barton 1792 Distillery (Tom Moore) – Sazerac",
+    "note": "Also listed as DSP-KY-20030.",
+    "permits": [
+      "KY-S-20030"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2006 thread)"
+    ]
+  },
+  "DSP-KY-14": {
+    "location": "Frankfort, KY",
+    "manual": true,
+    "name": "Old Grand-Dad / Jim Beam (bottling)",
+    "note": "Described in 2006 as Beam's bottling-only number.",
+    "permits": [
+      "KY-S-768"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2006 thread)"
+    ]
+  },
+  "DSP-KY-15000": {
+    "location": "Hickman, KY",
+    "manual": true,
+    "name": "Jackson Purchase Distillery",
+    "note": "Also listed as DSP-KY-20096.",
+    "permits": [
+      "KY-S-20096"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-15002": {
+    "location": "Louisville, KY",
+    "manual": true,
+    "name": "Diageo",
+    "note": "",
+    "permits": [
+      "KY-S-15002"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-15004": {
+    "location": "Lexington, KY",
+    "manual": true,
+    "name": "Alltech's Lexington Distilling Co. (Town Branch)",
+    "note": "Alltech has two permits in Lexington; which one holds this number isn't confirmed.",
+    "permits": [
+      "KY-S-15010",
+      "KY-S-20069"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-15005": {
+    "location": "Lexington, KY",
+    "manual": true,
+    "name": "Barrel House Distilling Company",
+    "note": "",
+    "permits": [
+      "KY-S-15005"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-15006": {
+    "location": "Bowling Green, KY",
+    "manual": true,
+    "name": "Corsair Distillery",
+    "note": "",
+    "permits": [],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-15007": {
+    "location": "Bardstown, KY",
+    "manual": true,
+    "name": "Strong Spirits (bottler) / Backbone Bourbon Co.",
+    "note": "",
+    "permits": [
+      "KY-S-15007"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-15010": {
+    "location": "Pembroke, KY",
+    "manual": true,
+    "name": "MB Roland Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-15009"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-15012": {
+    "location": "Maysville, KY",
+    "manual": true,
+    "name": "Old Pogue Distillery (former number)",
+    "note": "Used from 2004 until 2012, when Old Pogue got its original DSP-KY-3 back.",
+    "permits": [
+      "KY-S-20057"
+    ],
+    "sources": [
+      "Starter list",
+      "Old Pogue Distillery (Straightbourbon, BevNews)"
+    ]
+  },
+  "DSP-KY-15014": {
+    "location": "",
+    "manual": true,
+    "name": "Disputed: Wild Turkey or Limestone Branch",
+    "note": "The starter list says Limestone Branch; the 2023 Straightbourbon list says Wild Turkey and gives Limestone Branch DSP-KY-15018. TTB's permit KY-S-15014 belongs to Wild Turkey, which supports that reading but isn't proof.",
+    "permits": [],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-15018": {
+    "location": "Lebanon, KY",
+    "manual": true,
+    "name": "Limestone Branch Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-20105"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-15019": {
+    "location": "Versailles, KY",
+    "manual": true,
+    "name": "Woodford Reserve",
+    "note": "Also see DSP-KY-52.",
+    "permits": [
+      "KY-S-15019"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-15023": {
+    "location": "Louisville, KY",
+    "manual": true,
+    "name": "Brown-Forman (Old Forester Distilling Co.)",
+    "note": "",
+    "permits": [
+      "KY-S-15023"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-16": {
+    "location": "Louisville, KY",
+    "manual": true,
+    "name": "Stitzel-Weller Distillery",
+    "note": "Historic; no longer distilling.",
+    "permits": [],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2006 thread)"
+    ]
+  },
+  "DSP-KY-18": {
+    "location": "Frankfort, KY",
+    "manual": true,
+    "name": "Castle & Key Distillery (Old Taylor)",
+    "note": "",
+    "permits": [
+      "KY-S-20020"
+    ],
+    "sources": [
+      "Starter list"
+    ]
+  },
+  "DSP-KY-2": {
+    "location": "Louisville, KY",
+    "manual": true,
+    "name": "Heaven Hill Bernheim Distillery (former Astor Distillery still)",
+    "note": "",
+    "permits": [
+      "KY-S-779"
+    ],
+    "sources": [
+      "Straightbourbon (2006 thread)"
+    ]
+  },
+  "DSP-KY-20002": {
+    "location": "Frankfort, KY",
+    "manual": true,
+    "name": "Three Boys Farm / Whiskey Thief Distilling",
+    "note": "",
+    "permits": [
+      "KY-S-20002"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20003": {
+    "location": "Louisville, KY",
+    "manual": true,
+    "name": "Michter's Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-20003"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20004": {
+    "location": "Crestwood, KY",
+    "manual": true,
+    "name": "Kentucky Artisan Distillery (Jefferson's / Coalition Whiskey)",
+    "note": "",
+    "permits": [
+      "KY-S-20004"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20005": {
+    "location": "Danville, KY",
+    "manual": true,
+    "name": "Wilderness Trail Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-20005"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20006": {
+    "location": "Midway, KY",
+    "manual": true,
+    "name": "Bluegrass Distillers",
+    "note": "",
+    "permits": [
+      "KY-S-20006"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20010": {
+    "location": "Radcliff, KY",
+    "manual": true,
+    "name": "Boundary Oak Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-20010"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20013": {
+    "location": "Franklin, KY",
+    "manual": true,
+    "name": "Dueling Grounds Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-20013"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20014": {
+    "location": "Louisville, KY",
+    "manual": true,
+    "name": "Copper & Kings American Brandy",
+    "note": "",
+    "permits": [
+      "KY-S-20169"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20016": {
+    "location": "Newport, KY",
+    "manual": true,
+    "name": "New Riff Distilling",
+    "note": "",
+    "permits": [
+      "KY-S-20015"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20017": {
+    "location": "Frankfort, KY",
+    "manual": true,
+    "name": "Glenns Creek Distilling",
+    "note": "",
+    "permits": [
+      "KY-S-20017"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20018": {
+    "location": "Paris, KY",
+    "manual": true,
+    "name": "Hartfield & Co.",
+    "note": "",
+    "permits": [
+      "KY-S-20018"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20022": {
+    "location": "Hopkinsville, KY",
+    "manual": true,
+    "name": "Casey Jones Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-20022"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20023": {
+    "location": "Owensboro, KY",
+    "manual": true,
+    "name": "Green River Distilling",
+    "note": "The 2023 list wonders whether this is also DSP-KY-10.",
+    "permits": [],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20024": {
+    "location": "Louisville, KY",
+    "manual": true,
+    "name": "Angel's Envy (Louisville Distilling Co.)",
+    "note": "",
+    "permits": [
+      "KY-S-20024"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20025": {
+    "location": "",
+    "manual": true,
+    "name": "Kentucky Mountain Moonshine Distillery",
+    "note": "",
+    "permits": [],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20026": {
+    "location": "",
+    "manual": true,
+    "name": "Bulleit",
+    "note": "",
+    "permits": [],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20028": {
+    "location": "",
+    "manual": true,
+    "name": "Boone County Distilling",
+    "note": "The 2023 list gives Boone County both 20028 and 20032. TTB's permit KY-S-20028 belongs to Diageo in Shelbyville, so this one is uncertain.",
+    "permits": [],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20029": {
+    "location": "Owensboro, KY",
+    "manual": true,
+    "name": "Glenmore Distillery – Sazerac",
+    "note": "Also listed as DSP-KY-24.",
+    "permits": [
+      "KY-S-20029"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20030": {
+    "location": "Bardstown, KY",
+    "manual": true,
+    "name": "Barton 1792 Distillery – Sazerac",
+    "note": "Also listed as DSP-KY-12.",
+    "permits": [
+      "KY-S-20030"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20032": {
+    "location": "Boone County, KY",
+    "manual": true,
+    "name": "Boone County Distilling",
+    "note": "",
+    "permits": [
+      "KY-S-20032"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20035": {
+    "location": "Whitesburg, KY",
+    "manual": true,
+    "name": "Kentucky Mist Moonshine",
+    "note": "",
+    "permits": [
+      "KY-S-20035"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20037": {
+    "location": "Bardstown, KY",
+    "manual": true,
+    "name": "Bardstown Bourbon Company",
+    "note": "",
+    "permits": [
+      "KY-S-20041"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20038": {
+    "location": "Shelbyville, KY",
+    "manual": true,
+    "name": "Jeptha Creed Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-20038"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20039": {
+    "location": "Sparta, KY",
+    "manual": true,
+    "name": "Neeley Family Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-20131"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20040": {
+    "location": "Bardstown, KY",
+    "manual": true,
+    "name": "Preservation Distillery",
+    "note": "Preservation is listed under both 20040 and 20044.",
+    "permits": [
+      "KY-S-20044"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20044": {
+    "location": "Bardstown, KY",
+    "manual": true,
+    "name": "Preservation Distillery",
+    "note": "Preservation is listed under both 20040 and 20044.",
+    "permits": [
+      "KY-S-20044"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20045": {
+    "location": "Louisville, KY",
+    "manual": true,
+    "name": "Rabbit Hole Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-20045"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20047": {
+    "location": "Bardstown, KY",
+    "manual": true,
+    "name": "Lux Row Distillers",
+    "note": "",
+    "permits": [
+      "KY-S-20106"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20049": {
+    "location": "",
+    "manual": true,
+    "name": "Dueling Barrels Brewery & Distillery",
+    "note": "",
+    "permits": [],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20050": {
+    "location": "Louisville, KY",
+    "manual": true,
+    "name": "Barrell Craft Spirits",
+    "note": "",
+    "permits": [
+      "KY-S-20050"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20051": {
+    "location": "Drakesboro, KY",
+    "manual": true,
+    "name": "Coal Pick Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-20051"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20054": {
+    "location": "Danville, KY",
+    "manual": true,
+    "name": "AMBRABev (Blue Rook Cane Spirits)",
+    "note": "",
+    "permits": [
+      "KY-S-20054"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20057": {
+    "location": "Maysville, KY",
+    "manual": true,
+    "name": "Old Pogue Distillery",
+    "note": "Old Pogue says its number is DSP-KY-3; this may be a permit number rather than a DSP number.",
+    "permits": [
+      "KY-S-20057"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20058": {
+    "location": "",
+    "manual": true,
+    "name": "Hummingbird Ridge",
+    "note": "",
+    "permits": [],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20061": {
+    "location": "",
+    "manual": true,
+    "name": "Baker-Bird",
+    "note": "",
+    "permits": [],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20062": {
+    "location": "Louisville, KY",
+    "manual": true,
+    "name": "Brough Brothers Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-20062"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20084": {
+    "location": "Lebanon, KY",
+    "manual": true,
+    "name": "Diageo Lebanon Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-20084"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20085": {
+    "location": "Louisville, KY",
+    "manual": true,
+    "name": "Barrels & Billets Custom Bourbon",
+    "note": "",
+    "permits": [
+      "KY-S-20085"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20087": {
+    "location": "Augusta, KY",
+    "manual": true,
+    "name": "Augusta Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-20087"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20096": {
+    "location": "Hickman, KY",
+    "manual": true,
+    "name": "Jackson Purchase Distillery",
+    "note": "Also listed as DSP-KY-15000.",
+    "permits": [
+      "KY-S-20096"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-20114": {
+    "location": "Lexington, KY",
+    "manual": true,
+    "name": "Fresh Bourbon Distilling",
+    "note": "",
+    "permits": [
+      "KY-S-20110"
+    ],
+    "sources": [
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-230": {
+    "location": "Clermont, KY",
+    "manual": true,
+    "name": "Jim Beam Distillery",
+    "note": "Also covers Beam's Booker Noe distillery in Boston, KY, per the 2023 Straightbourbon thread.",
+    "permits": [
+      "KY-S-230"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2006 thread)",
+      "Straightbourbon (2023 list)"
+    ]
+  },
+  "DSP-KY-24": {
+    "location": "Owensboro, KY",
+    "manual": true,
+    "name": "Glenmore Distillery – Sazerac",
+    "note": "Also listed as DSP-KY-20029.",
+    "permits": [
+      "KY-S-20029"
+    ],
+    "sources": [
+      "Starter list"
+    ]
+  },
+  "DSP-KY-25": {
+    "location": "",
+    "manual": true,
+    "name": "Old Crow Distillery",
+    "note": "Historic.",
+    "permits": [],
+    "sources": [
+      "Starter list"
+    ]
+  },
+  "DSP-KY-3": {
+    "location": "Maysville, KY",
+    "manual": true,
+    "name": "Old Pogue Distillery",
+    "note": "Original 1876 number, restored in 2012. Before that the distillery used DSP-KY-15012.",
+    "permits": [
+      "KY-S-20057"
+    ],
+    "sources": [
+      "Old Pogue Distillery (Straightbourbon, BevNews)"
+    ]
+  },
+  "DSP-KY-31": {
+    "location": "Bardstown, KY",
+    "manual": true,
+    "name": "Heaven Hill Distillery – Bardstown bottling facility",
+    "note": "The Bardstown distillery burned in 1996; bottling continued under this number.",
+    "permits": [
+      "KY-S-85"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2006 thread)"
+    ]
+  },
+  "DSP-KY-354": {
+    "location": "Shively (Louisville), KY",
+    "manual": true,
+    "name": "Brown-Forman Distillery (formerly Early Times)",
+    "note": "",
+    "permits": [
+      "KY-S-773"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2006 thread)"
+    ]
+  },
+  "DSP-KY-414": {
+    "location": "Louisville, KY",
+    "manual": true,
+    "name": "Old Forester (Brown-Forman) – Dixie Highway",
+    "note": "Historic Old Forester distillery/bottling number seen on older bottled-in-bond labels.",
+    "permits": [],
+    "sources": [
+      "Straightbourbon (2006 thread)"
+    ]
+  },
+  "DSP-KY-44": {
+    "location": "Loretto, KY",
+    "manual": true,
+    "name": "Maker's Mark Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-3"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2006 thread)",
+      "Label filing (COLA)"
+    ]
+  },
+  "DSP-KY-49": {
+    "location": "Owensboro, KY",
+    "manual": true,
+    "name": "Medley Distillery",
+    "note": "Historic.",
+    "permits": [],
+    "sources": [
+      "Starter list"
+    ]
+  },
+  "DSP-KY-50": {
+    "location": "Louisville, KY",
+    "manual": true,
+    "name": "Kentucky Peerless Distilling",
+    "note": "Revived in 2014 with its original number.",
+    "permits": [
+      "KY-S-20019"
+    ],
+    "sources": [
+      "Starter list",
+      "InsideHook"
+    ]
+  },
+  "DSP-KY-52": {
+    "location": "Versailles, KY",
+    "manual": true,
+    "name": "Woodford Reserve Distillery – Brown-Forman",
+    "note": "TTB lists two Woodford Reserve permits in Versailles; which one holds this number isn't confirmed. Also see DSP-KY-15019.",
+    "permits": [
+      "KY-S-776",
+      "KY-S-15019"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2006 thread)"
+    ]
+  },
+  "DSP-KY-62": {
+    "location": "Cox's Creek, KY",
+    "manual": true,
+    "name": "Four Roses – Cox's Creek",
+    "note": "",
+    "permits": [
+      "KY-S-777"
+    ],
+    "sources": [
+      "Starter list"
+    ]
+  },
+  "DSP-KY-67": {
+    "location": "Lawrenceburg, KY",
+    "manual": true,
+    "name": "Wild Turkey Distillery",
+    "note": "Also see DSP-KY-15014.",
+    "permits": [
+      "KY-S-15014"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2006 thread)"
+    ]
+  },
+  "DSP-KY-78": {
+    "location": "Bardstown, KY",
+    "manual": true,
+    "name": "Willett Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-770"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2006 thread)"
+    ]
+  },
+  "DSP-KY-8": {
+    "location": "Lawrenceburg, KY",
+    "manual": true,
+    "name": "Four Roses Distillery",
+    "note": "",
+    "permits": [
+      "KY-S-47"
+    ],
+    "sources": [
+      "Starter list",
+      "Straightbourbon (2006 thread)"
+    ]
+  },
+  "DSP-KY-82": {
+    "location": "Versailles, KY",
+    "manual": true,
+    "name": "Labrot & Graham (historic name of the Woodford Reserve site)",
+    "note": "Historic.",
+    "permits": [],
+    "sources": [
+      "Straightbourbon (2006 thread)"
+    ]
+  },
+  "DSP-OH-20028": {
+    "location": "Cleveland, OH",
+    "manual": true,
+    "name": "Cleveland Distillery",
+    "note": "TTB lists several Cleveland-area permits (Cleveland Distillery LLC and Cleveland Whiskey), so this isn't linked yet.",
+    "permits": [],
+    "sources": [
+      "Starter list"
+    ]
+  },
+  "DSP-PA-15016": {
+    "location": "Pittsburgh, PA",
+    "manual": true,
+    "name": "Pittsburgh Distilling Company",
+    "note": "",
+    "permits": [],
+    "sources": [
+      "Starter list"
+    ]
+  },
+  "DSP-TN-15006": {
+    "location": "Nashville, TN",
+    "manual": true,
+    "name": "Corsair Distillery",
+    "note": "",
+    "permits": [
+      "TN-S-15005"
+    ],
+    "sources": [
+      "Starter list"
+    ]
+  },
+  "DSP-TN-2": {
+    "location": "Tullahoma, TN",
+    "manual": true,
+    "name": "Cascade Hollow Distilling (George Dickel)",
+    "note": "",
+    "permits": [
+      "TN-S-15003"
+    ],
+    "sources": [
+      "Starter list"
+    ]
+  },
+  "DSP-TN-4": {
+    "location": "Lynchburg, TN",
+    "manual": true,
+    "name": "Jack Daniel Distillery",
+    "note": "TTB lists two Jack Daniel permits in Lynchburg.",
+    "permits": [
+      "TN-S-10",
+      "TN-S-11"
+    ],
+    "sources": [
+      "Starter list"
+    ]
+  },
+  "DSP-VA-1797": {
+    "location": "Mount Vernon, VA",
+    "manual": true,
+    "name": "George Washington's Distillery",
+    "note": "Historic site operated by the Mount Vernon Ladies' Association.",
+    "permits": [
+      "VA-S-1797"
+    ],
+    "sources": [
+      "Starter list"
+    ]
+  },
+  "DSP-VA-25": {
+    "location": "Fredericksburg, VA",
+    "manual": true,
+    "name": "A. Smith Bowman Distillery (Virginia Gentleman)",
+    "note": "",
+    "permits": [
+      "VA-S-20096"
+    ],
+    "sources": [
+      "Starter list"
+    ]
+  }
+}

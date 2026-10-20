@@ -1,0 +1,37 @@
+services:
+  bot:
+    build: .
+    image: spirit_info
+    container_name: spirit_info
+    restart: unless-stopped
+
+    # Token and IDs come from .env at runtime; they are not stored in the image
+    env_file: .env
+
+    # No "ports:" section on purpose. Nothing is published to your computer
+    # or your network; the bot only dials out to Discord and YouTube.
+
+    # Lock-down
+    user: "10001:10001"          # not root
+    read_only: true              # container filesystem can't be modified
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL                      # no Linux capabilities
+    security_opt:
+      - no-new-privileges:true   # can't escalate via setuid binaries
+    pids_limit: 100
+    mem_limit: 256m
+    cpus: 0.5
+
+    volumes:
+      # Your mashbill / code data: the only folder on your computer the bot
+      # can see, and it is read-only (":ro"). Edit the JSON files on your
+      # computer, then run /reload-data in Discord.
+      - ./data:/app/data:ro
+      # The bot's own small notebook (watched YouTube channels). Lives in a
+      # Docker volume, not in your folders, and survives rebuilds.
+      - spirit_state:/app/state
+
+volumes:
+  spirit_state:

@@ -1,0 +1,799 @@
+{
+  "1B": {
+    "meaning": "Single Barrel",
+    "aliases": [
+      "1B"
+    ]
+  },
+  "4R / FR/4🌹": {
+    "meaning": "Four Roses",
+    "aliases": [
+      "4R",
+      "FR",
+      "4🌹"
+    ]
+  },
+  "4RYL": {
+    "meaning": "Four Roses Yellow Label",
+    "aliases": [
+      "4RYL"
+    ]
+  },
+  "AA / AAA": {
+    "meaning": "Ancient Age / Ancient Ancient Age",
+    "aliases": [
+      "AA",
+      "AAA"
+    ]
+  },
+  "AB": {
+    "meaning": "Abraham Bowman",
+    "aliases": [
+      "AB"
+    ]
+  },
+  "ABV": {
+    "meaning": "Alcohol By Volume",
+    "aliases": [
+      "ABV"
+    ]
+  },
+  "AE": {
+    "meaning": "Angel’s Envy",
+    "aliases": [
+      "AE"
+    ]
+  },
+  "AECS": {
+    "meaning": "Angel’s Envy Cask Strength",
+    "aliases": [
+      "AECS"
+    ]
+  },
+  "AHH": {
+    "meaning": "A.H. Hirsch",
+    "aliases": [
+      "AHH"
+    ]
+  },
+  "AS": {
+    "meaning": "Age Stated",
+    "aliases": [
+      "AS"
+    ]
+  },
+  "B25": {
+    "meaning": "Booker's 25th",
+    "aliases": [
+      "B25"
+    ]
+  },
+  "B30": {
+    "meaning": "Booker's 30th",
+    "aliases": [
+      "B30"
+    ]
+  },
+  "BC": {
+    "meaning": "Boone County",
+    "aliases": [
+      "BC"
+    ]
+  },
+  "BF": {
+    "meaning": "Brown Forman",
+    "aliases": [
+      "BF"
+    ]
+  },
+  "BH": {
+    "meaning": "Brookhill",
+    "aliases": [
+      "BH"
+    ]
+  },
+  "BHC": {
+    "meaning": "Bourbon Heritage Collection",
+    "aliases": [
+      "BHC"
+    ]
+  },
+  "BIB": {
+    "meaning": "Bottled In Bond",
+    "aliases": [
+      "BIB"
+    ]
+  },
+  "BIN": {
+    "meaning": "Buy It Now",
+    "aliases": [
+      "BIN"
+    ],
+    "note": "Binding agreement to complete the deal"
+  },
+  "BMH": {
+    "meaning": "Black Maple Hill",
+    "aliases": [
+      "BMH"
+    ]
+  },
+  "Bones": {
+    "meaning": "Substitute for dollars (FB)",
+    "aliases": [
+      "Bones"
+    ]
+  },
+  "BP": {
+    "meaning": "Barrel Proof",
+    "aliases": [
+      "BP"
+    ]
+  },
+  "BT": {
+    "meaning": "Buffalo Trace",
+    "aliases": [
+      "BT"
+    ]
+  },
+  "BTAC": {
+    "meaning": "Buffalo Trace Antique Coll.",
+    "aliases": [
+      "BTAC"
+    ]
+  },
+  "BTEC": {
+    "meaning": "Buffalo Trace Experimental",
+    "aliases": [
+      "BTEC"
+    ]
+  },
+  "BUMP": {
+    "meaning": "Facebook bump trick",
+    "aliases": [
+      "BUMP"
+    ]
+  },
+  "CEHT / EHT": {
+    "meaning": "Colonel E.H. Taylor",
+    "aliases": [
+      "CEHT",
+      "EHT"
+    ]
+  },
+  "CGF": {
+    "meaning": "Cheesy Gold Foil",
+    "aliases": [
+      "CGF"
+    ]
+  },
+  "COK": {
+    "meaning": "Cream of Kentucky",
+    "aliases": [
+      "COK"
+    ]
+  },
+  "CONUS": {
+    "meaning": "Continental US Shipping",
+    "aliases": [
+      "CONUS"
+    ]
+  },
+  "CS": {
+    "meaning": "Cask Strength",
+    "aliases": [
+      "CS"
+    ]
+  },
+  "DSP": {
+    "meaning": "Distilled Spirits Plant No.",
+    "aliases": [
+      "DSP"
+    ]
+  },
+  "EC": {
+    "meaning": "Elijah Craig",
+    "aliases": [
+      "EC"
+    ]
+  },
+  "ECBP": {
+    "meaning": "Elijah Craig Barrel Proof",
+    "aliases": [
+      "ECBP"
+    ]
+  },
+  "ER": {
+    "meaning": "Eagle Rare",
+    "aliases": [
+      "ER"
+    ]
+  },
+  "ER17": {
+    "meaning": "Eagle Rare 17",
+    "aliases": [
+      "ER17"
+    ]
+  },
+  "ET": {
+    "meaning": "Early Times",
+    "aliases": [
+      "ET"
+    ]
+  },
+  "ETL": {
+    "meaning": "Elmer T. Lee",
+    "aliases": [
+      "ETL"
+    ]
+  },
+  "ETLC": {
+    "meaning": "Elmer T. Lee Commemorative",
+    "aliases": [
+      "ETLC"
+    ]
+  },
+  "EW": {
+    "meaning": "Evan Williams",
+    "aliases": [
+      "EW"
+    ]
+  },
+  "F’Fort": {
+    "meaning": "Frankfort",
+    "aliases": [
+      "F’Fort"
+    ]
+  },
+  "FC": {
+    "meaning": "Fighting Cock",
+    "aliases": [
+      "FC"
+    ]
+  },
+  "FS": {
+    "meaning": "For Sale",
+    "aliases": [
+      "FS"
+    ]
+  },
+  "FT": {
+    "meaning": "For Trade",
+    "aliases": [
+      "FT"
+    ]
+  },
+  "GD": {
+    "meaning": "George Dickel",
+    "aliases": [
+      "GD"
+    ]
+  },
+  "GF": {
+    "meaning": "Gold Foil",
+    "aliases": [
+      "GF"
+    ]
+  },
+  "GNS": {
+    "meaning": "Grain Neutral Spirits",
+    "aliases": [
+      "GNS"
+    ]
+  },
+  "GTS": {
+    "meaning": "George T. Stagg",
+    "aliases": [
+      "GTS"
+    ]
+  },
+  "H21, H22, etc.": {
+    "meaning": "Hirsch 21, 22, etc.",
+    "aliases": [
+      "H21",
+      "H22"
+    ]
+  },
+  "Hazmat": {
+    "meaning": "Over 140 proof whiskey",
+    "aliases": [
+      "Hazmat"
+    ],
+    "note": "Hazmat because by DOT regulations you cannot fly with it due to risk of spontaneous combustion"
+  },
+  "HH": {
+    "meaning": "Heaven Hill",
+    "aliases": [
+      "HH"
+    ]
+  },
+  "HHSS": {
+    "meaning": "Heaven Hill Select Stock",
+    "aliases": [
+      "HHSS"
+    ]
+  },
+  "HM10": {
+    "meaning": "Henry McKenna 10 Year",
+    "aliases": [
+      "HM10"
+    ]
+  },
+  "HW": {
+    "meaning": "High West",
+    "aliases": [
+      "HW"
+    ]
+  },
+  "IP": {
+    "meaning": "In Person",
+    "aliases": [
+      "IP"
+    ]
+  },
+  "ISO": {
+    "meaning": "In Search Of",
+    "aliases": [
+      "ISO"
+    ]
+  },
+  "JB": {
+    "meaning": "Jim Beam",
+    "aliases": [
+      "JB"
+    ]
+  },
+  "JD": {
+    "meaning": "Jack Daniels",
+    "aliases": [
+      "JD"
+    ]
+  },
+  "JPS": {
+    "meaning": "Jefferson's Pres. Select",
+    "aliases": [
+      "JPS"
+    ]
+  },
+  "KC": {
+    "meaning": "Knob Creek",
+    "aliases": [
+      "KC"
+    ]
+  },
+  "KO / KOR": {
+    "meaning": "Kentucky Owl / Rye",
+    "aliases": [
+      "KO",
+      "KOR"
+    ]
+  },
+  "KOK": {
+    "meaning": "King of Kentucky",
+    "aliases": [
+      "KOK"
+    ]
+  },
+  "L’Burg": {
+    "meaning": "Lawrenceburg, KY",
+    "aliases": [
+      "L’Burg"
+    ]
+  },
+  "L’Ville": {
+    "meaning": "Louisville",
+    "aliases": [
+      "L’Ville"
+    ]
+  },
+  "LB": {
+    "meaning": "Little Book",
+    "aliases": [
+      "LB"
+    ]
+  },
+  "LDI": {
+    "meaning": "Lawrenceburg Distillers Indiana",
+    "aliases": [
+      "LDI"
+    ]
+  },
+  "LE": {
+    "meaning": "Limited Edition",
+    "aliases": [
+      "LE"
+    ]
+  },
+  "LMDW": {
+    "meaning": "La Maison du Whisky",
+    "aliases": [
+      "LMDW"
+    ]
+  },
+  "Lot B": {
+    "meaning": "Van Winkle Special Reserve 12 yr",
+    "aliases": [
+      "Lot B"
+    ]
+  },
+  "M10 / M20": {
+    "meaning": "Michter’s 10 / 20 Year",
+    "aliases": [
+      "M10",
+      "M20"
+    ]
+  },
+  "MGP": {
+    "meaning": "MGP of Indiana",
+    "aliases": [
+      "MGP"
+    ]
+  },
+  "MM": {
+    "meaning": "Maker’s Mark",
+    "aliases": [
+      "MM"
+    ]
+  },
+  "MWND": {
+    "meaning": "Midwinter Nights Dram",
+    "aliases": [
+      "MWND"
+    ]
+  },
+  "NAS": {
+    "meaning": "Non Age Stated",
+    "aliases": [
+      "NAS"
+    ]
+  },
+  "NCF": {
+    "meaning": "Non Chill Filtered",
+    "aliases": [
+      "NCF"
+    ]
+  },
+  "ND": {
+    "meaning": "National Distillers",
+    "aliases": [
+      "ND"
+    ]
+  },
+  "NDP": {
+    "meaning": "Non Distilling Producer",
+    "aliases": [
+      "NDP"
+    ]
+  },
+  "OC": {
+    "meaning": "Old Charter",
+    "aliases": [
+      "OC"
+    ]
+  },
+  "OF": {
+    "meaning": "Old Fitzgerald",
+    "aliases": [
+      "OF"
+    ]
+  },
+  "OFBB": {
+    "meaning": "Old Forester Birthday Bourbon",
+    "aliases": [
+      "OFBB"
+    ]
+  },
+  "OGD": {
+    "meaning": "Old Grand Dad",
+    "aliases": [
+      "OGD"
+    ]
+  },
+  "OO": {
+    "meaning": "Old Overholt",
+    "aliases": [
+      "OO"
+    ]
+  },
+  "ORVW": {
+    "meaning": "Old Rip Van Winkle",
+    "aliases": [
+      "ORVW"
+    ]
+  },
+  "OS": {
+    "meaning": "Old Scout",
+    "aliases": [
+      "OS"
+    ]
+  },
+  "OT": {
+    "meaning": "Old Taylor",
+    "aliases": [
+      "OT"
+    ]
+  },
+  "OWA": {
+    "meaning": "Old Weller Antique",
+    "aliases": [
+      "OWA"
+    ]
+  },
+  "OWO": {
+    "meaning": "Old Weller Original",
+    "aliases": [
+      "OWO"
+    ]
+  },
+  "Pf": {
+    "meaning": "Proof",
+    "aliases": [
+      "Pf"
+    ]
+  },
+  "PHC": {
+    "meaning": "Parker's Heritage Coll.",
+    "aliases": [
+      "PHC"
+    ]
+  },
+  "PM": {
+    "meaning": "Private Message",
+    "aliases": [
+      "PM"
+    ]
+  },
+  "POAC": {
+    "meaning": "Pride of Anderson County",
+    "aliases": [
+      "POAC"
+    ]
+  },
+  "PP / PPFF": {
+    "meaning": "PayPal / PayPal F&F",
+    "aliases": [
+      "PP",
+      "PPFF"
+    ]
+  },
+  "PVW": {
+    "meaning": "Pappy Van Winkle",
+    "aliases": [
+      "PVW"
+    ]
+  },
+  "RC": {
+    "meaning": "Rare Character",
+    "aliases": [
+      "RC"
+    ]
+  },
+  "RHF": {
+    "meaning": "Rock Hill Farms",
+    "aliases": [
+      "RHF"
+    ]
+  },
+  "Ritt": {
+    "meaning": "Rittenhouse Rye",
+    "aliases": [
+      "Ritt"
+    ]
+  },
+  "RR / RRR": {
+    "meaning": "Russell’s Reserve / Rye",
+    "aliases": [
+      "RR",
+      "RRR"
+    ]
+  },
+  "RTR": {
+    "meaning": "Right To Refuse",
+    "aliases": [
+      "RTR"
+    ]
+  },
+  "RY": {
+    "meaning": "Rebel Yell",
+    "aliases": [
+      "RY"
+    ]
+  },
+  "SA": {
+    "meaning": "Smooth Ambler",
+    "aliases": [
+      "SA"
+    ]
+  },
+  "SAOS": {
+    "meaning": "Smooth Ambler Old Scout",
+    "aliases": [
+      "SAOS"
+    ]
+  },
+  "Saz / SAZ": {
+    "meaning": "Sazerac",
+    "aliases": [
+      "Saz",
+      "SAZ"
+    ]
+  },
+  "SB / SmB / SMB": {
+    "meaning": "Small Batch",
+    "aliases": [
+      "SB",
+      "SmB",
+      "SMB"
+    ]
+  },
+  "SBS": {
+    "meaning": "Small Batch Select",
+    "aliases": [
+      "SBS"
+    ]
+  },
+  "SFTB": {
+    "meaning": "Straight From The Barrel",
+    "aliases": [
+      "SFTB"
+    ]
+  },
+  "SIB / SiB": {
+    "meaning": "Single Barrel",
+    "aliases": [
+      "SIB",
+      "SiB"
+    ]
+  },
+  "SIBLE": {
+    "meaning": "Single Barrel Limited Ed.",
+    "aliases": [
+      "SIBLE"
+    ]
+  },
+  "SiBS": {
+    "meaning": "Single Barrel Select",
+    "aliases": [
+      "SiBS"
+    ]
+  },
+  "SW / S-W": {
+    "meaning": "Stitzel Weller",
+    "aliases": [
+      "SW",
+      "S-W"
+    ]
+  },
+  "THH": {
+    "meaning": "Thomas H. Handy",
+    "aliases": [
+      "THH"
+    ]
+  },
+  "TPS": {
+    "meaning": "The Party Source",
+    "aliases": [
+      "TPS"
+    ]
+  },
+  "UV": {
+    "meaning": "Unsolicited Vouch",
+    "aliases": [
+      "UV"
+    ],
+    "note": "You recommend the person for exchange and they did not ask you to to vouch for them"
+  },
+  "V17 / V21 / V23": {
+    "meaning": "Vintage 17, 21, 23",
+    "aliases": [
+      "V17",
+      "V21",
+      "V23"
+    ]
+  },
+  "VOB": {
+    "meaning": "Very Old Barton",
+    "aliases": [
+      "VOB"
+    ]
+  },
+  "VOF / VXOF / VVOF": {
+    "meaning": "Very Old Fitzgerald",
+    "aliases": [
+      "VOF",
+      "VXOF",
+      "VVOF"
+    ]
+  },
+  "VOSN": {
+    "meaning": "Very Olde St. Nick",
+    "aliases": [
+      "VOSN"
+    ]
+  },
+  "VSOF": {
+    "meaning": "Very Special Old Fitzgerald",
+    "aliases": [
+      "VSOF"
+    ]
+  },
+  "VWFRR": {
+    "meaning": "Van Winkle Family Reserve Rye",
+    "aliases": [
+      "VWFRR"
+    ]
+  },
+  "W12": {
+    "meaning": "Weller 12 Year",
+    "aliases": [
+      "W12"
+    ]
+  },
+  "WFE": {
+    "meaning": "Willett Family Estate",
+    "aliases": [
+      "WFE"
+    ]
+  },
+  "WFP": {
+    "meaning": "Weller Full Proof",
+    "aliases": [
+      "WFP"
+    ]
+  },
+  "WLW": {
+    "meaning": "William Larue Weller",
+    "aliases": [
+      "WLW"
+    ]
+  },
+  "WOM": {
+    "meaning": "West of the Mississippi",
+    "aliases": [
+      "WOM"
+    ]
+  },
+  "WR": {
+    "meaning": "Woodford Reserve",
+    "aliases": [
+      "WR"
+    ]
+  },
+  "WSR": {
+    "meaning": "Weller Special Reserve",
+    "aliases": [
+      "WSR"
+    ]
+  },
+  "WT": {
+    "meaning": "Wild Turkey",
+    "aliases": [
+      "WT"
+    ]
+  },
+  "WTAS": {
+    "meaning": "WT American Spirit",
+    "aliases": [
+      "WTAS"
+    ]
+  },
+  "WTB / WTS": {
+    "meaning": "Want To Buy / Sell",
+    "aliases": [
+      "WTB",
+      "WTS"
+    ]
+  },
+  "WTR / WTRB": {
+    "meaning": "WT Rye / Rare Breed",
+    "aliases": [
+      "WTR",
+      "WTRB"
+    ]
+  },
+  "YO": {
+    "meaning": "Years Old",
+    "aliases": [
+      "YO"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+# Secrets must never be baked into the image
+.env
+.env.*
+!.env.example
+
+.git
+.gitignore
+.DS_Store
+**/.DS_Store
+__pycache__/
+**/*.pyc
+Procfile
+README.md
+Dockerfile
+.dockerignore
+docker-compose.yml

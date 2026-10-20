@@ -4,6 +4,7 @@ import json
 import xml.etree.ElementTree as ET
 from datetime import datetime, time as dtime
 from typing import Optional
+from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
 import aiohttp
@@ -21,8 +22,10 @@ ALLOWED_POST_CHANNEL_IDS = {
     int(x) for x in os.getenv("YOUTUBE_ALLOWED_CHANNEL_IDS", "").split(",") if x.strip()
 }
 
-DATA_DIR = "data"
-STATE_FILE = os.path.join(DATA_DIR, "youtube_channels.json")
+# Where the watched-channel list is saved. Defaults to data/ as before; set
+# STATE_DIR to keep it somewhere else (Docker does, so data/ can be read-only).
+STATE_DIR = os.getenv("STATE_DIR", "").strip() or "data"
+STATE_FILE = os.path.join(STATE_DIR, "youtube_channels.json")
 # ---- Check schedule (Eastern time; follows daylight saving automatically) ----
 #   8:00 AM - 11:59 PM  -> every 30 minutes (on the :00 and :30)
 #   1:00 PM -  2:59 PM  -> every minute
@@ -37,6 +40,23 @@ USER_AGENT = "Mozilla/5.0 (compatible; DiscordBourbonBot/1.0)"
 
 FEED_URL = "https://www.youtube.com/feeds/videos.xml?channel_id={}"
 YT_CHANNEL_ID_RE = re.compile(r"^UC[a-zA-Z0-9_-]{22}$")
+# The only sites /ytalerts add will ever fetch. Anything else is refused, so
+# the command can't be used to make the bot request other addresses.
+YT_HOSTS = {"youtube.com", "www.youtube.com", "m.youtube.com"}
+
+
+def is_youtube_url(url: str) -> bool:
+    try:
+        parts = urlsplit(url)
+        return (
+            parts.scheme == "https"
+            and (parts.hostname or "").lower() in YT_HOSTS
+            and parts.port in (None, 443)
+            and not parts.username
+            and not parts.password
+        )
+    except ValueError:
+        return False
 
 ATOM_NS = "{http://www.w3.org/2005/Atom}"
 YT_NS = "{http://www.youtube.com/xml/schemas/2015}"
@@ -76,7 +96,7 @@ def load_state():
 
 
 def save_state(state):
-    os.makedirs(DATA_DIR, exist_ok=True)
+    os.makedirs(STATE_DIR, exist_ok=True)
     with open(STATE_FILE, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=2)
 
@@ -89,11 +109,15 @@ async def resolve_channel_id(session: aiohttp.ClientSession, channel: str) -> Op
         return channel
 
     if channel.startswith("http://") or channel.startswith("https://"):
-        url = channel
+        url = "https://" + channel.split("://", 1)[1]
     elif channel.startswith("@"):
         url = f"https://www.youtube.com/{channel}"
     else:
         url = f"https://www.youtube.com/@{channel}"
+
+    if not is_youtube_url(url):
+        print(f"[youtube] Refusing non-YouTube address '{channel}'")
+        return None
 
     try:
         async with session.get(
